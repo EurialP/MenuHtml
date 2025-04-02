@@ -39,57 +39,69 @@
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 20px;
-            align-items: start; /* Align items to the start of the cell */
+            align-items: start;
+            cursor: pointer; /* Add cursor style to indicate interactivity */
         }
         .menu-item-name {
             font-size: 1.125rem;
             font-weight: 500;
-            color: #4b5563; /* Slightly darker menu item name */
+            color: #4b5563;
             margin-bottom: 6px;
-            line-height: 1.4; /* Improved line height for name */
+            line-height: 1.4;
         }
         .menu-item-description {
             font-size: 0.875rem;
-            color: #6b7280; /* Slightly darker description */
-            line-height: 1.5; /* Improved line height for description */
+            color: #6b7280;
+            line-height: 1.5;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            margin-top: 0;
         }
+        .menu-item.expanded .menu-item-description {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 12px;
+        }
+
         .menu-item-price {
             font-size: 1rem;
             font-weight: 600;
-            color: #1e293b; /* Darker price */
+            color: #1e293b;
         }
         .allergen-info {
             font-size: 0.75rem;
-            color: #9ca3af; /* Slightly lighter allergen info */
+            color: #9ca3af;
             margin-top: 8px;
             display: block;
         }
 
         /* New styles for improved layout and spacing */
         .top-section {
-            margin-bottom: 40px; /* Increased spacing before "FOOD MENU" */
+            margin-bottom: 40px;
         }
 
         .description-block {
-            margin-top: 24px; /* Increased spacing before description blocks */
+            margin-top: 24px;
             margin-bottom: 24px;
             padding: 16px;
-            background-color: #f7f7f7; /* Lighter background for description box */
+            background-color: #f7f7f7;
             border-radius: 6px;
-            border: 1px solid #edf2f7; /* Subtle border */
+            border: 1px solid #edf2f7;
         }
 
         .description-title {
             font-size: 1rem;
             font-weight: 600;
-            color: #334155; /* Darker title for description box */
+            color: #334155;
             margin-bottom: 12px;
         }
 
         .description-content {
             font-size: 0.875rem;
-            color: #4b5563; /* Slightly darker description content */
-            line-height: 1.6; /* Improved line height */
+            color: #4b5563;
+            line-height: 1.6;
         }
 
     </style>
@@ -100,50 +112,50 @@
         <main>
             <section>
                 <h2 class="section-title">SNACKS</h2>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CRUDITÉS</h3>
-                        <p class="menu-item-description">SEASONAL VEGETABLES WITH CHIVE AIOLI</p>
+                        <p class="menu-item-description">SEASONAL VEGETABLES WITH CHIVE AIOLI. Crudités refers to the term "raw" in French, typically served as an amuse bouche or canapé. A NoMad Classic from NY. Chicory, radishes, cucumbers and carrots served with chive emulsion.</p>
                         <span class="allergen-info">CELERY</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">TUNA TOAST</h3>
-                        <p class="menu-item-description">WITH LEMON & HORSERADISH</p>
+                        <p class="menu-item-description">WITH LEMON & HORSERADISH. Toasted milk bread, filled with Tuna tartare & horseradish cream. Served with lemon gel, pickled shallot, frisée, radish & mustard frill.</p>
                         <span class="allergen-info">FISH, CEREALS/GLUTEN, MILK (INCL LACTOSE), MUSTARD</span>
                     </div>
                     <p class="menu-item-price">19</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">OYSTER ON THE HALF SHELF</h3>
-                        <p class="menu-item-description">6 PIECES WITH SICILIAN LEMON & MIGNONETTE</p>
+                        <p class="menu-item-description">6 PIECES WITH SICILIAN LEMON & MIGNONETTE. Carlingford oysters on a half shelf with vermouth mignonette and gremolata, finished with lemon ledges and served on crushed ice.</p>
                         <span class="allergen-info">MOLLUSCS</span>
                     </div>
                     <p class="menu-item-price">28</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SCOTCH OLIVES</h3>
-                        <p class="menu-item-description">WITH LAMB SAUSAGE, HARISSA & HALBOURNE BLUE</p>
+                        <p class="menu-item-description">WITH LAMB SAUSAGE, HARISSA & HALBOURNE BLUE. Halbourne stuffed inside Gordal Olives wrapped in Lamb sausage, breaded with panko and fried. Served with Harissa Mayo garnished with fried mint leaves</p>
                         <span class="allergen-info">MILK (INCL LACTOSE), EGGS</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">FLATBREAD</h3>
-                        <p class="menu-item-description">WITH DELICA SQUASH, MOZZARELLA & HOT HONEY</p>
+                        <p class="menu-item-description">WITH DELICA SQUASH, MOZZARELLA & HOT HONEY. Flatbread baked with crème fraiche and mozzarella served with confit delica squash and finished with whipped ricotta, picked thyme, fried pumpkin seeds and a drizzle of hot honey.</p>
                         <span class="allergen-info">CEREALS/GLUTEN, MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">12</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">KALETTES</h3>
-                        <p class="menu-item-description">FRIED WITH HONEY MUSTARD & DRIED CRANBERRIES</p>
+                        <p class="menu-item-description">FRIED WITH HONEY MUSTARD & DRIED CRANBERRIES. Rice flour tempura kalettes with honey mustard and dried cranberries.</p>
                         <span class="allergen-info">MUSTARD, EGGS</span>
                     </div>
                     <p class="menu-item-price">14</p>
@@ -152,42 +164,42 @@
 
             <section>
                 <h2 class="section-title">VEGETABLES</h2>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">WALDORF SALAD</h3>
-                        <p class="menu-item-description">WITH BLACK TRUFFLE, WALNUTS & RED CURRANTS</p>
+                        <p class="menu-item-description">WITH BLACK TRUFFLE, WALNUTS & RED CURRANTS. Waldorf salad and Walford dressing piped into filo pastry and dipped in parsley breadcrumbs, then fried finished with truffle paste and fresh sliced black truffle</p>
                         <span class="allergen-info">NUTS, MILK (INCL LACTOSE), EGGS</span>
                     </div>
                     <p class="menu-item-price">15</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">GEM SALAD</h3>
-                        <p class="menu-item-description">WITH GREEN GODDESS, RADISH & DILL</p>
+                        <p class="menu-item-description">WITH GREEN GODDESS, RADISH & DILL. Red gem lettuce leaves served with shaved raw radish, lemon vinaigrette & Green Goddess dressing. Finished with chopped chives & lemon zest.</p>
                         <span class="allergen-info">MILK (INCL LACTOSE), EGGS, MUSTARD</span>
                     </div>
                     <p class="menu-item-price">12</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">RED SALAD</h3>
-                        <p class="menu-item-description">WITH BEETROOT, WINTER GREENS & EDMOND TEW SPREAD</p>
+                        <p class="menu-item-description">WITH BEETROOT, WINTER GREENS & EDMOND TEW SPREAD. Red leaf salad with beetroot, winter greens and Edmond tew spread</p>
                         <span class="allergen-info">MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">15</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CHARRED HISPI CABBAGE</h3>
-                        <p class="menu-item-description">WITH PUMPKIN SEED BUTTER, SQUASH PUREE, NUTS & SEEDS</p>
+                        <p class="menu-item-description">WITH PUMPKIN SEED BUTTER, SQUASH PUREE, NUTS & SEEDS. Purple Hispi Cabbage charred dressed with pumpkin seed butter topped with a nut and seed mix and served with delica squash pure</p>
                         <span class="allergen-info">NUTS</span>
                     </div>
                     <p class="menu-item-price">29</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">MUSHROOM RISOTTO</h3>
-                        <p class="menu-item-description">WITH UK SOURCED MUSHROOMS & MINT</p>
+                        <p class="menu-item-description">WITH UK SOURCED MUSHROOMS & MINT. Carnaroli rice risotto with maitake mushrooms, porcini and black trumpet. Mushrooms</p>
                         <span class="allergen-info">MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">32</p>
@@ -196,50 +208,50 @@
 
             <section>
                 <h2 class="section-title">FISH</h2>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">OYSTER ROCKEFELLER</h3>
-                        <p class="menu-item-description">3 PIECES GRILLED WITH BASIL, LARDONS & PERNOD</p>
+                        <p class="menu-item-description">3 PIECES GRILLED WITH BASIL, LARDONS & PERNOD. Carlingford Oysters topped with parmesan, bacon & breadcrumbs, then grilled on the hearth.</p>
                         <span class="allergen-info">MOLLUSCS, MILK (INCL LACTOSE), EGGS</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SEABASS CRUDO</h3>
-                        <p class="menu-item-description">WITH GREEN CURRY & PUFFED TAPIOCA</p>
+                        <p class="menu-item-description">WITH GREEN CURRY & PUFFED TAPIOCA. Seabass crudo served on a tapioca crisp dressed with green curry sauce, coriander oil and finger lime and garnished with red and green shiso leaves as well as Thai basil</p>
                         <span class="allergen-info">FISH</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">GRILLED ORKNEY SCALLOP</h3>
-                        <p class="menu-item-description">WITH DULCE, ROE OIL & SMOKED SABAYON</p>
+                        <p class="menu-item-description">WITH DULCE, ROE OIL & SMOKED SABAYON. Orkney Scallop shucked fresh and grilled on the coals, served with roe oil and a smoked sabayon finished with smoked dulce powder</p>
                         <span class="allergen-info">MOLLUSCS, EGGS</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SCOTTISH MUSSELS</h3>
-                        <p class="menu-item-description">WITH CALABRIAN CHILI SOFFRITO & GRILLED SOURDOUGH</p>
+                        <p class="menu-item-description">WITH CALABRIAN CHILI SOFFRITO & GRILLED SOURDOUGH. Scottish mussels with fresh Calabrian chilli and anchovies, shallot, fennel and celery soffrito finished with sourdough bread and chives brunoise and Calabrian chilli spread</p>
                         <span class="allergen-info">MOLLUSCS, FISH, CEREALS/GLUTEN</span>
                     </div>
                     <p class="menu-item-price">18</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">LOBSTER PAPPARDELLE</h3>
-                        <p class="menu-item-description">WITH CHIVES, LEMON & BLACK PEPPER</p>
+                        <p class="menu-item-description">WITH CHIVES, LEMON & BLACK PEPPER. Pappardelle with a Butter Emulsion, Lobster finished Lemongrass and Black Pepper.</p>
                         <span class="allergen-info">CRUSTACEANS, EGGS, MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">38</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SEARED ATLANTIC COD</h3>
-                        <p class="menu-item-description">WITH CELERIAC CHOWDER, FRISEE & HERBS</p>
+                        <p class="menu-item-description">WITH CELERIAC CHOWDER, FRISEE & HERBS. Seared Atlantic cod with fumet blanc, celeriac puree and blanched celeries. Finished with picked watercress, chives, celery and parsley.</p>
                         <span class="allergen-info">FISH, MILK (INCL LACTOSE), CELERY</span>
                     </div>
                     <p class="menu-item-price">46</p>
@@ -248,50 +260,50 @@
 
             <section>
                 <h2 class="section-title">MEAT & GAME</h2>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">GRILLED QUAIL</h3>
-                        <p class="menu-item-description">WITH THREE PEPPER SPICE & LEMON</p>
+                        <p class="menu-item-description">WITH THREE PEPPER SPICE & LEMON. Spiced Quail with lemon puree & marigold leaf.</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">BEEF CARPACCIO</h3>
-                        <p class="menu-item-description">THINLY SLICED WITH PINE NUT CONFIT & CAPERS</p>
+                        <p class="menu-item-description">THINLY SLICED WITH PINE NUT CONFIT & CAPERS. Beef Carpaccio, served with Caper & parmesan cream, pine nut confit, pickled shallots & caper berries.</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">24</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SQUAB</h3>
-                        <p class="menu-item-description">WITH CASTELFRANCO, BRAISED FENNEL & BLOOD ORANGE</p>
+                        <p class="menu-item-description">WITH CASTELFRANCO, BRAISED FENNEL & BLOOD ORANGE. Confit Squab leg and seared Squab breast and served with braised fennel, orange puree, fennel puree and Squab sauce. Finished with Castelfranco, pink radicchio, orange segments and fennel pollen</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">24</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SHERWOOD FOREST VENISON</h3>
-                        <p class="menu-item-description">WITH CHESTNUTS, CHARED ONIONS & BLACK TRUMPET MUSHROOMS</p>
+                        <p class="menu-item-description">WITH CHESTNUTS, CHARED ONIONS & BLACK TRUMPET MUSHROOMS. Black trumpet crumbed Venison served with chestnut puree, charred pickled onion, black trumpet mushrooms and sauce civet. Fresh chestnut shaved over the top to garnish.</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">48</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CORN FED CHICKEN</h3>
-                        <p class="menu-item-description">BREAST WITH LETTUCE & POTATO PUREE</p>
+                        <p class="menu-item-description">BREAST WITH LETTUCE & POTATO PUREE. Chicken Breast with confit potatoes and gem lettuce, dressed in buttermilk and served with lettuce puree and a sherry cream sauce.</p>
                         <span class="allergen-info">MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">32</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">BRITISH BEEF FILET</h3>
-                        <p class="menu-item-description">DRY-AGED WITH TURNIP & KALES</p>
+                        <p class="menu-item-description">DRY-AGED WITH TURNIP & KALES. Dry-aged beef fillet with turnip puree, cooked turnip, fried purple and green kale and bordelaise sauce. Finished with spikey kale tops and black pepper.</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">56</p>
@@ -300,34 +312,34 @@
 
             <section>
                 <h2 class="section-title">FEASTS FROM THE HEARTH</h2>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">TOMAHAWK STEAK</h3>
-                        <p class="menu-item-description">FIRE-ROASTED BROWN BUTTER MASH & BORDELAISE</p>
+                        <p class="menu-item-description">FIRE-ROASTED BROWN BUTTER MASH & BORDELAISE. 45 day aged Tomahawk steak (950g av), served with Jersey Royals & Heritage tomatoes dressed in Green Goddess Dressing, creamed chard and classic chimichurri on the side.</p>
                         <span class="allergen-info">MILK (INCL LACTOSE), EGGS</span>
                     </div>
                     <p class="menu-item-price">150</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">WHOLE GRILLED SEA BASS</h3>
-                        <p class="menu-item-description">WITH PUNTARELLE, CITRUS SALSA & BUTTER GLAZED NEW POTATOES</p>
+                        <p class="menu-item-description">WITH PUNTARELLE, CITRUS SALSA & BUTTER GLAZED NEW POTATOES. Grilled on the heart sea bass with agrodolce, Puntarelle, Citrus Salsa and Butter Glazed New Potatoes on the side.</p>
                         <span class="allergen-info">FISH</span>
                     </div>
                     <p class="menu-item-price">120</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">WILD HAMPSHIRE PHEASANT</h3>
-                        <p class="menu-item-description">SMOKED ABOVE THE FIRE WITH OFFAL TART & BLACK TRUFFLE</p>
+                        <p class="menu-item-description">SMOKED ABOVE THE FIRE WITH OFFAL TART & BLACK TRUFFLE. Grilled Guinea Fowl with Baby Corn, Chimichurri, Spinach & Sweetcorn Custard</p>
                         <span class="allergen-info">EGGS, CEREALS/GLUTEN</span>
                     </div>
                     <p class="menu-item-price">85</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">STUFFED SQUASH</h3>
-                        <p class="menu-item-description">ROASTED WITH SAGE STUFFING, WINTER GREENS & GRAPE SALAD</p>
+                        <p class="menu-item-description">ROASTED WITH SAGE STUFFING, WINTER GREENS & GRAPE SALAD. Stuffed Delica Squash served with braised collard greens, wild rice and a roasted vegetable sauce</p>
                         <span class="allergen-info">EGGS, MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">65</p>
@@ -336,42 +348,42 @@
 
             <section>
                 <h2 class="section-title">SIDES</h2>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">SIDE SALAD</h3>
-                        <p class="menu-item-description">WITH RADISH & DILL</p>
+                        <p class="menu-item-description">WITH RADISH & DILL. Red gem lettuce leaves served with shaved raw radish, lemon vinaigrette and dill</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">9</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">KALES</h3>
-                        <p class="menu-item-description">SAUTED WITH LEMON VINAIGRETTE</p>
-                         <span class="allergen-info">None listed</span>
+                        <p class="menu-item-description">SAUTED WITH LEMON VINAIGRETTE. Green and purple fried kale leaves with sauteed kale and garlic</p>
+                        <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">7</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">TWICE BAKED PΟΤΑΤΟ</h3>
-                        <p class="menu-item-description">WITH RACLETTE & BLACK TRUFFLES</p>
+                        <p class="menu-item-description">WITH RACLETTE & BLACK TRUFFLES. Twice baked potato stuffed with truffle mash and finished with fried black truffle and cheese puma, garnished with black truffle and chives</p>
                         <span class="allergen-info">MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">19</p>
                 </div>
-                 <div class="menu-item">
+                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">BROCCOLINI</h3>
-                        <p class="menu-item-description">GRILLED WITH SESAME & CHILI CRUNCH</p>
+                        <p class="menu-item-description">GRILLED WITH SESAME & CHILI CRUNCH. Charred Broccolini dressed in lemon vinaigrette, chilli oil & sesame crumble</p>
                         <span class="allergen-info">SESAME SEEDS</span>
                     </div>
                     <p class="menu-item-price">10</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CHIPS</h3>
-                        <p class="menu-item-description">ROSEMARY & LEMON</p>
+                        <p class="menu-item-description">ROSEMARY & LEMON. Rosemary Chips, Served with Ketchup and Pommery mustard mayo</p>
                         <span class="allergen-info">None listed</span>
                     </div>
                     <p class="menu-item-price">9</p>
@@ -380,7 +392,7 @@
 
             <section>
                 <h2 class="section-title">DESSERT</h2>
-                 <div class="menu-item">
+                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">STRAWBERRY</h3>
                         <p class="menu-item-description">HIBISCUS SORBET, PUFFED RICE & BERRY COMPOTE</p>
@@ -388,31 +400,31 @@
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                          <h3 class="menu-item-name">APPLE</h3>
-                        <p class="menu-item-description">SORBET WITH SHISO, YUZU & WHITE CHOCOLATE MOUSSE</p>
+                        <p class="menu-item-description">SORBET WITH SHISO, YUZU & WHITE CHOCOLATE MOUSSE. Shiso & yogurt granita mixed with white chocolate soil on a bed of apple shiso soup. On top we have a crystalised shiso leaf. Apple sorbet on the bottom white chocolate yoghurt mousse</p>
                         <span class="allergen-info">MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">RASPBERRY & PISTACHIO</h3>
-                        <p class="menu-item-description">BAKED PASTRY WITH RASPBERRY & PISTACHIO ICE CREAM</p>
+                        <p class="menu-item-description">BAKED PASTRY WITH RASPBERRY & PISTACHIO ICE CREAM. Pistachio Mille Feuille with pistachio mousseline and raspberry pate de fruit. Served with pistachio ice cream on the side.</p>
                         <span class="allergen-info">NUTS, MILK (INCL LACTOSE), EGGS</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CHOCOLATE</h3>
-                        <p class="menu-item-description">SALTED CARAMEL, BANANA BRÛLÉE & BANANA CHOCOLATE ICE CREAM</p>
+                        <p class="menu-item-description">SALTED CARAMEL, BANANA BRÛLÉE & BANANA CHOCOLATE ICE CREAM. A banana chocolate cake with banana Cremieux, banana caramel, banana crumble and banana tuile on top. Served with banana & Chocolate ice cream.</p>
                         <span class="allergen-info">MILK (INCL LACTOSE), EGGS</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CHERRY</h3>
                         <p class="menu-item-description">BAKED CHERRY & ALMOND CUSTARD WITH TONKA BEAN ICE CREAM</p>
@@ -420,16 +432,33 @@
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
                         <h3 class="menu-item-name">CHEESE</h3>
-                        <p class="menu-item-description">BRIGHTWELL ASH, BERKSWELL, ST. JAMES, BEAUVALE WITH SEASONAL ACCOMPANIMENTS</p>
+                        <p class="menu-item-description">BRIGHTWELL ASH, BERKSWELL, ST. JAMES, BEAUVALE WITH SEASONAL ACCOMPANIMENTS. Westcomb Cheddar	Unpasteurised, Cows milk East Somerset, England, Stichelton Unpasteurised, Cows milk Nottinghamshire, England, St Helena Unpasteurised, Cows milk Suffolk, England, Ragstone Pasteurized Goats milk Herefordshire, England. Animal rennet. Expressing the full character of Westcombe's terroir, our Cheddar has a deep brothy flavour and mellow lactic tang. Notes of hazelnut, caramel and citrus come through on the long, smooth breakdown. Westcombe Cheddar is aged A juicy acidity and toasty, biscuity notes toward the rind are the hallmarks of Stichelton, though the range of flavours this soft, creamy raw milk blue can exhibit is extraordinary: from crisp green apple right through to beef stock umami Washed-rind, semi-firm. Warm, milky, round flavours are accentuated by a dense and silky texture. The flavour is surprisingly rich and long for such a delicate and relatively youthful cheese A soft, matured goat's cheese with a densely fudgy texture and lactic, lemony flavours reminiscent of crème fraiche. This cheese intentionally has a thin mould rind. Because of this, wild moulds- spots of blue, green and grey moulds, often from between 12 to 18 months develop on the surface during maturation. They are perfectly safe to eat and do not negatively affect the flavour of the cheese.  ACCOMPANIMENTS: Truffle honey jelly & gooseberry chutney BREAD: Parmesan Sable Breton (cereals/gluten, eggs, milk), currant bread & sourdough crackers (sesame seeds)</p>
                         <span class="allergen-info">MILK (INCL LACTOSE)</span>
                     </div>
                     <p class="menu-item-price">18</p>
                 </div>
             </section>
+             <section>
+                <h2 class="section-title">BISCOTTI</h2>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">BISCOTTI</h3>
+                        <p class="menu-item-description"> Biscotti, to be served with our coffees and teas. Served at "7 o'clock," opposite to the spoon. Cardamom, Sour Cherry and Pistachio Almond, roasted hazelnut and orange (GLUTEN FREE OPTION) Sugar, salt, lemon zest, vanilla and cardamom are mixed together, then melted butter and vegetable oil are added. Cooked in the oven at 65C until crispy.</p>
+                        <span class="allergen-info">CEREALS/GLUTEN, EGGS, NUTS, MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">Included</p>
+                </div>
+            </section>
         </main>
     </div>
+
+    <script>
+        function toggleDescription(menuItem) {
+            menuItem.classList.toggle('expanded');
+        }
+    </script>
 </body>
 </html>
