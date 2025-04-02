@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -143,13 +144,13 @@
             <h1 class="heading-primary">COCKTAIL MENU</h1>
             <p class="text-gray-600 text-center">Winter Season 2024</p>
             <div class="menu-navigation">
-                <a href="index.html">Food Menu</a>
-                <a href="beers.html">Beer & Cider Menu</a>
-                <a href="#" class="current">Cocktail Menu</a>
-                <a href="wines.html">Wine Menu</a>
+                <a href="index.html" class="ajax-link">Food Menu</a>
+                <a href="beers.html" class="ajax-link">Beer & Cider Menu</a>
+                <a href="cocktails.html" class="ajax-link current">Cocktail Menu</a>
+                <a href="wines.html" class="ajax-link">Wine Menu</a>
             </div>
         </header>
-        <main>
+        <main id="menu-content">
             <section>
                 <h2 class="section-title">Classic Cocktails</h2>
                 <div class="menu-item" onclick="toggleDescription(this)">
@@ -633,7 +634,7 @@
                     <p class="menu-item-price">£17</p>
                 </div>
             </section>
-        </main>
+        </main> <!-- End #menu-content -->
          <footer class="text-center mt-8 md:mt-12 text-sm text-gray-500">
             Please ask staff about allergens or for further details. Prices in GBP.
         </footer>
@@ -652,6 +653,72 @@
             // Toggle the current item
             menuItem.classList.toggle('expanded');
         }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Function to load content via AJAX
+            function loadMenuContent(url, targetLink) {
+                // Add a space and the ID selector to load only that part of the page
+                $('#menu-content').load(url + ' #menu-content > *', function(response, status, xhr) {
+                    if (status == "error") {
+                        console.error("Error loading page: " + xhr.status + " " + xhr.statusText);
+                        // Optionally display an error message to the user
+                        $('#menu-content').html("<p>Sorry, could not load the menu content.</p>");
+                    } else {
+                        // Update the 'current' class on navigation links
+                        $('.menu-navigation a').removeClass('current');
+                         if (targetLink) { // Check if targetLink exists
+                           $(targetLink).addClass('current');
+                        }
+
+                        // Update browser history (optional but good for UX)
+                         // Check if pushState is supported and the URL is different
+                        if (history.pushState && window.location.href !== url) {
+                           history.pushState({ path: url }, '', url);
+                        }
+
+                         // Re-attach any dynamic event handlers if necessary
+                         // Example: If toggleDescription was dynamically added, re-run setup
+                         // (In this case, toggleDescription is global, so it should still work)
+                    }
+                });
+            }
+
+            // Handle clicks on navigation links
+            // Use event delegation for potentially dynamically loaded links
+             $(document).on('click', '.ajax-link', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                const url = $(this).attr('href');
+                 // Don't reload if already on the current page
+                if (url !== window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) && url !== window.location.href) {
+                   loadMenuContent(url, this);
+                }
+            });
+
+             // Handle back/forward browser navigation
+             $(window).on('popstate', function(event) {
+                 // Check if the state object has our path (it might be null on initial load/hash changes)
+                 let targetUrl = location.href; // Default to current location
+                 if (event.originalEvent.state && event.originalEvent.state.path) {
+                     targetUrl = event.originalEvent.state.path;
+                 }
+
+                // Find the corresponding link to set the 'current' class
+                const link = $('.menu-navigation a[href="' + targetUrl.substring(targetUrl.lastIndexOf('/') + 1) + '"]');
+                loadMenuContent(targetUrl, link.length ? link[0] : null);
+            });
+
+            // Initial setup: Ensure the correct link is marked as current on first load
+            const currentPath = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+             $('.menu-navigation a').removeClass('current');
+             $('.menu-navigation a[href="' + currentPath + '"]').addClass('current');
+             // Store the initial page state
+             if (history.replaceState) {
+                history.replaceState({ path: window.location.href }, '', window.location.href);
+             }
+
+        });
     </script>
 </body>
 </html>

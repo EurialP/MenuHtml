@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -146,6 +147,13 @@
             color: #6b7280;
             margin-left: 8px;
         }
+        .wine-variety {
+            font-size: 0.85rem; /* Slightly smaller */
+            font-weight: 400;
+            color: #4b5563; /* Slightly darker gray */
+            margin-left: 8px;
+            font-style: italic; /* Add italic style */
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -154,21 +162,20 @@
             <h1 class="heading-primary">WINE MENU</h1>
             <p class="text-gray-600 text-center">Wines By The Glass (Winter 2024)</p>
             <div class="menu-navigation">
-                <a href="index.html">Food Menu</a>
-                <a href="beers.html">Beer & Cider Menu</a>
-                <a href="cocktails.html">Cocktail Menu</a>
-                <a href="#" class="current">Wine Menu</a>
+                <a href="index.html" class="ajax-link">Food Menu</a>
+                <a href="beers.html" class="ajax-link">Beer & Cider Menu</a>
+                <a href="cocktails.html" class="ajax-link">Cocktail Menu</a>
+                <a href="wines.html" class="ajax-link current">Wine Menu</a>
             </div>
         </header>
-        <main>
+        <main id="menu-content">
             <section>
                 <h2 class="section-title">Sparkling</h2>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Pelegrim <span class="wine-sub-name">Westwell NV</span></h3>
+                        <h3 class="menu-item-name">Pelegrim <span class="wine-sub-name">Westwell NV</span> <span class="wine-variety">(Pinot Noir, Chardonnay, Pinot Meunier)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Kent, England</p>
-                            <p><strong>Variety:</strong> Pinot Noir, Chardonnay, Pinot Meunier</p>
                             <p><strong>Producer:</strong> Westwell</p>
                             <p><strong>Vintage:</strong> NV</p>
                             <p><strong>Farming:</strong> Low intervention</p>
@@ -180,10 +187,9 @@
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Blanc de Blancs <span class="wine-sub-name">Gusbourne 2019</span></h3>
+                        <h3 class="menu-item-name">Blanc de Blancs <span class="wine-sub-name">Gusbourne 2019</span> <span class="wine-variety">(Chardonnay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Kent, England</p>
-                            <p><strong>Variety:</strong> Chardonnay</p>
                             <p><strong>Producer:</strong> Gusbourne</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -195,10 +201,9 @@
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Fluence Brut Nature <span class="wine-sub-name">Franck Pascal NV</span></h3>
+                        <h3 class="menu-item-name">Fluence Brut Nature <span class="wine-sub-name">Franck Pascal NV</span> <span class="wine-variety">(Chardonnay (31%), Pinot Meunier (69%))</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Champagne, France</p>
-                            <p><strong>Variety:</strong> Chardonnay (31%), Pinot Meunier (69%)</p>
                             <p><strong>Producer:</strong> Franck Pascal</p>
                             <p><strong>Vintage:</strong> NV</p>
                             <p><strong>Farming:</strong> Biodynamic</p>
@@ -210,10 +215,9 @@
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Nos Pas Dans La Craie' Blanc de Blancs <span class="wine-sub-name">Marie Copinet 2019</span></h3>
+                        <h3 class="menu-item-name">'Nos Pas Dans La Craie' Blanc de Blancs <span class="wine-sub-name">Marie Copinet 2019</span> <span class="wine-variety">(Chardonnay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Champagne, France (Cote de Sezanne)</p>
-                            <p><strong>Variety:</strong> Chardonnay</p>
                             <p><strong>Producer:</strong> Marie Copinet</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Sustainable, Certified Organic</p>
@@ -225,10 +229,9 @@
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Grand Cuvee 172ème <span class="wine-sub-name">Krug NV</span></h3>
+                        <h3 class="menu-item-name">Grand Cuvee 172ème <span class="wine-sub-name">Krug NV</span> <span class="wine-variety">(Chardonnay, Pinot Noir, Pinot Meunier)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Champagne, France</p>
-                            <p><strong>Variety:</strong> Chardonnay, Pinot Noir, Pinot Meunier</p>
                             <p><strong>Producer:</strong> Krug</p>
                             <p><strong>Vintage:</strong> NV (Base 2016, oldest 1998)</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -240,10 +243,9 @@
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Dom Perignon 2013</h3>
+                        <h3 class="menu-item-name">Dom Perignon 2013 <span class="wine-variety">(Pinot Noir, Chardonnay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Champagne, France (Hautvillers)</p>
-                            <p><strong>Variety:</strong> Pinot Noir, Chardonnay</p>
                             <p><strong>Producer:</strong> Dom Perignon</p>
                             <p><strong>Vintage:</strong> 2013</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -255,10 +257,9 @@
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Rose <span class="wine-sub-name">Ruinart NV</span></h3>
+                        <h3 class="menu-item-name">Rose <span class="wine-sub-name">Ruinart NV</span> <span class="wine-variety">(Chardonnay, Pinot Noir)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Champagne, France</p>
-                            <p><strong>Variety:</strong> Chardonnay, Pinot Noir</p>
                             <p><strong>Producer:</strong> Ruinart</p>
                             <p><strong>Vintage:</strong> NV</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -268,31 +269,15 @@
                     </div>
                     <p class="menu-item-price">£35</p>
                 </div>
-                 <div class="menu-item" onclick="toggleDescription(this)">
-                    <div>
-                        <h3 class="menu-item-name">Bugey Cerdon Classique <span class="wine-sub-name">Philippe Balivet NV</span></h3>
-                        <div class="menu-item-description">
-                            <p><strong>Region:</strong> Bugey Cerdon, France</p>
-                            <p><strong>Variety:</strong> Gamay</p>
-                            <p><strong>Producer:</strong> Philippe Balivet</p>
-                            <p><strong>Vintage:</strong> NV (Blend 2022/2023)</p>
-                            <p><strong>Farming:</strong> Organic</p>
-                            <p><strong>Tasting Notes:</strong> Lots of red fruit, delicately perfumed, fine bubbles which a fresh and precise. Full of crunch, cherry raspberry and violets.</p>
-                            <p><strong>About:</strong> Sparkling rose made via Ancestral Method (Pet Nat). Off-dry, low alcohol. From steep limestone slopes in the Jura mountains.</p>
-                        </div>
-                    </div>
-                    <p class="menu-item-price">£13</p> <!-- Note: Price from original was 100ML -->
-                </div>
             </section>
 
             <section>
                 <h2 class="section-title">White</h2>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Grüner Veltliner <span class="wine-sub-name">Christina 2023</span></h3>
+                        <h3 class="menu-item-name">Grüner Veltliner <span class="wine-sub-name">Christina 2023</span> <span class="wine-variety">(Grüner Veltliner)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Carnuntum, Austria</p>
-                            <p><strong>Variety:</strong> Grüner Veltliner</p>
                             <p><strong>Producer:</strong> Christina Netzl</p>
                             <p><strong>Vintage:</strong> 2023</p>
                             <p><strong>Farming:</strong> Certified Organic, vegan friendly</p>
@@ -304,10 +289,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">La Pepie Chignin <span class="wine-sub-name">Adrien Berlioz 2023</span></h3>
+                        <h3 class="menu-item-name">La Pepie Chignin <span class="wine-sub-name">Adrien Berlioz 2023</span> <span class="wine-variety">(Jacquere)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Savoie, France (Chignin)</p>
-                            <p><strong>Variety:</strong> Jacquere</p>
                             <p><strong>Producer:</strong> Adrien Berlioz</p>
                             <p><strong>Vintage:</strong> 2023</p>
                             <p><strong>Farming:</strong> Biodynamic</p>
@@ -319,10 +303,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Severna Morava <span class="wine-sub-name">Deuric 2021</span></h3>
+                        <h3 class="menu-item-name">Severna Morava <span class="wine-sub-name">Deuric 2021</span> <span class="wine-variety">(Morava)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Srem, Serbia</p>
-                            <p><strong>Variety:</strong> Morava</p>
                             <p><strong>Producer:</strong> Deuric</p>
                             <p><strong>Vintage:</strong> 2021</p>
                             <p><strong>Farming:</strong> Certified organic</p>
@@ -334,10 +317,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Rheingau' Riesling <span class="wine-sub-name">Eva Fricke 2022</span></h3>
+                        <h3 class="menu-item-name">'Rheingau' Riesling <span class="wine-sub-name">Eva Fricke 2022</span> <span class="wine-variety">(Riesling)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Rheingau, Germany</p>
-                            <p><strong>Variety:</strong> Riesling</p>
                             <p><strong>Producer:</strong> Eva Fricke</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> Certified Organic, Biodynamic Practices</p>
@@ -349,10 +331,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Trinquàmes <span class="wine-sub-name">La Grange Tiphaine 2023</span></h3>
+                        <h3 class="menu-item-name">Trinquàmes <span class="wine-sub-name">La Grange Tiphaine 2023</span> <span class="wine-variety">(Sauvignon Blanc)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Touraine, Loire, France</p>
-                            <p><strong>Variety:</strong> Sauvignon Blanc</p>
                             <p><strong>Producer:</strong> La Grange Tiphaine</p>
                             <p><strong>Vintage:</strong> 2023</p>
                             <p><strong>Farming:</strong> Biodynamic</p>
@@ -364,10 +345,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Calvarino' Soave <span class="wine-sub-name">Pieropan 2015</span></h3>
+                        <h3 class="menu-item-name">'Calvarino' Soave <span class="wine-sub-name">Pieropan 2015</span> <span class="wine-variety">(70% Garganega, 30% Trebbiano)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Soave, Italy</p>
-                            <p><strong>Variety:</strong> 70% Garganega, 30% Trebbiano</p>
                             <p><strong>Producer:</strong> Pieropan</p>
                             <p><strong>Vintage:</strong> 2015</p>
                             <p><strong>Farming:</strong> Practicing organic</p>
@@ -379,10 +359,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Au Quin Château' Macon-Cruzille <span class="wine-sub-name">Vignes du Mayne 2022</span></h3>
+                        <h3 class="menu-item-name">'Au Quin Château' Macon-Cruzille <span class="wine-sub-name">Vignes du Mayne 2022</span> <span class="wine-variety">(Chardonnay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Burgundy, France (Macon-Cruzille)</p>
-                            <p><strong>Variety:</strong> Chardonnay</p>
                             <p><strong>Producer:</strong> Vignes du Mayne</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> Organic certified, biodynamic practices</p>
@@ -394,10 +373,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Central Coast Chardonnay <span class="wine-sub-name">Sandhi 2021</span></h3>
+                        <h3 class="menu-item-name">Central Coast Chardonnay <span class="wine-sub-name">Sandhi 2021</span> <span class="wine-variety">(Chardonnay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> California, USA (Central Coast)</p>
-                            <p><strong>Variety:</strong> Chardonnay</p>
                             <p><strong>Producer:</strong> Sandhi (Rajat Parr & Sashi Moorman)</p>
                             <p><strong>Vintage:</strong> 2021</p>
                             <p><strong>Farming:</strong> Practicing Organic</p>
@@ -409,10 +387,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Leirana' Albariño <span class="wine-sub-name">Forjas del Salnés 2023</span></h3>
+                        <h3 class="menu-item-name">'Leirana' Albariño <span class="wine-sub-name">Forjas del Salnés 2023</span> <span class="wine-variety">(Albariño)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Rias Baixas, Spain (Val do Salnés)</p>
-                            <p><strong>Variety:</strong> Albariño</p>
                             <p><strong>Producer:</strong> Forjas del Salnés</p>
                             <p><strong>Vintage:</strong> 2023</p>
                             <p><strong>Farming:</strong> Organic, practicing biodynamic</p>
@@ -424,10 +401,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Benje' <span class="wine-sub-name">Envínate 2022</span></h3>
+                        <h3 class="menu-item-name">'Benje' <span class="wine-sub-name">Envínate 2022</span> <span class="wine-variety">(Listan Blanco (Palomino))</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Tenerife, Spain (Ycoden-Daute-Isora)</p>
-                            <p><strong>Variety:</strong> Listan Blanco (Palomino)</p>
                             <p><strong>Producer:</strong> Envínate</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> organic</p>
@@ -439,10 +415,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Chassagne-Montrachet 'Les Chenevottes' <span class="wine-sub-name">Thomas Morey 2020</span></h3>
+                        <h3 class="menu-item-name">Chassagne-Montrachet 'Les Chenevottes' <span class="wine-sub-name">Thomas Morey 2020</span> <span class="wine-variety">(Chardonnay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Burgundy, France (Chassagne-Montrachet)</p>
-                            <p><strong>Variety:</strong> Chardonnay</p>
                             <p><strong>Producer:</strong> Thomas Morey</p>
                             <p><strong>Vintage:</strong> 2020</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -458,10 +433,9 @@
                 <h2 class="section-title">Skin-Contact</h2>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Bohem' Friulano <span class="wine-sub-name">Atelier Kramar 2019</span></h3>
+                        <h3 class="menu-item-name">'Bohem' Friulano <span class="wine-sub-name">Atelier Kramar 2019</span> <span class="wine-variety">(Friulano)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Brda, Slovenia</p>
-                            <p><strong>Variety:</strong> Friulano</p>
                             <p><strong>Producer:</strong> Atelier Kramar</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Certified Organic, Biodynamic Practices</p>
@@ -477,10 +451,9 @@
                 <h2 class="section-title">Rose</h2>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">L' Écorce Buissonnière <span class="wine-sub-name">Valérie Courrèges 2023</span></h3>
+                        <h3 class="menu-item-name">L' Écorce Buissonnière <span class="wine-sub-name">Valérie Courrèges 2023</span> <span class="wine-variety">(Grenache, Vermentino, Syrah)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Provence, France</p>
-                            <p><strong>Variety:</strong> Grenache, Vermentino, Syrah</p>
                             <p><strong>Producer:</strong> Valérie Courrèges</p>
                             <p><strong>Vintage:</strong> 2023</p>
                             <p><strong>Farming:</strong> Biodynamic</p>
@@ -492,10 +465,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Cru Classé <span class="wine-sub-name">Chateau Galoupet 2023</span></h3>
+                        <h3 class="menu-item-name">Cru Classé <span class="wine-sub-name">Chateau Galoupet 2023</span> <span class="wine-variety">(Grenache, Tibouren, Syrah, Vermentino, Cinsault, Semillon)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Provence, France</p>
-                            <p><strong>Variety:</strong> Grenache, Tibouren, Syrah, Vermentino, Cinsault, Semillon</p>
                             <p><strong>Producer:</strong> Chateau Galoupet</p>
                             <p><strong>Vintage:</strong> 2023</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -511,10 +483,9 @@
                 <h2 class="section-title">Red</h2>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Nomad Collab <span class="wine-sub-name">Foradori 2022</span></h3>
+                        <h3 class="menu-item-name">Nomad Collab <span class="wine-sub-name">Foradori 2022</span> <span class="wine-variety">(Vernatsch (Schiava))</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Trentino, Italy</p>
-                            <p><strong>Variety:</strong> Vernatsch (Schiava)</p>
                             <p><strong>Producer:</strong> Foradori</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> Biodynamic, Demeter certified</p>
@@ -526,10 +497,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Red <span class="wine-sub-name">Kamptal Kollektiv 2021</span></h3>
+                        <h3 class="menu-item-name">Red <span class="wine-sub-name">Kamptal Kollektiv 2021</span> <span class="wine-variety">(Zweigelt, St Laurent, Blaufrankisch)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Kamptal, Austria</p>
-                            <p><strong>Variety:</strong> Zweigelt, St Laurent, Blaufrankisch</p>
                             <p><strong>Producer:</strong> Kamptal Kollektiv</p>
                             <p><strong>Vintage:</strong> 2021</p>
                             <p><strong>Farming:</strong> Practising Organic</p>
@@ -541,10 +511,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">CDT Rouge <span class="wine-sub-name">Champ des Treilles 2020</span></h3>
+                        <h3 class="menu-item-name">CDT Rouge <span class="wine-sub-name">Champ des Treilles 2020</span> <span class="wine-variety">(Merlot 50%, Cabernet Franc 27%, Cabernet Sauvignon 15%, Petit Verdot 8%)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Bordeaux, France (Sainte-Foy)</p>
-                            <p><strong>Variety:</strong> Merlot 50%, Cabernet Franc 27%, Cabernet Sauvignon 15%, Petit Verdot 8%</p>
                             <p><strong>Producer:</strong> Champ des Treilles</p>
                             <p><strong>Vintage:</strong> 2020</p>
                             <p><strong>Farming:</strong> Certified Organic, Practising Biodynamic</p>
@@ -556,10 +525,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Pommard 'Les Combes' <span class="wine-sub-name">Buisson-Battault 2020</span></h3>
+                        <h3 class="menu-item-name">Pommard 'Les Combes' <span class="wine-sub-name">Buisson-Battault 2020</span> <span class="wine-variety">(Pinot Noir)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Burgundy, France (Pommard)</p>
-                            <p><strong>Variety:</strong> Pinot Noir</p>
                             <p><strong>Producer:</strong> Buisson-Battault</p>
                             <p><strong>Vintage:</strong> 2020</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -571,10 +539,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Beaujolais Village <span class="wine-sub-name">Christophe Pacalet 2022</span></h3>
+                        <h3 class="menu-item-name">Beaujolais Village <span class="wine-sub-name">Christophe Pacalet 2022</span> <span class="wine-variety">(Gamay)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Beaujolais, France</p>
-                            <p><strong>Variety:</strong> Gamay</p>
                             <p><strong>Producer:</strong> Christophe Pacalet</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> Organics</p>
@@ -586,10 +553,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">El Mentridano <span class="wine-sub-name">Agricola Mentridana 2022</span></h3>
+                        <h3 class="menu-item-name">El Mentridano <span class="wine-sub-name">Agricola Mentridana 2022</span> <span class="wine-variety">(Grenache)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Mentrida, Spain</p>
-                            <p><strong>Variety:</strong> Grenache</p>
                             <p><strong>Producer:</strong> Agricola Mentridana (Curro Barreño)</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> Practicing biodynamic</p>
@@ -601,10 +567,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Barbera d'Alba <span class="wine-sub-name">Giacomo Fenocchio 2022</span></h3>
+                        <h3 class="menu-item-name">Barbera d'Alba <span class="wine-sub-name">Giacomo Fenocchio 2022</span> <span class="wine-variety">(Barbera)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Piedmont, Italy (Alba)</p>
-                            <p><strong>Variety:</strong> Barbera</p>
                             <p><strong>Producer:</strong> Giacomo Fenocchio</p>
                             <p><strong>Vintage:</strong> 2022</p>
                             <p><strong>Farming:</strong> Organic not certified</p>
@@ -616,10 +581,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Quintessence de Chateau des Gravieres, Margaux 2018</h3>
+                        <h3 class="menu-item-name">Quintessence de Chateau des Gravieres, Margaux 2018 <span class="wine-variety">(Cabernet Sauvignon, Petit Verdot, Merlot, Malbec)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Margaux, Bordeaux, France</p>
-                            <p><strong>Variety:</strong> Cabernet Sauvignon, Petit Verdot, Merlot, Malbec</p>
                             <p><strong>Producer:</strong> Chateau des Gravieres</p>
                             <p><strong>Vintage:</strong> 2018</p>
                             <p><strong>Farming:</strong> Organic, practicing Biodynamic</p>
@@ -631,10 +595,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Merlot <span class="wine-sub-name">Colete 2019</span></h3>
+                        <h3 class="menu-item-name">Merlot <span class="wine-sub-name">Colete 2019</span> <span class="wine-variety">(Merlot)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Napa, California, USA (Coombsville)</p>
-                            <p><strong>Variety:</strong> Merlot</p>
                             <p><strong>Producer:</strong> Colete (Rajat Parr & Marie Vayron Personnet)</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -646,10 +609,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Montepulciano d'Abruzzo <span class="wine-sub-name">Amorotti 2019</span></h3>
+                        <h3 class="menu-item-name">Montepulciano d'Abruzzo <span class="wine-sub-name">Amorotti 2019</span> <span class="wine-variety">(Montepulciano)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Abruzzo, Italy</p>
-                            <p><strong>Variety:</strong> Montepulciano</p>
                             <p><strong>Producer:</strong> Amorotti</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Certified Organic since 2006</p>
@@ -661,10 +623,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Gess' Valtellina Superiore <span class="wine-sub-name">Dirupi 2017</span></h3>
+                        <h3 class="menu-item-name">'Gess' Valtellina Superiore <span class="wine-sub-name">Dirupi 2017</span> <span class="wine-variety">(Chiavennasca (Nebbiolo))</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Valtellina, Lombardy, Italy</p>
-                            <p><strong>Variety:</strong> Chiavennasca (Nebbiolo)</p>
                             <p><strong>Producer:</strong> Dirupi</p>
                             <p><strong>Vintage:</strong> 2017</p>
                             <p><strong>Farming:</strong> Certified Organic since 2006</p>
@@ -676,10 +637,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'Paje' Barbaresco <span class="wine-sub-name">Roagna 2014</span></h3>
+                        <h3 class="menu-item-name">'Paje' Barbaresco <span class="wine-sub-name">Roagna 2014</span> <span class="wine-variety">(Nebbiolo)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Barbaresco, Piedmont, Italy</p>
-                            <p><strong>Variety:</strong> Nebbiolo</p>
                             <p><strong>Producer:</strong> Roagna</p>
                             <p><strong>Vintage:</strong> 2014</p>
                             <p><strong>Farming:</strong> Practising organic</p>
@@ -695,10 +655,9 @@
                 <h2 class="section-title">Sweet</h2>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Cuvee Kattalin Jurancon Moelleux <span class="wine-sub-name">Domaine de Souch 2018</span></h3>
+                        <h3 class="menu-item-name">Cuvee Kattalin Jurancon Moelleux <span class="wine-sub-name">Domaine de Souch 2018</span> <span class="wine-variety">(Petit Manseng / Gros Manseng)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Jurancon, South West France</p>
-                            <p><strong>Variety:</strong> Petit Manseng / Gros Manseng</p>
                             <p><strong>Producer:</strong> Domaine de Souch</p>
                             <p><strong>Vintage:</strong> 2018</p>
                             <p><strong>Farming:</strong> Biodynamic</p>
@@ -710,10 +669,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Wehlener Sonnenuhr Auslese Riesling <span class="wine-sub-name">JJ Prüm 2018</span></h3>
+                        <h3 class="menu-item-name">Wehlener Sonnenuhr Auslese Riesling <span class="wine-sub-name">JJ Prüm 2018</span> <span class="wine-variety">(Riesling)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Mosel, Germany</p>
-                            <p><strong>Variety:</strong> Riesling</p>
                             <p><strong>Producer:</strong> JJ Prüm</p>
                             <p><strong>Vintage:</strong> 2018</p>
                             <p><strong>Farming:</strong> N/A (Assumed conventional)</p>
@@ -725,10 +683,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Dolce <span class="wine-sub-name">Szolo 2021</span></h3>
+                        <h3 class="menu-item-name">Dolce <span class="wine-sub-name">Szolo 2021</span> <span class="wine-variety">(Furmint, Harslevelu)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Tokaj, Hungary</p>
-                            <p><strong>Variety:</strong> Furmint, Harslevelu</p>
                             <p><strong>Producer:</strong> Szolo Winery</p>
                             <p><strong>Vintage:</strong> 2021</p>
                             <p><strong>Farming:</strong> Certified Biodynamic since 2020</p>
@@ -740,10 +697,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Sauternes <span class="wine-sub-name">Château d'Yquem 1997</span></h3>
+                        <h3 class="menu-item-name">Sauternes <span class="wine-sub-name">Château d'Yquem 1997</span> <span class="wine-variety">(Sauvignon Blanc / Semillon)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Sauternes, Bordeaux, France</p>
-                            <p><strong>Variety:</strong> Sauvignon Blanc / Semillon</p>
                             <p><strong>Producer:</strong> Chateau d'Yquem</p>
                             <p><strong>Vintage:</strong> 1997</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -755,10 +711,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Sauternes <span class="wine-sub-name">Château d'Yquem 2019</span></h3>
+                        <h3 class="menu-item-name">Sauternes <span class="wine-sub-name">Château d'Yquem 2019</span> <span class="wine-variety">(Sauvignon Blanc / Semillon (45% SB))</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Sauternes, Bordeaux, France</p>
-                            <p><strong>Variety:</strong> Sauvignon Blanc / Semillon (45% SB)</p>
                             <p><strong>Producer:</strong> Chateau d'Yquem</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -770,10 +725,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Sauternes <span class="wine-sub-name">Château d'Yquem 2020</span></h3>
+                        <h3 class="menu-item-name">Sauternes <span class="wine-sub-name">Château d'Yquem 2020</span> <span class="wine-variety">(Sauvignon Blanc / Semillon)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Sauternes, Bordeaux, France</p>
-                            <p><strong>Variety:</strong> Sauvignon Blanc / Semillon</p>
                             <p><strong>Producer:</strong> Chateau d'Yquem</p>
                             <p><strong>Vintage:</strong> 2020</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -785,10 +739,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Passito Rosso <span class="wine-sub-name">Feudo Montoni NV</span></h3>
+                        <h3 class="menu-item-name">Passito Rosso <span class="wine-sub-name">Feudo Montoni NV</span> <span class="wine-variety">(Nero d'Avola/Perricone)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Sicily, Italy</p>
-                            <p><strong>Variety:</strong> Nero d'Avola/Perricone</p>
                             <p><strong>Producer:</strong> Feudo Montoni</p>
                             <p><strong>Vintage:</strong> NV</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -798,16 +751,29 @@
                     </div>
                     <p class="menu-item-price">£20</p> <!-- Note: Price from original was 100ML -->
                 </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Bugey Cerdon Classique <span class="wine-sub-name">Philippe Balivet NV</span> <span class="wine-variety">(Gamay)</span></h3>
+                        <div class="menu-item-description">
+                            <p><strong>Region:</strong> Bugey Cerdon, France</p>
+                            <p><strong>Producer:</strong> Philippe Balivet</p>
+                            <p><strong>Vintage:</strong> NV</p>
+                            <p><strong>Farming:</strong> Organic</p>
+                            <p><strong>Tasting Notes:</strong> Lots of red fruit, delicately perfumed, fine bubbles which a fresh and precise. Full of crunch, cherry raspberry and violets.</p>
+                            <p><strong>About:</strong> Sparkling rose made via Ancestral Method (Pet Nat). Off-dry, low alcohol. From steep limestone slopes in the Jura mountains.</p>
+                        </div>
+                    </div>
+                    <p class="menu-item-price">£13</p> <!-- Note: Price is 100ML -->
+                </div>
             </section>
 
             <section>
                 <h2 class="section-title">Fortified</h2>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">20-Year-Old Tawny Port <span class="wine-sub-name">Sandeman NV</span></h3>
+                        <h3 class="menu-item-name">20-Year-Old Tawny Port <span class="wine-sub-name">Sandeman NV</span> <span class="wine-variety">(Field Blend (inc. Touriga Nacional, Tinto Roriz))</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Douro, Portugal</p>
-                            <p><strong>Variety:</strong> Field Blend (inc. Touriga Nacional, Tinto Roriz)</p>
                             <p><strong>Producer:</strong> Sandeman's</p>
                             <p><strong>Vintage:</strong> NV</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -819,10 +785,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Don PX <span class="wine-sub-name">Toro Albala 2019</span></h3>
+                        <h3 class="menu-item-name">Don PX <span class="wine-sub-name">Toro Albala 2019</span> <span class="wine-variety">(Pedro Ximenez)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Montilla-Moriles, Andalusia, Spain</p>
-                            <p><strong>Variety:</strong> Pedro Ximenez</p>
                             <p><strong>Producer:</strong> Toro Albala</p>
                             <p><strong>Vintage:</strong> 2019</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -834,10 +799,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Sercial <span class="wine-sub-name">D'Oliveiras 1989</span></h3>
+                        <h3 class="menu-item-name">Sercial <span class="wine-sub-name">D'Oliveiras 1989</span> <span class="wine-variety">(Sercial)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Madeira</p>
-                            <p><strong>Variety:</strong> Sercial</p>
                             <p><strong>Producer:</strong> D'Oliveiras</p>
                             <p><strong>Vintage:</strong> 1989</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -849,10 +813,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">'I Think' Manzanilla En Rama <span class="wine-sub-name">Equipo Navazos NV</span></h3>
+                        <h3 class="menu-item-name">'I Think' Manzanilla En Rama <span class="wine-sub-name">Equipo Navazos NV</span> <span class="wine-variety">(Palomino)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Jerez, Spain (Sanlucar de Barameda)</p>
-                            <p><strong>Variety:</strong> Palomino</p>
                             <p><strong>Producer:</strong> Equipo Navazos</p>
                             <p><strong>Vintage:</strong> NV</p>
                             <p><strong>Farming:</strong> Conventional</p>
@@ -864,10 +827,9 @@
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Vin Jaune <span class="wine-sub-name">Domaine de la Tournelle 2014</span></h3>
+                        <h3 class="menu-item-name">Vin Jaune <span class="wine-sub-name">Domaine de la Tournelle 2014</span> <span class="wine-variety">(Savagnin)</span></h3>
                         <div class="menu-item-description">
                             <p><strong>Region:</strong> Cotes du Jura, France</p>
-                            <p><strong>Variety:</strong> Savagnin</p>
                             <p><strong>Producer:</strong> Domaine de la Tournelle</p>
                             <p><strong>Vintage:</strong> 2014</p>
                             <p><strong>Farming:</strong> Organic</p>
@@ -878,7 +840,7 @@
                     <p class="menu-item-price">£25</p> <!-- Note: Price from original was 100ML -->
                 </div>
             </section>
-        </main>
+        </main> <!-- End #menu-content -->
          <footer class="text-center mt-8 md:mt-12 text-sm text-gray-500">
             Please ask staff about allergens or for further details. Prices in GBP. (ML sizes may vary)
         </footer>
@@ -897,6 +859,75 @@
             // Toggle the current item
             menuItem.classList.toggle('expanded');
         }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Function to load content via AJAX
+            function loadMenuContent(url, targetLink) {
+                // Add a space and the ID selector to load only that part of the page
+                $('#menu-content').load(url + ' #menu-content > *', function(response, status, xhr) {
+                    if (status == "error") {
+                        console.error("Error loading page: " + xhr.status + " " + xhr.statusText);
+                        // Optionally display an error message to the user
+                        $('#menu-content').html("<p>Sorry, could not load the menu content.</p>");
+                    } else {
+                        // Update the 'current' class on navigation links
+                        $('.menu-navigation a').removeClass('current');
+                        if (targetLink) { // Check if targetLink exists
+                           $(targetLink).addClass('current');
+                        }
+
+
+                        // Update browser history (optional but good for UX)
+                        // Check if pushState is supported and the URL is different
+                        if (history.pushState && window.location.href !== url) {
+                           history.pushState({ path: url }, '', url);
+                        }
+
+
+                         // Re-attach any dynamic event handlers if necessary
+                         // Example: If toggleDescription was dynamically added, re-run setup
+                         // (In this case, toggleDescription is global, so it should still work)
+                    }
+                });
+            }
+
+            // Handle clicks on navigation links
+            // Use event delegation for potentially dynamically loaded links
+            $(document).on('click', '.ajax-link', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                const url = $(this).attr('href');
+                 // Don't reload if already on the current page
+                if (url !== window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) && url !== window.location.href) {
+                   loadMenuContent(url, this);
+                }
+            });
+
+             // Handle back/forward browser navigation
+             $(window).on('popstate', function(event) {
+                 // Check if the state object has our path (it might be null on initial load/hash changes)
+                 let targetUrl = location.href; // Default to current location
+                 if (event.originalEvent.state && event.originalEvent.state.path) {
+                     targetUrl = event.originalEvent.state.path;
+                 }
+
+                // Find the corresponding link to set the 'current' class
+                const link = $('.menu-navigation a[href="' + targetUrl.substring(targetUrl.lastIndexOf('/') + 1) + '"]');
+                loadMenuContent(targetUrl, link.length ? link[0] : null);
+            });
+
+            // Initial setup: Ensure the correct link is marked as current on first load
+            const currentPath = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+             $('.menu-navigation a').removeClass('current');
+             $('.menu-navigation a[href="' + currentPath + '"]').addClass('current');
+             // Store the initial page state
+             if (history.replaceState) {
+                history.replaceState({ path: window.location.href }, '', window.location.href);
+             }
+
+
+        });
     </script>
 </body>
 </html>

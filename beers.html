@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -133,6 +134,14 @@
             color: #6b7280; /* Gray color */
             margin-left: 8px; /* Space from beer name */
         }
+         /* Style for beer type */
+        .beer-type {
+            font-size: 0.9rem; /* Slightly smaller */
+            font-weight: 400; /* Normal weight */
+            color: #71717a; /* Zinc 500 */
+            margin-left: 8px; /* Space from beer name */
+            font-style: italic;
+        }
          /* Style for special notes */
         .special-note {
             font-size: 0.75rem;
@@ -153,102 +162,102 @@
             <h1 class="heading-primary">BEER & CIDER MENU</h1>
             <p class="text-gray-600 text-center">Explore our curated list of beers and ciders.</p>
             <div class="menu-navigation">
-                <a href="index.html">Food Menu</a>
-                <a href="#" class="current">Beer & Cider Menu</a>
-                <a href="cocktails.html">Cocktail Menu</a>
-                <a href="wines.html">Wine Menu</a>
+                <a href="index.html" class="ajax-link">Food Menu</a>
+                <a href="beers.html" class="ajax-link current">Beer & Cider Menu</a>
+                <a href="cocktails.html" class="ajax-link">Cocktail Menu</a>
+                <a href="wines.html" class="ajax-link">Wine Menu</a>
             </div>
         </header>
-        <main>
+        <main id="menu-content">
             <section>
                 <h2 class="section-title">BEERS</h2>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">PowerPlant Pilsner <span class="brewery-name">Two Tribes</span></h3>
+                        <h3 class="menu-item-name">PowerPlant Pilsner <span class="beer-type">(Pilsner)</span> <span class="brewery-name">Two Tribes</span></h3>
                         <p class="menu-item-description">Pilsner. Floral, herbaceous, low bitterness, cedar notes. Gluten Free. Origin: London, UK</p>
                     </div>
                     <p class="menu-item-price">4.5%</p>
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Metroland Tokyo <span class="brewery-name">Two Tribes</span></h3>
+                        <h3 class="menu-item-name">Metroland Tokyo <span class="beer-type">(Session IPA)</span> <span class="brewery-name">Two Tribes</span></h3>
                         <p class="menu-item-description">Session IPA. Big hop aroma, drinkable, full flavoured, pineapple & green tea notes. Origin: London, UK</p>
                     </div>
                     <p class="menu-item-price">4.0%</p>
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Hop Hand Fallacy <span class="brewery-name">Lost & Grounded</span></h3>
+                        <h3 class="menu-item-name">Hop Hand Fallacy <span class="beer-type">(Witbier)</span> <span class="brewery-name">Lost & Grounded</span></h3>
                         <p class="menu-item-description">Witbier. Soft mouthfeel, low bitterness, citrus, orange peel, coriander. Vegan. Origin: Bristol, UK</p>
                     </div>
                     <p class="menu-item-price">4.4%</p>
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">American Pale Ale <span class="brewery-name">SOHO</span></h3>
+                        <h3 class="menu-item-name">American Pale Ale <span class="beer-type">(West Coast IPA)</span> <span class="brewery-name">SOHO</span></h3>
                         <p class="menu-item-description">West Coast IPA. Strong hop aroma, intense bitterness, citrus/piney, smooth citrusy, zesty grapefruit. Origin: West Sussex, UK</p>
                     </div>
                     <p class="menu-item-price">4.4%</p>
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Neighbourhood IPA <span class="brewery-name">40ft</span></h3>
+                        <h3 class="menu-item-name">Neighbourhood IPA <span class="beer-type">(West Coast IPA)</span> <span class="brewery-name">40ft</span></h3>
                         <p class="menu-item-description">West Coast IPA. Strong hop aromas, intense bitterness, citrus/piney notes. Origin: London, UK</p>
                     </div>
                     <p class="menu-item-price">6.0%</p>
                 </div>
                 <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Guinness <span class="brewery-name">Guinness</span></h3>
+                        <h3 class="menu-item-name">Guinness <span class="beer-type">(Irish Dry Stout)</span> <span class="brewery-name">Guinness</span></h3>
                         <p class="menu-item-description">Irish Dry Stout. Dry, coffee-flavoured, creamy texture, dark roasted barley. Origin: Dublin, IE</p>
                     </div>
                     <p class="menu-item-price">4.1%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Fruh Kolsch <span class="brewery-name">Fruh</span></h3>
+                        <h3 class="menu-item-name">Fruh Kolsch <span class="beer-type">(Kolsch)</span> <span class="brewery-name">Fruh</span></h3>
                         <p class="menu-item-description">Kolsch. Bright noble hop aroma, faint fruitiness, light, simple, quaffable, crisp. Origin: Cologne, DE</p>
                     </div>
                     <p class="menu-item-price">4.8%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Lager <span class="brewery-name">SOHO</span></h3>
+                        <h3 class="menu-item-name">Lager <span class="beer-type">(Pilsner)</span> <span class="brewery-name">SOHO</span></h3>
                         <p class="menu-item-description">Pilsner. Balanced, flavorsome, quaffable, soft bitterness, complex aromatics, smooth. Origin: London, UK</p>
                     </div>
                     <p class="menu-item-price">4.5%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Pacifico Clara <span class="brewery-name">Pacifico</span></h3>
+                        <h3 class="menu-item-name">Pacifico Clara <span class="beer-type">(Mexican Lager)</span> <span class="brewery-name">Pacifico</span></h3>
                         <p class="menu-item-description">Mexican Lager. Crisp, refreshing, grass-citrus and ocean mist notes. Origin: Sinaloa, MX</p>
                     </div>
                     <p class="menu-item-price">4.5%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Pale Ale <span class="brewery-name">Kernel</span></h3>
+                        <h3 class="menu-item-name">Pale Ale <span class="beer-type">(Pale Ale)</span> <span class="brewery-name">Kernel</span></h3>
                         <p class="menu-item-description">Pale Ale. Dry, light-bodied, showcases varying hops (batch dependent). Origin: Bermondsey, London, UK</p>
                     </div>
                     <p class="menu-item-price">5-6%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">NoMad Mexican Sour <span class="brewery-name">Two Tribes</span><span class="special-note">Cans Only</span></h3>
+                        <h3 class="menu-item-name">NoMad Mexican Sour <span class="beer-type">(Gose/Kettle Sour)</span> <span class="brewery-name">Two Tribes</span><span class="special-note">Cans Only</span></h3>
                         <p class="menu-item-description">Gose/Kettle Sour. Salty, high acid, lime peel, margarita profile. Origin: London, UK</p>
                     </div>
                     <p class="menu-item-price">5.6%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Orval Belgian Ale <span class="brewery-name">Orval</span></h3>
+                        <h3 class="menu-item-name">Orval Belgian Ale <span class="beer-type">(Trappist Ale)</span> <span class="brewery-name">Orval</span></h3>
                         <p class="menu-item-description">Trappist Ale. Complex aroma of leather, spice, earthy notes. Dry hopped, Brett yeast. Origin: Orval, Belgium</p>
                     </div>
                     <p class="menu-item-price">6.2%</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">Fowl Play <span class="brewery-name">40FT</span><span class="special-note">Cans/Growler</span></h3>
+                        <h3 class="menu-item-name">Fowl Play <span class="beer-type">(Schwarzbier)</span> <span class="brewery-name">40FT</span><span class="special-note">Cans/Growler</span></h3>
                         <p class="menu-item-description">Schwarzbier. Dark lager with coffee, chocolate, citrus notes. Delicate bitterness. Origin: London, UK</p>
                     </div>
                     <p class="menu-item-price">4.6%</p>
@@ -290,7 +299,7 @@
                     <p class="menu-item-price">0.05%</p>
                 </div>
             </section>
-        </main>
+        </main> <!-- End #menu-content -->
          <footer class="text-center mt-8 md:mt-12 text-sm text-gray-500">
             Menu items based on Beer Info Sheets FEB 2025. Please ask staff for current availability.
         </footer>
@@ -309,6 +318,72 @@
             // Toggle the current item
             menuItem.classList.toggle('expanded');
         }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Function to load content via AJAX
+            function loadMenuContent(url, targetLink) {
+                // Add a space and the ID selector to load only that part of the page
+                $('#menu-content').load(url + ' #menu-content > *', function(response, status, xhr) {
+                    if (status == "error") {
+                        console.error("Error loading page: " + xhr.status + " " + xhr.statusText);
+                        // Optionally display an error message to the user
+                        $('#menu-content').html("<p>Sorry, could not load the menu content.</p>");
+                    } else {
+                        // Update the 'current' class on navigation links
+                        $('.menu-navigation a').removeClass('current');
+                         if (targetLink) { // Check if targetLink exists
+                           $(targetLink).addClass('current');
+                        }
+
+                        // Update browser history (optional but good for UX)
+                         // Check if pushState is supported and the URL is different
+                        if (history.pushState && window.location.href !== url) {
+                           history.pushState({ path: url }, '', url);
+                        }
+
+                         // Re-attach any dynamic event handlers if necessary
+                         // Example: If toggleDescription was dynamically added, re-run setup
+                         // (In this case, toggleDescription is global, so it should still work)
+                    }
+                });
+            }
+
+            // Handle clicks on navigation links
+            // Use event delegation for potentially dynamically loaded links
+             $(document).on('click', '.ajax-link', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                const url = $(this).attr('href');
+                 // Don't reload if already on the current page
+                if (url !== window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) && url !== window.location.href) {
+                   loadMenuContent(url, this);
+                }
+            });
+
+             // Handle back/forward browser navigation
+             $(window).on('popstate', function(event) {
+                 // Check if the state object has our path (it might be null on initial load/hash changes)
+                 let targetUrl = location.href; // Default to current location
+                 if (event.originalEvent.state && event.originalEvent.state.path) {
+                     targetUrl = event.originalEvent.state.path;
+                 }
+
+                // Find the corresponding link to set the 'current' class
+                const link = $('.menu-navigation a[href="' + targetUrl.substring(targetUrl.lastIndexOf('/') + 1) + '"]');
+                loadMenuContent(targetUrl, link.length ? link[0] : null);
+            });
+
+            // Initial setup: Ensure the correct link is marked as current on first load
+            const currentPath = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+             $('.menu-navigation a').removeClass('current');
+             $('.menu-navigation a[href="' + currentPath + '"]').addClass('current');
+             // Store the initial page state
+             if (history.replaceState) {
+                history.replaceState({ path: window.location.href }, '', window.location.href);
+             }
+
+        });
     </script>
 </body>
 </html>
