@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoMaD London - Dinner Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .heading-primary {
+            font-size: 2.25rem; /* slightly larger */
+            font-weight: 700;
+            color: #1e293b; /* Slightly darker heading color */
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.025em;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #334155; /* Slightly darker section title */
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-top: 32px; /* Add space before section title */
+        }
+        .menu-item {
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: start; /* Align items to the start of the cell */
+        }
+        .menu-item-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #4b5563; /* Slightly darker menu item name */
+            margin-bottom: 6px;
+            line-height: 1.4; /* Improved line height for name */
+        }
+        .menu-item-description {
+            font-size: 0.875rem;
+            color: #6b7280; /* Slightly darker description */
+            line-height: 1.5; /* Improved line height for description */
+        }
+        .menu-item-price {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b; /* Darker price */
+        }
+        .allergen-info {
+            font-size: 0.75rem;
+            color: #9ca3af; /* Slightly lighter allergen info */
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* New styles for improved layout and spacing */
+        .top-section {
+            margin-bottom: 40px; /* Increased spacing before "FOOD MENU" */
+        }
+
+        .description-block {
+            margin-top: 24px; /* Increased spacing before description blocks */
+            margin-bottom: 24px;
+            padding: 16px;
+            background-color: #f7f7f7; /* Lighter background for description box */
+            border-radius: 6px;
+            border: 1px solid #edf2f7; /* Subtle border */
+        }
+
+        .description-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #334155; /* Darker title for description box */
+            margin-bottom: 12px;
+        }
+
+        .description-content {
+            font-size: 0.875rem;
+            color: #4b5563; /* Slightly darker description content */
+            line-height: 1.6; /* Improved line height */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50"> <div class="container">
+        <header class="top-section">
+            <h1 class="heading-primary">FOOD MENU</h1> <p class="text-gray-600 text-center">AUTUMN 2024 DINNER</p> </header>
+        <main>
+            <section>
+                <h2 class="section-title">SNACKS</h2>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CRUDITÉS</h3>
+                        <p class="menu-item-description">SEASONAL VEGETABLES WITH CHIVE AIOLI</p>
+                        <span class="allergen-info">CELERY</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">TUNA TOAST</h3>
+                        <p class="menu-item-description">WITH LEMON & HORSERADISH</p>
+                        <span class="allergen-info">FISH, CEREALS/GLUTEN, MILK (INCL LACTOSE), MUSTARD</span>
+                    </div>
+                    <p class="menu-item-price">19</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">OYSTER ON THE HALF SHELF</h3>
+                        <p class="menu-item-description">6 PIECES WITH SICILIAN LEMON & MIGNONETTE</p>
+                        <span class="allergen-info">MOLLUSCS</span>
+                    </div>
+                    <p class="menu-item-price">28</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SCOTCH OLIVES</h3>
+                        <p class="menu-item-description">WITH LAMB SAUSAGE, HARISSA & HALBOURNE BLUE</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE), EGGS</span>
+                    </div>
+                    <p class="menu-item-price">16</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">FLATBREAD</h3>
+                        <p class="menu-item-description">WITH DELICA SQUASH, MOZZARELLA & HOT HONEY</p>
+                        <span class="allergen-info">CEREALS/GLUTEN, MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">12</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">KALETTES</h3>
+                        <p class="menu-item-description">FRIED WITH HONEY MUSTARD & DRIED CRANBERRIES</p>
+                        <span class="allergen-info">MUSTARD, EGGS</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">VEGETABLES</h2>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">WALDORF SALAD</h3>
+                        <p class="menu-item-description">WITH BLACK TRUFFLE, WALNUTS & RED CURRANTS</p>
+                        <span class="allergen-info">NUTS, MILK (INCL LACTOSE), EGGS</span>
+                    </div>
+                    <p class="menu-item-price">15</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">GEM SALAD</h3>
+                        <p class="menu-item-description">WITH GREEN GODDESS, RADISH & DILL</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE), EGGS, MUSTARD</span>
+                    </div>
+                    <p class="menu-item-price">12</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">RED SALAD</h3>
+                        <p class="menu-item-description">WITH BEETROOT, WINTER GREENS & EDMOND TEW SPREAD</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">15</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CHARRED HISPI CABBAGE</h3>
+                        <p class="menu-item-description">WITH PUMPKIN SEED BUTTER, SQUASH PUREE, NUTS & SEEDS</p>
+                        <span class="allergen-info">NUTS</span>
+                    </div>
+                    <p class="menu-item-price">29</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">MUSHROOM RISOTTO</h3>
+                        <p class="menu-item-description">WITH UK SOURCED MUSHROOMS & MINT</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">32</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">FISH</h2>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">OYSTER ROCKEFELLER</h3>
+                        <p class="menu-item-description">3 PIECES GRILLED WITH BASIL, LARDONS & PERNOD</p>
+                        <span class="allergen-info">MOLLUSCS, MILK (INCL LACTOSE), EGGS</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SEABASS CRUDO</h3>
+                        <p class="menu-item-description">WITH GREEN CURRY & PUFFED TAPIOCA</p>
+                        <span class="allergen-info">FISH</span>
+                    </div>
+                    <p class="menu-item-price">16</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">GRILLED ORKNEY SCALLOP</h3>
+                        <p class="menu-item-description">WITH DULCE, ROE OIL & SMOKED SABAYON</p>
+                        <span class="allergen-info">MOLLUSCS, EGGS</span>
+                    </div>
+                    <p class="menu-item-price">16</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SCOTTISH MUSSELS</h3>
+                        <p class="menu-item-description">WITH CALABRIAN CHILI SOFFRITO & GRILLED SOURDOUGH</p>
+                        <span class="allergen-info">MOLLUSCS, FISH, CEREALS/GLUTEN</span>
+                    </div>
+                    <p class="menu-item-price">18</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">LOBSTER PAPPARDELLE</h3>
+                        <p class="menu-item-description">WITH CHIVES, LEMON & BLACK PEPPER</p>
+                        <span class="allergen-info">CRUSTACEANS, EGGS, MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">38</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SEARED ATLANTIC COD</h3>
+                        <p class="menu-item-description">WITH CELERIAC CHOWDER, FRISEE & HERBS</p>
+                        <span class="allergen-info">FISH, MILK (INCL LACTOSE), CELERY</span>
+                    </div>
+                    <p class="menu-item-price">46</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">MEAT & GAME</h2>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">GRILLED QUAIL</h3>
+                        <p class="menu-item-description">WITH THREE PEPPER SPICE & LEMON</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">16</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">BEEF CARPACCIO</h3>
+                        <p class="menu-item-description">THINLY SLICED WITH PINE NUT CONFIT & CAPERS</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">24</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SQUAB</h3>
+                        <p class="menu-item-description">WITH CASTELFRANCO, BRAISED FENNEL & BLOOD ORANGE</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">24</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SHERWOOD FOREST VENISON</h3>
+                        <p class="menu-item-description">WITH CHESTNUTS, CHARED ONIONS & BLACK TRUMPET MUSHROOMS</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">48</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CORN FED CHICKEN</h3>
+                        <p class="menu-item-description">BREAST WITH LETTUCE & POTATO PUREE</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">32</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">BRITISH BEEF FILET</h3>
+                        <p class="menu-item-description">DRY-AGED WITH TURNIP & KALES</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">56</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">FEASTS FROM THE HEARTH</h2>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">TOMAHAWK STEAK</h3>
+                        <p class="menu-item-description">FIRE-ROASTED BROWN BUTTER MASH & BORDELAISE</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE), EGGS</span>
+                    </div>
+                    <p class="menu-item-price">150</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">WHOLE GRILLED SEA BASS</h3>
+                        <p class="menu-item-description">WITH PUNTARELLE, CITRUS SALSA & BUTTER GLAZED NEW POTATOES</p>
+                        <span class="allergen-info">FISH</span>
+                    </div>
+                    <p class="menu-item-price">120</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">WILD HAMPSHIRE PHEASANT</h3>
+                        <p class="menu-item-description">SMOKED ABOVE THE FIRE WITH OFFAL TART & BLACK TRUFFLE</p>
+                        <span class="allergen-info">EGGS, CEREALS/GLUTEN</span>
+                    </div>
+                    <p class="menu-item-price">85</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">STUFFED SQUASH</h3>
+                        <p class="menu-item-description">ROASTED WITH SAGE STUFFING, WINTER GREENS & GRAPE SALAD</p>
+                        <span class="allergen-info">EGGS, MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">65</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">SIDES</h2>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">SIDE SALAD</h3>
+                        <p class="menu-item-description">WITH RADISH & DILL</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">9</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">KALES</h3>
+                        <p class="menu-item-description">SAUTED WITH LEMON VINAIGRETTE</p>
+                         <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">7</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">TWICE BAKED PΟΤΑΤΟ</h3>
+                        <p class="menu-item-description">WITH RACLETTE & BLACK TRUFFLES</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">19</p>
+                </div>
+                 <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">BROCCOLINI</h3>
+                        <p class="menu-item-description">GRILLED WITH SESAME & CHILI CRUNCH</p>
+                        <span class="allergen-info">SESAME SEEDS</span>
+                    </div>
+                    <p class="menu-item-price">10</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CHIPS</h3>
+                        <p class="menu-item-description">ROSEMARY & LEMON</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">9</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">DESSERT</h2>
+                 <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">STRAWBERRY</h3>
+                        <p class="menu-item-description">HIBISCUS SORBET, PUFFED RICE & BERRY COMPOTE</p>
+                        <span class="allergen-info">None listed</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                         <h3 class="menu-item-name">APPLE</h3>
+                        <p class="menu-item-description">SORBET WITH SHISO, YUZU & WHITE CHOCOLATE MOUSSE</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">RASPBERRY & PISTACHIO</h3>
+                        <p class="menu-item-description">BAKED PASTRY WITH RASPBERRY & PISTACHIO ICE CREAM</p>
+                        <span class="allergen-info">NUTS, MILK (INCL LACTOSE), EGGS</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CHOCOLATE</h3>
+                        <p class="menu-item-description">SALTED CARAMEL, BANANA BRÛLÉE & BANANA CHOCOLATE ICE CREAM</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE), EGGS</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CHERRY</h3>
+                        <p class="menu-item-description">BAKED CHERRY & ALMOND CUSTARD WITH TONKA BEAN ICE CREAM</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE), EGGS, NUTS</span>
+                    </div>
+                    <p class="menu-item-price">14</p>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item-name">CHEESE</h3>
+                        <p class="menu-item-description">BRIGHTWELL ASH, BERKSWELL, ST. JAMES, BEAUVALE WITH SEASONAL ACCOMPANIMENTS</p>
+                        <span class="allergen-info">MILK (INCL LACTOSE)</span>
+                    </div>
+                    <p class="menu-item-price">18</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
