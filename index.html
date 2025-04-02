@@ -104,11 +104,44 @@
             line-height: 1.6;
         }
 
+        /* Navigation styles */
+        .menu-navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        .menu-navigation a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            margin: 0 8px;
+        }
+        .menu-navigation a:hover {
+            background-color: #4338ca;
+        }
+        .menu-navigation .current {
+            background-color: #312e81;
+            cursor: default;
+        }
     </style>
 </head>
 <body class="bg-gray-50"> <div class="container">
         <header class="top-section">
-            <h1 class="heading-primary">FOOD MENU</h1> <p class="text-gray-600 text-center">AUTUMN 2024 DINNER</p> </header>
+            <h1 class="heading-primary">FOOD MENU</h1> 
+            <p class="text-gray-600 text-center">AUTUMN 2024 DINNER</p> 
+            <div class="menu-navigation">
+                <a href="#" class="current">Food Menu</a>
+                <a href="beers.html">Beer & Cider Menu</a>
+                <a href="cocktails.html">Cocktail Menu</a>
+                <a href="wines.html">Wine Menu</a>
+            </div>
+        </header>
         <main>
             <section>
                 <h2 class="section-title">SNACKS</h2>
