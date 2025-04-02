@@ -87,21 +87,44 @@
         }
         .menu-navigation a {
             display: inline-block;
-            padding: 8px 16px;
-            background-color: #4f46e5;
-            color: white;
+            padding: 8px 16px; /* Keep padding for spacing */
+            /* background-color: #4f46e5; */ /* Remove background */
+            color: #4b5563; /* Use gray text color */
             text-decoration: none;
-            border-radius: 6px;
+            /* border-radius: 6px; */ /* Remove border-radius */
             font-weight: 500;
-            transition: background-color 0.2s;
+            transition: color 0.2s; /* Transition color */
             margin: 0 8px;
         }
         .menu-navigation a:hover {
-            background-color: #4338ca;
+            /* background-color: #4338ca; */ /* Remove hover background */
+            color: #1e293b; /* Darker text on hover */
+            text-decoration: underline; /* Add underline on hover */
         }
         .menu-navigation .current {
-            background-color: #312e81;
+            /* background-color: #312e81; */ /* Remove current background */
+            color: #1e293b; /* Darker text for current */
+            font-weight: 700; /* Bold for current */
+            text-decoration: underline; /* Underline for current */
             cursor: default;
+        }
+        .menu-navigation .current:hover {
+             text-decoration: underline; /* Keep underline on hover for current */
+        }
+
+        /* Responsive styles for navigation */
+        @media (max-width: 640px) { /* Adjust breakpoint as needed */
+            .menu-navigation {
+                flex-direction: column; /* Stack links vertically */
+                align-items: center; /* Center links */
+            }
+            .menu-navigation a {
+                margin: 4px 0; /* Adjust vertical margin */
+                padding: 6px 12px; /* Slightly smaller padding */
+            }
+        }
+        .menu-navigation .current:hover {
+             text-decoration: underline; /* Keep underline on hover for current */
         }
         /* Style for brewery name */
         .brewery-name {
