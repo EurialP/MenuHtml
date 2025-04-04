@@ -1,0 +1,63 @@
+---
+// src/pages/ird.astro
+import Layout from '../layouts/Layout.astro';
+import MenuItem from '../components/MenuItem.astro';
+import irdMenu from '../data/ird.json'; // Import the IRD menu data
+
+// Define the expected structure for items coming from JSON
+// (Ideally, move to a shared types file later)
+interface MenuItemData {
+    name: string | null;
+    description?: string;
+    price?: string | number;
+    allergens?: string;
+    dietaryInfo?: string;
+    tagline?: string;
+    // Add other potential fields if needed
+    type?: string;
+    brewery?: string;
+    abv?: string;
+    note?: string;
+    subName?: string;
+    variety?: string;
+    region?: string;
+    producer?: string;
+    vintage?: string;
+    farming?: string;
+    tastingNotes?: string;
+    about?: string;
+}
+---
+<Layout title="NoMaD London - In-Room Dining Menu">
+    {/* Apply Tailwind classes directly */}
+    <h1 class="text-4xl font-bold text-slate-800 mb-4 text-center tracking-tight">
+        {irdMenu.title}
+    </h1>
+    {irdMenu.subtitle && (
+        <p class="text-slate-600 text-center mb-8">{irdMenu.subtitle}</p> /* Adjusted color */
+    )}
+
+    {irdMenu.sections.map(section => (
+        <section class="mb-10">
+             {/* Apply Tailwind classes directly */}
+            <h2 class="text-2xl font-semibold text-slate-700 mb-5 border-b border-gray-300 pb-3 mt-10">
+                {section.title}
+            </h2>
+            {section.items.map(item => {
+                const menuItem = item as MenuItemData;
+                return (
+                    <MenuItem
+                        name={menuItem.name}
+                        tagline={menuItem.tagline}
+                        description={menuItem.description}
+                        price={menuItem.price}
+                        allergens={menuItem.allergens}
+                        dietaryInfo={menuItem.dietaryInfo}
+                    />
+                );
+            })}
+        </section>
+    ))}
+</Layout>
+
+<!-- Removed <style is:global> block -->

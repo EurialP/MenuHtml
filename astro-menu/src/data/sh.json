@@ -1,0 +1,176 @@
+{
+  "title": "SIDE HUSTLE MENU",
+  "subtitle": "Spring 2025",
+  "sections": [
+    {
+      "title": "SALSAS / DIPS (Served with corn Tortilla chips)",
+      "items": [
+        {
+          "name": "Guacamole",
+          "tagline": "Fresh Herbs & Ajo Perejil",
+          "description": "Guacamole with herbs and ajo perejil, served with corn Tortilla chips on the side garnished with a herb salad.\nDefinitions:\nGuacamole: Originates from Aztecs (avocados, tomatoes, chiles, salt), Spanish added onion, lime, coriander.\nAjo Perejil: Spanish staple marinade (garlic, parsley, olive oil, salt).",
+          "allergens": "(None marked)",
+          "dietaryInfo": "Citrus, Garlic, Nightshade (chilli), Onion.",
+          "price": "£10"
+        },
+        {
+          "name": "Sikil Pak",
+          "tagline": "Tomato, Guajillo & Hazelnut",
+          "description": "Hazelnut sikil pak with guajillo powder and tortilla chips served on the side.\nDefinitions:\nSikil Pak: Pre-Hispanic Yucatan dip (toasted pumpkin seeds, habanero, roasted tomato).\nGuajillo Chili: Dry form of mirasol pepper, common in Mexican cuisine.",
+          "allergens": "Nuts (Hazelnut).",
+          "dietaryInfo": "Citrus, Garlic, Nightshade, Onion.",
+          "price": "£8"
+        },
+        {
+          "name": "Green Pipian",
+          "tagline": "Pistachio & Jalapeño",
+          "description": "Green pipian with pistachios and jalapeño, served with roasted pistachio, pumpkin seeds and corn tortillas chips on the side.\nDefinition: Pipián: Mexican sauce with puréed greens, thickened with ground pumpkin seeds; origins in Aztec, Purepecha & Mayan cuisines.",
+          "allergens": "Nuts (Pistachio), Sulphites.",
+          "dietaryInfo": "Citrus, Garlic, Nightshade (chilli), Onion.",
+          "price": "£9"
+        },
+        {
+          "name": "All 3 Salsas/Dips",
+          "price": "£25"
+        }
+      ]
+    },
+    {
+      "title": "BOTANAS / SNACKS",
+      "items": [
+        {
+          "name": "Oysters",
+          "tagline": "Jalapeño & Pomegranate Mignonette",
+          "description": "Carlingford oysters served with Pomegranate mignonette, red currant berries, shallots and jalapeno. (Carlingford Lough oysters benefit from tidal water exchange and freshwater flow, giving distinctive flavour).",
+          "allergens": "Molluscs (Cannot be removed), Sulphites.",
+          "dietaryInfo": "Nightshade (chilli), Onion.",
+          "price": "6 for £28"
+        },
+        {
+          "name": "Prawn Croquettes",
+          "tagline": "Seaweed, Bonito & Habanero",
+          "description": "Prawn croquettes, served with Kewpie mayo, habanero sweet and sour, Katsuobushi (bonito flake), Nori, and a lime wedge. (3 pieces per portion, possible to add a fourth).\nDefinitions: Katsuobushi: Bonito flakes (simmered, smoked, fermented skipjack tuna) for umami.",
+          "allergens": "Cereals/Gluten, Crustaceans, Eggs, Fish (Bonito), Milk (Incl Lactose), Sesame Seeds, Soya.",
+          "dietaryInfo": "Alcohol (White Wine, Mirin), Citrus (Lime), Garlic, Nightshade (Habanero, Morita), Onion.",
+          "price": "£12"
+        },
+        {
+          "name": "Padrón Peppers",
+          "tagline": "Citrus & Salsa Macha",
+          "description": "Padrones with salsa macha, morita and lime salt.\nDefinition: Padrón Peppers: Small, green peppers from Galicia, Spain; usually mild, but about 1 in 10 is spicy.",
+          "allergens": "Sesame Seeds, Sulphites.",
+          "dietaryInfo": "Citrus, Garlic, Nightshade (chilli), Onion.",
+          "price": "£9"
+        },
+        {
+          "name": "Seabass Ceviche",
+          "tagline": "Delica Pumpkin & Leche de Tigre (Note: Details mention Yuzu & Tomatillo)",
+          "description": "A seabass ceviche, rice crackers, with leche de tigre, pico de gallo.\nDefinition: Ceviche: Raw meat or fish cured in citrus.",
+          "allergens": "Eggs, Fish, Soya, Sulphites.",
+          "dietaryInfo": "Alcohol (Mirin), Citrus, Nightshade, Onion.",
+          "price": "£16"
+        },
+        {
+          "name": "Sweet Plantain (Maduro)",
+          "tagline": "Truffle Honey, Cheese & Togarashi",
+          "description": "A Ripe Plantain, with a Queso Mix. Accompanied by Togarashi, Lemon Balm, Guacachile and a Habanero ash.\nDefinition: Togarashi: Japanese spice blend for a fiery umami kick.",
+          "allergens": "Milk (Incl Lactose), Sesame Seeds.",
+          "dietaryInfo": "Citrus (Orange Skin), Garlic, Nightshade (chilli), Onion.",
+          "price": "£11"
+        },
+        {
+          "name": "Tuna Tostones (Tostada)",
+          "tagline": "Crudo with Coriander Mayo & Ancho Chilli",
+          "description": "Crispy tortilla, topped with ancho chilli spread, coriander mayo, layered slices of tuna sashimi, radish relish and coriander leaf.\nDefinitions:\nTostada: \"Toasted\" tortilla, often flat, with toppings.\nAncho Chilli: Mild, earthy, fruity dried poblano chilli.",
+          "allergens": "Eggs, Fish, Soya, Sulphites.",
+          "dietaryInfo": "Citrus (Vinegar), Garlic, Nightshade.",
+          "price": "£14"
+        }
+      ]
+    },
+    {
+      "title": "MAIZ / CORN",
+      "items": [
+        {
+          "name": "Shiitake Taco",
+          "tagline": "With Tare, Shoyu & Daikon (Note: Description differs)",
+          "description": "A Taco with Romesco, Shiitake Sofrito, White Onion, Coriander and a Lime wedge.\nDefinition: Shoyu: Soy Sauce (white version used here).",
+          "allergens": "Eggs, Soya, Sulphites.",
+          "dietaryInfo": "Alcohol (Mirin, Sake, White Wine), Citrus, Garlic, Mushroom, Nightshade (chilli), Onion.",
+          "price": "£8"
+        },
+        {
+          "name": "Baja Fish Taco",
+          "tagline": "With Mexican Coleslaw & Morita Chilli",
+          "description": "Baja style cod taco, with Morita Mayo & cabbage coleslaw.",
+          "allergens": "Eggs, Fish. (Confirm Gluten in tempura).",
+          "dietaryInfo": "Citrus, Garlic, Nightshade, Onion.",
+          "price": "£8"
+        },
+        {
+          "name": "Pork Carnita Taco",
+          "tagline": "With Avocado Salsa Verde & Xnipec",
+          "description": "Pork Carnitas with Avocado salsa verde & xnipek.\nDefinition: Tomatillo: Small, green, tangy fruit used in Mexican cuisine, key for salsas.",
+          "allergens": "Sulphites (Vinegar).",
+          "dietaryInfo": "Citrus, Garlic, Nightshade, Onion, Pork.",
+          "price": "£8"
+        },
+        {
+          "name": "Chicken Tinga Taco",
+          "tagline": "With Charred Pineapple & Guajillo Chilli",
+          "description": "Taco with Chicken tinga, Al Pastor sauce, charred pineapple, pickled red onion, and coriander.",
+          "allergens": "Cereals/Gluten (standard tortilla), Sulphites (vinegar).",
+          "dietaryInfo": "Citrus, Garlic, Nightshade (chilli), Onion. (Note: May contain gluten - check with kitchen).",
+          "price": "£8"
+        },
+        {
+          "name": "Any 3 Tacos",
+          "price": "£22"
+        },
+        {
+          "name": "Flautas (Paneer Flauta)",
+          "tagline": "Three, Chilli Paneer with Salsa Verde & Cheese Costra (Note: Description differs)",
+          "description": "A Flauta with Paneer, Salsa Criolla, Salsa Macha and Morita Oil. (3 pieces per portion, possible to add a fourth).\nDefinition: Paneer: Fresh, soft Indian cheese from curdled milk.",
+          "allergens": "Eggs, Milk (Incl Lactose - Paneer, Mozzarella), Sesame Seeds.",
+          "dietaryInfo": "Garlic, Nightshade (chilli), Onion.",
+          "price": "£12"
+        },
+        {
+          "name": "Lamb Birria Papusa",
+          "tagline": "Mozzarella & Caraway Slaw (Note: Details use Cumin Slaw)",
+          "description": "",
+          "allergens": "Celery (Stock?), Milk (Incl Lactose), Sulphites (Vinegar).",
+          "dietaryInfo": "Citrus, Garlic, Nightshade, Onion.",
+          "price": "£14"
+        },
+        {
+          "name": "Fried Chicken Torta",
+          "tagline": "With Salsa Guajillo",
+          "description": "Warm torta with tempura fried chicken, avocado and salsa guajillo. Finished with pickled jalapenos and salad.\nDefinition: Torta: Hot/cold sandwich on a crusty roll.",
+          "allergens": "Eggs (Mayo), Milk (Incl Lactose - Whey), Soya, Sulphites (Vinegar). (Confirm Gluten in dredge/tempura).",
+          "dietaryInfo": "Citrus, Garlic, Nightshade, Onion.",
+          "price": "£19"
+        }
+      ]
+    },
+    {
+      "title": "POSTRE / DESSERT",
+      "items": [
+        {
+          "name": "Ice Cream Sandwich",
+          "tagline": "Salted Caramel & Sweet Corn",
+          "description": "Ice cream Sandwich made with corn ice cream, corn brittle, sable biscuit & corn salted caramel.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Soya (Chocolate).",
+          "price": "£12"
+        },
+        {
+          "name": "Churros",
+          "tagline": "Chocolate & Dulce de Leche Crema",
+          "description": "Cinnamon sugar churros served with two dipping sauces: Chocolate Tonka Sauce & Dulce de leche.\nDefinitions:\nChurros: Fried dough dessert (Spanish/Portuguese cuisine). Dough contains no dairy.\nTonka Bean: Similar to vanilla but nuttier/spiced.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose - Dulce de Leche), Soya (Choc Sauce). (Note: Churros dough is dairy-free but contains egg).",
+          "price": "£12"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "BREAKFAST MENU",
+  "subtitle": "Served Daily",
+  "sections": [
+    {
+      "title": "Coffee",
+      "items": [
+        { "name": "Espresso", "price": "£3" },
+        { "name": "Americano", "price": "£4" },
+        { "name": "Cortado / Macchiato / Flat White", "price": "£5" },
+        { "name": "Cappuccino / Latte", "price": "£6" }
+      ]
+    },
+    {
+      "title": "Tea by Rare Tea Company",
+      "items": [
+        { "name": "White", "description": "Jasmine Silver Tip", "price": "£7 each" },
+        { "name": "Green", "description": "Sencha / Genmaicha", "price": "£7 each" },
+        { "name": "Black", "description": "English Breakfast Blend / Earl Grey", "price": "£7 each" },
+        { "name": "Oolong", "description": "Sunset Oolong", "price": "£7 each" },
+        { "name": "Herbal", "description": "Fresh Mint Blend / Lemongrass & Ginger / Chamomile", "price": "£7 each" }
+      ]
+    },
+    {
+      "title": "Hot Drinks",
+      "items": [
+        { "name": "Chai Latte", "description": "Masala Chai, Cinnamon, Ginger & White Pepper with Milk of Choice", "price": "£7 each" },
+        { "name": "Matcha Latte", "description": "Matcha Tea, Coconut & Oat Milk", "price": "£7 each" },
+        { "name": "Hot Chocolate", "description": "Dark Chocolate, Cream & Salt", "price": "£7 each" }
+      ]
+    },
+    {
+      "title": "Breakfast",
+      "items": [
+        { "name": "Yoghurt & Berries", "description": "Greek Yoghurt, Nomad Granola & Fresh Berries", "price": "£14" },
+        { "name": "Porridge", "description": "Toasted Oats, Oat Milk & Fruit Compote", "price": "£12" },
+        { "name": "Lemon Poppy Pancakes", "description": "Griddled with Blueberries & Whipped Ricotta", "price": "£19" },
+        { "name": "Avocado Toast", "description": "Maitake Mushrooms, Radishes & Parsley", "price": "£18" },
+        { "name": null, "description": "With a Poached Egg", "price": "£22" },
+        { "name": "Two Eggs", "description": "Prepared Any Style with Choice of Toast", "price": "£17" },
+        { "name": "Omelette", "description": "Sautéed Mushrooms & Cacio e Pepe", "price": "£19" },
+        { "name": "Breakfast Sandwich", "description": "Fried Burford Brown Egg & Cheese on Homemade English Muffin, Choice of Bacon / Chicken Sausage / Greens & Rosti", "price": "£18" },
+        { "name": "Pastries", "description": "Croissant / Ham & Cheese Croissant / Pain au Chocolat", "price": "£6" },
+        { "name": "Full English", "description": "Fried Eggs, Black Pudding, Bacon, Sausage, Roast Tomato, Mushroom, Potato Rosti & Sourdough Toast. Includes coffee or tea and juice", "price": "£29" },
+        { "name": "Full Veggie", "description": "Fried Eggs, Avocado, Spinach, Stewed Beans, Roast Tomato, Mushroom, Potato Rosti & Sourdough Toast. Includes coffee or tea and juice", "price": "£25" }
+      ]
+    },
+    {
+      "title": "Sides",
+      "items": [
+        { "name": "Fresh Fruit Bowl / Avocado / Potato Rostis", "price": "£7 each" },
+        { "name": "Bacon / Pork Sausage / Smoked Salmon", "price": "£8 each" }
+      ]
+    }
+  ]
+}

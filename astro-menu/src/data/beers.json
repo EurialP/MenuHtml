@@ -1,0 +1,138 @@
+{
+  "title": "BEER & CIDER MENU",
+  "subtitle": "Explore our curated list of beers and ciders.",
+  "sections": [
+    {
+      "title": "BEERS",
+      "items": [
+        {
+          "name": "PowerPlant Pilsner",
+          "type": "Pilsner",
+          "brewery": "Two Tribes",
+          "description": "Pilsner. Floral, herbaceous, low bitterness, cedar notes. Gluten Free. Origin: London, UK",
+          "abv": "4.5%"
+        },
+        {
+          "name": "Metroland Tokyo",
+          "type": "Session IPA",
+          "brewery": "Two Tribes",
+          "description": "Session IPA. Big hop aroma, drinkable, full flavoured, pineapple & green tea notes. Origin: London, UK",
+          "abv": "4.0%"
+        },
+        {
+          "name": "Hop Hand Fallacy",
+          "type": "Witbier",
+          "brewery": "Lost & Grounded",
+          "description": "Witbier. Soft mouthfeel, low bitterness, citrus, orange peel, coriander. Vegan. Origin: Bristol, UK",
+          "abv": "4.4%"
+        },
+        {
+          "name": "American Pale Ale",
+          "type": "West Coast IPA",
+          "brewery": "SOHO",
+          "description": "West Coast IPA. Strong hop aroma, intense bitterness, citrus/piney, smooth citrusy, zesty grapefruit. Origin: West Sussex, UK",
+          "abv": "4.4%"
+        },
+        {
+          "name": "Neighbourhood IPA",
+          "type": "West Coast IPA",
+          "brewery": "40ft",
+          "description": "West Coast IPA. Strong hop aromas, intense bitterness, citrus/piney notes. Origin: London, UK",
+          "abv": "6.0%"
+        },
+        {
+          "name": "Guinness",
+          "type": "Irish Dry Stout",
+          "brewery": "Guinness",
+          "description": "Irish Dry Stout. Dry, coffee-flavoured, creamy texture, dark roasted barley. Origin: Dublin, IE",
+          "abv": "4.1%"
+        },
+        {
+          "name": "Fruh Kolsch",
+          "type": "Kolsch",
+          "brewery": "Fruh",
+          "description": "Kolsch. Bright noble hop aroma, faint fruitiness, light, simple, quaffable, crisp. Origin: Cologne, DE",
+          "abv": "4.8%"
+        },
+        {
+          "name": "Lager",
+          "type": "Pilsner",
+          "brewery": "SOHO",
+          "description": "Pilsner. Balanced, flavorsome, quaffable, soft bitterness, complex aromatics, smooth. Origin: London, UK",
+          "abv": "4.5%"
+        },
+        {
+          "name": "Pacifico Clara",
+          "type": "Mexican Lager",
+          "brewery": "Pacifico",
+          "description": "Mexican Lager. Crisp, refreshing, grass-citrus and ocean mist notes. Origin: Sinaloa, MX",
+          "abv": "4.5%"
+        },
+        {
+          "name": "Pale Ale",
+          "type": "Pale Ale",
+          "brewery": "Kernel",
+          "description": "Pale Ale. Dry, light-bodied, showcases varying hops (batch dependent). Origin: Bermondsey, London, UK",
+          "abv": "5-6%"
+        },
+        {
+          "name": "NoMad Mexican Sour",
+          "type": "Gose/Kettle Sour",
+          "brewery": "Two Tribes",
+          "description": "Gose/Kettle Sour. Salty, high acid, lime peel, margarita profile. Origin: London, UK",
+          "abv": "5.6%",
+          "note": "Cans Only"
+        },
+        {
+          "name": "Orval Belgian Ale",
+          "type": "Trappist Ale",
+          "brewery": "Orval",
+          "description": "Trappist Ale. Complex aroma of leather, spice, earthy notes. Dry hopped, Brett yeast. Origin: Orval, Belgium",
+          "abv": "6.2%"
+        },
+        {
+          "name": "Fowl Play",
+          "type": "Schwarzbier",
+          "brewery": "40FT",
+          "description": "Schwarzbier. Dark lager with coffee, chocolate, citrus notes. Delicate bitterness. Origin: London, UK",
+          "abv": "4.6%",
+          "note": "Cans/Growler"
+        }
+      ]
+    },
+    {
+      "title": "CIDERS",
+      "items": [
+        {
+          "name": "Sassy Organic Cider",
+          "brewery": "Maison Sassy",
+          "description": "Normandy Cider. Fruit forward, mature fruit, baked apple aromas. Organic. Origin: Normandy, FR",
+          "abv": "4.0%"
+        },
+        {
+          "name": "Sassy Poire Cider",
+          "brewery": "Maison Sassy",
+          "description": "Perry (Pear Cider). Crisp, fruit forward, fresh pear, white flower aromas. Organic. Origin: Normandy, FR",
+          "abv": "2.5%"
+        },
+        {
+          "name": "Sassy Rose Cider",
+          "brewery": "Maison Sassy",
+          "description": "Rosé Cider. Semi-dry/soft, fruit forward, red fruit, apple aromas. Organic. Origin: Normandy, FR",
+          "abv": "3.0%"
+        }
+      ]
+    },
+    {
+      "title": "NON-ALCOHOLIC",
+      "items": [
+        {
+          "name": "Superior Unfiltered Lager",
+          "brewery": "Lucky Saint",
+          "description": "Non-Alcoholic. Unfiltered lager brewed according to Reinheitsgebot. Maximum flavour. Origin: Bavaria, Germany",
+          "abv": "0.05%"
+        }
+      ]
+    }
+  ]
+}

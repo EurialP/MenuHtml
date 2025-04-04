@@ -1,0 +1,295 @@
+{
+  "title": "FOOD MENU",
+  "subtitle": "AUTUMN 2024 DINNER",
+  "sections": [
+    {
+      "title": "Snacks",
+      "items": [
+        {
+          "name": "CRUDITÉS",
+          "description": "Seasonal raw vegetables (chicory, radishes, cucumbers, carrots) served with chive emulsion. A NoMad Classic from NY.",
+          "price": 14,
+          "allergens": "Eggs.",
+          "dietaryInfo": "Onion."
+        },
+        {
+          "name": "TUNA TOAST",
+          "description": "Toasted milk bread filled with Tuna tartare & horseradish cream, served with lemon gel, pickled shallot, frisée, radish & mustard frill.",
+          "price": 19,
+          "allergens": "Cereals/Gluten (Cannot be removed), Fish (Cannot be removed), Milk (Incl Lactose - Cannot be removed), Mustard, Sulphites.",
+          "dietaryInfo": "Citrus, Onion."
+        },
+        {
+          "name": "OYSTER ON THE HALF SHELF",
+          "description": "6 Carlingford oysters served on crushed ice with vermouth mignonette, gremolata, and lemon wedges. Mignonette includes minced shallots, pepper, vinegar. Gremolata includes parsley, lemon zest, garlic.",
+          "price": 28,
+          "allergens": "Molluscs (Cannot be removed), Sulphites.",
+          "dietaryInfo": "Alcohol, Citrus, Garlic, Nightshade, Onion."
+        },
+        {
+          "name": "SCOTCH OLIVES",
+          "description": "Halbourne Blue cheese stuffed Gordal Olives wrapped in lamb sausage, breaded with panko, fried, and served with Harissa Mayo and fried mint leaves (3 per portion).",
+          "price": 16,
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Sulphites.",
+          "dietaryInfo": "Citrus, Garlic, Nightshade."
+        },
+        {
+          "name": "FLATBREAD",
+          "description": "Flatbread baked with crème fraiche and mozzarella, served with confit delica squash, whipped ricotta, picked thyme, fried pumpkin seeds, and hot honey. A 'plain' dairy-free version is available.",
+          "price": 12,
+          "allergens": "Cereals/Gluten (Cannot be removed), Milk (Incl Lactose - Cannot be removed).",
+          "dietaryInfo": "Garlic, Nightshade, Onion. (Dairy-free 'plain' version available)"
+        },
+        {
+          "name": "KALETTES",
+          "description": "Fried Kalettes (kale sprouts) in rice flour tempura batter with honey mustard and dried cranberries.",
+          "price": 14,
+          "allergens": "Cereals/Gluten (CC), Eggs (CC), Mustard, Sulphites.",
+          "dietaryInfo": "Citrus, Nightshade."
+        }
+      ]
+    },
+    {
+      "title": "Vegetables",
+      "items": [
+        {
+          "name": "WALDORF SALAD",
+          "description": "Waldorf salad mix (celery, apple, walnuts, grapes, mayo-based dressing) piped into filo pastry, dipped in parsley breadcrumbs, fried, and finished with truffle paste and fresh black truffle.",
+          "price": 15,
+          "allergens": "Celery, Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (Walnuts), Sulphites.",
+          "dietaryInfo": "Alcohol (Brandy), Citrus, Mushroom (Truffle), Nightshade (Cayenne), Onion."
+        },
+        {
+          "name": "GEM SALAD",
+          "description": "Red gem lettuce leaves with shaved raw radish, lemon vinaigrette, Green Goddess dressing (vegetarian version, no anchovy), chopped chives & lemon zest.",
+          "price": 12,
+          "allergens": "Eggs (Can be removed), Milk (Incl Lactose - Can be removed), Sulphites.",
+          "dietaryInfo": "Citrus, Garlic, Onion. (Modification: Lemon vinaigrette or EVOO)"
+        },
+        {
+          "name": "RED SALAD",
+          "description": "Red leaf salad (Radicchio, red endive, red frill mustard leaf, chard stem, red shiso, red/purple kale, beetroot) with Edmond Tew cheese spread (cow's milk, animal rennet).",
+          "price": 15,
+          "allergens": "Milk (Incl Lactose), Mustard, Sulphites.",
+          "dietaryInfo": "(None marked)."
+        },
+        {
+          "name": "CHARRED HISPI CABBAGE",
+          "description": "Charred purple Hispi (sweetheart) cabbage dressed with pumpkin seed butter, topped with a nut & seed mix, served with delica squash puree. (Vegan).",
+          "price": 29,
+          "allergens": "Nuts (Hazelnut, almond, pecan, walnut, pistachio, pine nut), Sulphites (Vinegar).",
+          "dietaryInfo": "Garlic, Nightshade (Aleppo). (Dish is Vegan)"
+        },
+        {
+          "name": "MUSHROOM RISOTTO",
+          "description": "Carnaroli rice risotto with UK-sourced wild mushrooms (Maitake, porcini, black trumpet - fresh and fried) and mint.",
+          "price": 32,
+          "allergens": "Celery, Cereals/Gluten (CC - Fried mushrooms), Milk (Incl Lactose - Parmesan), Sulphites (Wine).",
+          "dietaryInfo": "Alcohol (Wine), Citrus, Mushroom, Onion."
+        }
+      ]
+    },
+    {
+      "title": "Fish",
+      "items": [
+        {
+          "name": "OYSTER ROCKEFELLER",
+          "description": "3 Grilled Carlingford oysters topped with a creamy cheese sauce (bacon, garlic, shallot, spinach, cream, basil, Pernod, parmesan) and brioche crumb, grilled on the hearth.",
+          "price": 14,
+          "allergens": "Cereals/Gluten (Brioche), Milk (Incl Lactose - Cream, Parmesan), Molluscs, Sulphites (Pernod).",
+          "dietaryInfo": "Alcohol (Pernod), Garlic, Nightshade (Cayenne), Onion, Pork (Lardons)."
+        },
+        {
+          "name": "SEABASS CRUDO",
+          "description": "Seabass crudo served on a tapioca crisp, dressed with green curry sauce, coriander oil, finger lime, and garnished with red/green shiso leaves and Thai basil.",
+          "price": 16,
+          "allergens": "Celery (Stock), Cereals/Gluten (CC - Frier), Fish, Sulphites.",
+          "dietaryInfo": "Citrus, Garlic, Nightshade, Onion."
+        },
+        {
+          "name": "GRILLED ORKNEY SCALLOP",
+          "description": "Fresh Orkney Scallop grilled on the coals, served with roe oil and a smoked sabayon, finished with smoked dulce powder.",
+          "price": 16,
+          "allergens": "Eggs (Sabayon), Molluscs, Sulphites.",
+          "dietaryInfo": "Alcohol (Wine in Sabayon?), Garlic, Nightshade (Paprika), Onion."
+        },
+        {
+          "name": "SCOTTISH MUSSELS",
+          "description": "Scottish mussels cooked with fresh Calabrian chilli, anchovies, shallot, fennel, celery soffrito, served with grilled sourdough, chives, and Calabrian chilli spread.",
+          "price": 18,
+          "allergens": "Celery, Cereals/Gluten (Sourdough), Fish (Anchovies), Molluscs, Sulphites (Wine).",
+          "dietaryInfo": "Alcohol (Wine), Garlic, Nightshade, Onion."
+        },
+        {
+          "name": "LOBSTER PAPPARDELLE",
+          "description": "Pappardelle pasta with lobster in a butter emulsion, finished with lemongrass and black pepper.",
+          "price": 38,
+          "allergens": "Cereals/Gluten, Crustaceans, Eggs, Fish (Kombu Stock), Milk (Incl Lactose - Butter), Soya (Kombu Stock), Sulphites (Vinegar).",
+          "dietaryInfo": "Alcohol (Kombu Stock), Citrus, Garlic, Nightshade, Onion."
+        },
+        {
+          "name": "SEARED ATLANTIC COD",
+          "description": "Seared Atlantic cod served with a celeriac chowder (fumet blanc), blanched celeriac, and finished with picked watercress, chives, celery, and parsley.",
+          "price": 46,
+          "allergens": "Celery, Fish, Milk (Incl Lactose - Cream, Butter), Sulphites (Wine, Vermouth).",
+          "dietaryInfo": "Alcohol (Wine, Vermouth), Mushroom, Onion."
+        }
+      ]
+    },
+    {
+      "title": "Meat & Game",
+      "items": [
+        {
+          "name": "GRILLED QUAIL",
+          "description": "Grilled quail rubbed with a three-pepper spice mix, served medium with lemon puree and marigold leaf.",
+          "price": 16,
+          "allergens": "Milk (Incl Lactose - Butter).",
+          "dietaryInfo": "Citrus, Nightshade (Chilli, Cayenne)."
+        },
+        {
+          "name": "BEEF CARPACCIO",
+          "description": "Thinly sliced beef loin (seared outside) served with caper & parmesan cream, pine nut confit, pickled shallots & caper berries.",
+          "price": 24,
+          "allergens": "Milk (Incl Lactose - Parmesan, Cream), Mustard, Nuts (Pine Nuts), Sulphites (Vinegar).",
+          "dietaryInfo": "Citrus, Onion."
+        },
+        {
+          "name": "SQUAB",
+          "description": "Confit squab leg and seared breast served with braised fennel, orange puree, fennel puree, squab sauce, finished with Castelfranco & pink radicchio, orange segments, and fennel pollen.",
+          "price": 24,
+          "allergens": "Celery, Milk (Incl Lactose - Butter), Sulphites (Wine, Vinegar).",
+          "dietaryInfo": "Alcohol (Wine, Brandy, Port, Pernod), Citrus, Garlic, Onion."
+        },
+        {
+          "name": "SHERWOOD FOREST VENISON",
+          "description": "Black trumpet mushroom crumbed Venison served with chestnut puree, charred pickled onion, black trumpet mushrooms, and sauce civet (game stew sauce, traditionally w/ blood). Garnished with shaved fresh chestnut.",
+          "price": 48,
+          "allergens": "Cereals/Gluten (Brioche), Milk (Incl Lactose - Butter, Cream), Mustard (Dijon), Nuts (Chestnut), Sulphites (Wine, Vinegar).",
+          "dietaryInfo": "Alcohol (Wine, Brandy, Maderia), Onion, Pork (Blood)."
+        },
+        {
+          "name": "CORN FED CHICKEN",
+          "description": "Chicken Breast served with confit potatoes, gem lettuce dressed in buttermilk, lettuce puree, and a sherry cream sauce.",
+          "price": 32,
+          "allergens": "Celery, Eggs (Mayo), Milk (Incl Lactose - Buttermilk, Cream, Butter), Sulphites (Wine, Sherry).",
+          "dietaryInfo": "Alcohol (Wine, Sherry), Citrus, Garlic, Mushroom, Onion."
+        },
+        {
+          "name": "BRITISH BEEF FILET",
+          "description": "Dry-aged beef fillet (grilled med-rare) with turnip puree, cooked turnip, fried purple/green kale, bordelaise sauce, finished with spikey kale tops and black pepper.",
+          "price": 56,
+          "allergens": "Celery, Milk (Incl Lactose - Butter, Cream?), Sulphites (Wine, Vinegar).",
+          "dietaryInfo": "Alcohol (Wine, Brandy), Garlic, Onion."
+        }
+      ]
+    },
+    {
+      "title": "Feasts From The Hearth",
+      "items": [
+        {
+          "name": "TOMAHAWK STEAK",
+          "description": "45-day aged Tomahawk steak (950g avg) served with fire-roasted brown butter mash (pomme puree), Jersey Royals & Heritage tomatoes with Green Goddess Dressing, creamed chard, Bordelaise sauce, and chimichurri on the side.",
+          "price": 150,
+          "allergens": "Celery, Cereals/Gluten (Breadcrumb), Eggs, Milk (Incl Lactose - Cheese, Butter?), Sulphites.",
+          "dietaryInfo": "Alcohol, Citrus, Garlic, Nightshade, Onion."
+        },
+        {
+          "name": "WHOLE GRILLED SEA BASS",
+          "description": "Whole sea bass grilled on the hearth, served with agrodolce sauce, Puntarelle (chicory variant), Citrus Salsa, and Butter Glazed New Potatoes on the side.",
+          "price": 120,
+          "allergens": "Celery, Fish (Anchovy), Milk (Incl Lactose - Butter), Sulphites (Wine, Vinegar).",
+          "dietaryInfo": "Alcohol (Wine), Citrus, Garlic, Nightshade (Aleppo), Onion."
+        },
+        {
+          "name": "WILD HAMPSHIRE PHEASANT (GUINEA FOWL)",
+          "description": "Grilled Guinea Fowl (Label Rouge quality from Loire, France) served with fire-roasted baby corn with chimichurri, spinach, sweetcorn custard (chawanmushi style) with truffle, foie gras & offal tart, and truffle & Madeira sauce.",
+          "price": 85,
+          "allergens": "Cereals/Gluten (Rye, AP Flour), Eggs (Chawanmushi), Fish (Dashi, Bonito), Milk (Incl Lactose - Butter), Soya (White Soya Sauce), Sulphites (Madeira).",
+          "dietaryInfo": "Alcohol (Mirin, Madeira), Citrus, Garlic, Mushroom (Shiitake, Truffle), Nightshade, Onion."
+        },
+        {
+          "name": "STUFFED SQUASH",
+          "description": "Roasted Delica squash with a sage stuffing, served with braised collard greens, wild rice, puffed wild rice, sweet garlic puree, and a roasted vegetable sauce.",
+          "price": 65,
+          "allergens": "Celery, Cereals/Gluten (Brioche), Eggs, Milk (Incl Lactose - Cream, Milk, Whey, Butter), Sulphites (Wine).",
+          "dietaryInfo": "Alcohol (Wine), Garlic, Mushroom (Portabella), Nightshade (Red Peppers, Cayenne), Onion."
+        }
+      ]
+    },
+    {
+      "title": "Sides",
+      "items": [
+        {
+          "name": "SIDE SALAD",
+          "description": "Red gem lettuce leaves with shaved raw radish, lemon vinaigrette, and dill.",
+          "price": 9,
+          "allergens": "(None marked).",
+          "dietaryInfo": "Citrus."
+        },
+        {
+          "name": "KALES",
+          "description": "Sauteed green and purple kale leaves (including Cavolo Nero) with garlic and lemon vinaigrette, mixed with fried kale leaves.",
+          "price": 7,
+          "allergens": "Cereals/Gluten (CC).",
+          "dietaryInfo": "Citrus, Garlic."
+        },
+        {
+          "name": "TWICE BAKED POTATO",
+          "description": "Twice baked potato stuffed with truffle mash, finished with fried black truffle, cheese espuma (Raclette & Parmigiano Reggiano), garnished with black truffle and chives.",
+          "price": 19,
+          "allergens": "Cereals/Gluten (CC - Frier), Milk (Incl Lactose - Raclette, Cream, Milk).",
+          "dietaryInfo": "Mushroom (Truffle)."
+        },
+        {
+          "name": "BROCCOLINI",
+          "description": "Charred broccolini dressed in lemon vinaigrette, chilli oil & sesame crumble (Vegan).",
+          "price": 10,
+          "allergens": "Sesame Seeds, Sulphites (Vinegar?).",
+          "dietaryInfo": "Citrus, Nightshade (Chilli), Onion. (Dish is Vegan)"
+        },
+        {
+          "name": "CHIPS",
+          "description": "Chips seasoned with rosemary salt (rosemary, lemon skin, salt), served with Ketchup and Pommery mustard mayo.",
+          "price": 9,
+          "allergens": "Cereals/Gluten (CC), Eggs (Mayo), Milk (Incl Lactose - CC), Mustard (Mayo), Sulphites.",
+          "dietaryInfo": "Citrus, Nightshade (Ketchup?)."
+        }
+      ]
+    },
+    {
+      "title": "Dessert",
+      "items": [
+         {
+          "name": "STRAWBERRY",
+          "description": "Hibiscus Sorbet, Puffed Rice & Berry Compote",
+          "price": 14,
+          "allergens": "(No detailed allergen page found)"
+        },
+        {
+          "name": "CHOCOLATE",
+          "description": "Peanut Butter Ice Cream & Caramelised Banana",
+          "price": 14,
+          "allergens": "(No detailed allergen page found)"
+        },
+        {
+          "name": "MILK & HONEY",
+          "description": "Shortbread, Brittle & Ice Cream",
+          "price": 14,
+          "allergens": "(No detailed allergen page found)"
+        },
+        {
+          "name": "COCONUT",
+          "description": "Lime, Mango & Passion Fruit",
+          "price": 14,
+          "allergens": "(No detailed allergen page found)"
+        },
+        {
+          "name": "CHEESE SELECTION",
+          "description": "Served with Quince & Crackers",
+          "price": 19,
+          "allergens": "(No detailed allergen page found)"
+        }
+      ]
+    }
+  ]
+}

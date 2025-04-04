@@ -1,0 +1,121 @@
+---
+// src/components/MenuItem.astro
+export interface Props {
+    name: string | null; // Allow null for items like 'add poached egg'
+    description?: string;
+    price?: string | number; // Make price optional as some menus use ABV etc.
+    allergens?: string;
+    dietaryInfo?: string;
+    // Additional props for other menus
+    tagline?: string;
+    type?: string;
+    brewery?: string;
+    abv?: string;
+    note?: string;
+    subName?: string;
+    variety?: string;
+    region?: string;
+    producer?: string;
+    vintage?: string;
+    farming?: string;
+    tastingNotes?: string;
+    about?: string;
+}
+
+const {
+    name, description, price, allergens, dietaryInfo,
+    tagline, type, brewery, abv, note,
+    subName, variety, region, producer, vintage, farming, tastingNotes, about
+} = Astro.props;
+
+// Determine if the item should be expandable (include new fields)
+const isExpandable = description || allergens || dietaryInfo || tagline || tastingNotes || about || region || producer || vintage || farming || type || brewery; // Added type/brewery to expandable check
+
+// Determine what to display in the price column (Price, ABV, or nothing)
+const displayValue = price ?? abv ?? '';
+const displayLabel = typeof price === 'number' ? '£' : ''; // Add £ only if price is a number
+---
+<div id={`item-${name?.replace(/\s+/g, '-') ?? Math.random()}`}
+    class="menu-item mb-6 py-4 border-b border-gray-200 grid grid-cols-[1fr_auto] gap-x-6 items-start"
+    class:list={[{ "cursor-pointer hover:bg-gray-50 rounded-md -mx-2 px-2": isExpandable }]}
+    onclick={isExpandable ? "toggleDescription(this)" : undefined}
+>
+    {/* Main item details */}
+    <div class="flex flex-col">
+        {name && (
+            <h3 class="menu-item-name text-lg font-semibold text-slate-700 mb-1 leading-tight flex items-center flex-wrap">
+                <span>{name}</span>
+                {subName && <span class="wine-sub-name text-base font-normal text-gray-600 ml-2">{subName}</span>}
+                {type && <span class="beer-type text-base font-normal text-gray-600 italic ml-2">({type})</span>}
+                {brewery && <span class="brewery-name text-base font-normal text-gray-600 ml-2">{brewery}</span>}
+                {variety && <span class="wine-variety text-base font-normal text-gray-600 italic ml-2">({variety})</span>}
+                {note && <span class="special-note text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 ml-2 inline-block align-middle">{note}</span>}
+            </h3>
+        )}
+        {tagline && <span class="kind-of-like-tag text-sm italic text-slate-600 block mb-2">{tagline}</span>}
+    </div>
+
+    {/* Price / ABV Column */}
+    <p class="menu-item-price text-lg font-semibold text-slate-800 whitespace-nowrap mt-1">
+        {displayLabel}{displayValue}
+    </p>
+
+    {/* Expanded Details Section (Spans both columns) */}
+    <div class="menu-item-details col-span-2 text-sm text-slate-600 leading-relaxed max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0 mt-0">
+         <div class="pt-3 space-y-2"> {/* Add padding and spacing */}
+            {description && <p>{description}</p>}
+            {/* Wine specific details */}
+            {region && <p><strong>Region:</strong> {region}</p>}
+            {producer && <p><strong>Producer:</strong> {producer}</p>}
+            {vintage && <p><strong>Vintage:</strong> {vintage}</p>}
+            {farming && <p><strong>Farming:</strong> {farming}</p>}
+            {tastingNotes && <p><strong>Tasting Notes:</strong> {tastingNotes}</p>}
+            {about && <p><strong>About:</strong> {about}</p>}
+        </div>
+         {/* Allergens and Dietary Info */}
+         {(allergens || dietaryInfo) && (
+             <div class="mt-3 pt-3 border-t border-gray-200 space-y-1">
+                {allergens && (
+                    <span class="allergen-info block text-xs text-red-700">
+                        <strong>Allergens:</strong> {allergens}
+                    </span>
+                )}
+                {dietaryInfo && (
+                    <span class="other-dietary-info block text-xs text-stone-700">
+                        <strong>Other Dietaries:</strong> {dietaryInfo}
+                    </span>
+                )}
+             </div>
+         )}
+    </div>
+</div>
+
+<style>
+/* Scoped styles for the expanded state */
+.menu-item.expanded .menu-item-details {
+    max-height: 1500px; /* Generous max height */
+    opacity: 1;
+    margin-top: 0.75rem; /* Add margin when expanded */
+}
+/* Keep specific styles for strong tags if needed, otherwise Tailwind handles it */
+/*.menu-item.expanded .allergen-info strong { font-weight: 600; color: #b91c1c; }*/
+/*.menu-item.expanded .other-dietary-info strong { font-weight: 600; color: #44403c; }*/
+
+/* Add styles from other HTML files if needed */
+.menu-item-description p { margin-bottom: 0.5rem; }
+.menu-item-description p:last-child { margin-bottom: 0; }
+.menu-item-description strong { font-weight: 600; color: #374151; }
+.kind-of-like-tag { font-size: 0.9rem; font-style: italic; color: #4b5563; display: block; margin-bottom: 4px; } /* Adjusted size */
+.wine-sub-name { font-size: 1rem; font-weight: 400; color: #6b7280; margin-left: 8px; } /* Adjusted size */
+.beer-type { font-size: 1rem; font-weight: 400; color: #71717a; margin-left: 8px; font-style: italic; } /* Adjusted size */
+.brewery-name { font-size: 1rem; font-weight: 400; color: #6b7280; margin-left: 8px; } /* Adjusted size */
+.wine-variety { font-size: 1rem; font-weight: 400; color: #4b5563; margin-left: 8px; font-style: italic; } /* Adjusted size */
+.special-note { font-size: 0.75rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 9999px; background-color: #fef3c7; color: #92400e; margin-left: 0.5rem; display: inline-block; vertical-align: middle; }
+
+/* Remove redundant styles handled by Tailwind classes above */
+/*.allergen-info, .other-dietary-info { ... }*/
+/*.allergen-info { ... }*/
+/*.allergen-info strong { ... }*/
+/*.other-dietary-info { ... }*/
+/*.other-dietary-info strong { ... }*/
+</style>

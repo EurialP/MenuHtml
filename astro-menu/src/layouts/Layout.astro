@@ -1,0 +1,84 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css'; // Import Tailwind global styles
+
+// Define props for the layout, e.g., title
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+// Define navigation links (can be moved to data later)
+const navLinks = [
+    { href: "/", text: "Nomad", id: "index" },
+    { href: "/breakfast", text: "Breakfast", id: "breakfast" },
+    { href: "/ird", text: "IRD", id: "ird" },
+    { href: "/sh", text: "Side Hustle", id: "sh" },
+    { href: "/beers", text: "Beer", id: "beers" },
+    { href: "/cocktails", text: "Cocktails", id: "cocktails" },
+    { href: "/wines", text: "Wine", id: "wines" },
+];
+
+// Determine the current page path to mark the active link
+const currentPath = Astro.url.pathname;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style is:global>
+        /* Keep minimal global styles here if needed, or move all to global.css */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-slate-800"> {/* Slightly different background, base text color */}
+    <div class="container mx-auto max-w-5xl px-6 py-8"> {/* Wider container, more padding */}
+        <header class="top-section mb-10">
+            {/* Heading will be provided by individual pages */}
+            {/* Sticky Navigation */}
+            <div class="sticky top-0 z-10 bg-gray-100 py-3 mb-6 border-b border-gray-300 shadow-sm">
+                <div class="menu-navigation flex justify-center flex-wrap container mx-auto max-w-5xl px-2">
+                    {navLinks.map(link => (
+                        <a
+                            href={link.href}
+                            class:list={[
+                                "inline-block px-5 py-2 text-slate-600 font-semibold text-sm rounded-md transition-colors duration-200 mx-1 my-1 hover:text-slate-900 hover:bg-gray-200", // Larger text, more padding, subtle hover
+                                { "current text-white bg-slate-700 hover:bg-slate-800 cursor-default": currentPath === link.href || (currentPath === '/' && link.id === 'index') } // Clearer current state
+                            ]}
+                        >
+                        {link.text}
+                    </a>
+                ))}
+            </div>
+        </header>
+        <main id="menu-content">
+            <slot /> <!-- Page content will be injected here -->
+        </main>
+    </div>
+
+    <script is:inline>
+        // Keep toggleDescription function globally accessible
+        function toggleDescription(menuItem) {
+            menuItem.classList.toggle('expanded');
+        }
+
+        // Basic click handling for menu items (can be refined)
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.menu-item[onclick]');
+            menuItems.forEach(item => {
+                // If onclick exists, ensure it works. Consider replacing with event listeners.
+                // For now, we assume the inline onclick="toggleDescription(this)" works.
+            });
+        });
+    </script>
+</body>
+</html>

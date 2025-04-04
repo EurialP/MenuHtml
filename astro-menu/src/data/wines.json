@@ -1,0 +1,391 @@
+{
+  "title": "WINE MENU",
+  "subtitle": "Wines By The Glass (Winter 2024)",
+  "sections": [
+    {
+      "title": "Sparkling",
+      "items": [
+        {
+          "name": "Pelegrim",
+          "subName": "Westwell NV",
+          "variety": "Pinot Noir, Chardonnay, Pinot Meunier",
+          "region": "Kent, England",
+          "producer": "Westwell",
+          "vintage": "NV",
+          "farming": "Low intervention",
+          "tastingNotes": "Apples, raspberries and sourdough, lemon and biscuit.",
+          "about": "Traditional method sparkling from chalky soils, lees-aged 36 months. Named after 'Pilgrim' near Pilgrim's Way.",
+          "price": "£18"
+        },
+        {
+          "name": "Blanc de Blancs",
+          "subName": "Gusbourne 2019",
+          "variety": "Chardonnay",
+          "region": "Kent, England",
+          "producer": "Gusbourne",
+          "vintage": "2019",
+          "farming": "Conventional",
+          "tastingNotes": "Ripe citrus and stone fruit on the nose, with a rich biscuity note. Palate is dominate by ripe fruit, yellow apple, white peach, honey and citrus notes.",
+          "about": "Whole bunch pressed Chardonnay, fermented mostly in steel with some old oak. Lees aged 42 months, bottle aged 6 months.",
+          "price": "£20"
+        },
+        {
+          "name": "Fluence Brut Nature",
+          "subName": "Franck Pascal NV",
+          "variety": "Chardonnay (31%), Pinot Meunier (69%)",
+          "region": "Champagne, France",
+          "producer": "Franck Pascal",
+          "vintage": "NV",
+          "farming": "Biodynamic",
+          "tastingNotes": "Soft and elegant mousse, fresh citrus and stone fruits, creamy biscuit notes.",
+          "about": "Natural approach from Vallee de la Marne. Indigenous yeasts, no fining/filtering, avoids barrels. Brut Nature.",
+          "price": "£22"
+        },
+        {
+          "name": "'Nos Pas Dans La Craie' Blanc de Blancs",
+          "subName": "Marie Copinet 2019",
+          "variety": "Chardonnay",
+          "region": "Champagne, France (Cote de Sezanne)",
+          "producer": "Marie Copinet",
+          "vintage": "2019",
+          "farming": "Sustainable, Certified Organic",
+          "tastingNotes": "Aromas of citrus fruit, white fruit, fantastic acidity paired with a persistent mineral finish.",
+          "about": "Brut Nature from 40+ year old vines in Montgenost (lieu-dit Le Grande Montagne). Chalky soils.",
+          "price": "£24"
+        },
+        {
+          "name": "Grand Cuvee 172ème",
+          "subName": "Krug NV",
+          "variety": "Chardonnay, Pinot Noir, Pinot Meunier",
+          "region": "Champagne, France",
+          "producer": "Krug",
+          "vintage": "NV (Base 2016, oldest 1998)",
+          "farming": "Conventional",
+          "tastingNotes": "Blooming flowers, ripe, dried and citrus fruits, a touch of gingerbread. Hazelnut, almond brioche and honey with a lively acidity.",
+          "about": "Blend of 146 wines from 11 years. Fermented in small oak barrels, lees aged 6 years. 44% Pinot Noir, 36% Chardonnay, 20% Meunier.",
+          "price": "£35"
+        },
+        {
+          "name": "Dom Perignon 2013",
+          "subName": null,
+          "variety": "Pinot Noir, Chardonnay",
+          "region": "Champagne, France (Hautvillers)",
+          "producer": "Dom Perignon",
+          "vintage": "2013",
+          "farming": "Conventional",
+          "tastingNotes": "Green fruit, plum, apricot and oranges. Blossom and pepper with a silky-smooth saline finish in and amongst toasty hues.",
+          "about": "Single vintage blend from top 17 crus. Aged 8 years in cellar before release.",
+          "price": "£45"
+        },
+        {
+          "name": "Rose",
+          "subName": "Ruinart NV",
+          "variety": "Chardonnay, Pinot Noir",
+          "region": "Champagne, France",
+          "producer": "Ruinart",
+          "vintage": "NV",
+          "farming": "Conventional",
+          "tastingNotes": "Delicate mousse with a pomegranate pink colour. Tropical fruits such as lychee and guava, rose pomegranate, raspberries, cherries, pink grapefruit, elegant.",
+          "about": "Blend of ~80% Chardonnay and Pinot Noir. Claimed first rose Champagne. Oldest Champagne house (1729).",
+          "price": "£35"
+        }
+      ]
+    },
+    {
+      "title": "White",
+      "items": [
+        {
+          "name": "Grüner Veltliner",
+          "subName": "Christina 2023",
+          "variety": "Grüner Veltliner",
+          "region": "Carnuntum, Austria",
+          "producer": "Christina Netzl",
+          "vintage": "2023",
+          "farming": "Certified Organic, vegan friendly",
+          "tastingNotes": "Green fruit, white pepper spice, honeydew, a touch of saltiness and great balance of yeastiness and fruit.",
+          "about": "Whole bunch pressed, natural ferment in stainless steel, long lees ageing. Unfined, unfiltered.",
+          "price": "£14"
+        },
+        {
+          "name": "La Pepie Chignin",
+          "subName": "Adrien Berlioz 2023",
+          "variety": "Jacquere",
+          "region": "Savoie, France (Chignin)",
+          "producer": "Adrien Berlioz",
+          "vintage": "2023",
+          "farming": "Biodynamic",
+          "tastingNotes": "Freshness, mineral and alpine. Floral and fragrant notes, tangy, fresh and tense palate, light and aromatic.",
+          "about": "Hand-harvested from steep (50%) limestone slopes worked by horse. Whole cluster pressed, fermented in tank, 4 months ageing.",
+          "price": "£17"
+        },
+        {
+          "name": "Severna Morava",
+          "subName": "Deuric 2021",
+          "variety": "Morava",
+          "region": "Srem, Serbia",
+          "producer": "Deuric",
+          "vintage": "2021",
+          "farming": "Certified organic",
+          "tastingNotes": "Peach, ripe yellow apple and citrus fruits. Tropical, pinappale, mango, nectarines. Juicy with intervening lemongrass and melon characteristics.",
+          "about": "From Fruska Gora national park slopes. Morava is a Serbian crossing (Traminer x Riesling). Modern techniques used.",
+          "price": "£14"
+        },
+        {
+          "name": "'Rheingau' Riesling",
+          "subName": "Eva Fricke 2022",
+          "variety": "Riesling",
+          "region": "Rheingau, Germany",
+          "producer": "Eva Fricke",
+          "vintage": "2022",
+          "farming": "Certified Organic, Biodynamic Practices",
+          "tastingNotes": "Peach, nectarine, pear and lime. Slight spritz on the palate. Fresh and bright acidity to finish.",
+          "about": "Dry Riesling from various Rheingau sites. Spontaneous fermentation in stainless steel.",
+          "price": "£17"
+        },
+        {
+          "name": "Trinquàmes",
+          "subName": "La Grange Tiphaine 2023",
+          "variety": "Sauvignon Blanc",
+          "region": "Touraine, Loire, France",
+          "producer": "La Grange Tiphaine",
+          "vintage": "2023",
+          "farming": "Biodynamic",
+          "tastingNotes": "Fresh and aromatic, citrus and tropical fruit with a mineral backbone.",
+          "about": "From 25-year-old vines on clay/limestone. Hand harvested, fermented and aged in stainless steel.",
+          "price": "£20"
+        },
+        {
+          "name": "'Calvarino' Soave",
+          "subName": "Pieropan 2015",
+          "variety": "70% Garganega, 30% Trebbiano",
+          "region": "Soave, Italy",
+          "producer": "Pieropan",
+          "vintage": "2015",
+          "farming": "Practicing organic",
+          "tastingNotes": "Straw yellow, greenish hints, white flower, almond blossom, ripe fruit with a fresh clean acidity. Fragrant and long, almond pastry to finish.",
+          "about": "Single vineyard (Calvarino) Soave Classico from volcanic hills. Fermented and aged 1 year in glass-lined cement tanks on fine lees.",
+          "price": "£20"
+        },
+        {
+          "name": "'Au Quin Château' Macon-Cruzille",
+          "subName": "Vignes du Mayne 2022",
+          "variety": "Chardonnay",
+          "region": "Burgundy, France (Macon-Cruzille)",
+          "producer": "Vignes du Mayne",
+          "vintage": "2022",
+          "farming": "Organic certified, biodynamic practices",
+          "tastingNotes": "Notes of fresh lemon and almond, textured palate with elements of lemon pith and apple.",
+          "about": "From 30-year-old vines on white/blue marl. Pressed into barrels, aged 8 months. Unfined, unfiltered. Oldest continually organic winery in France.",
+          "price": "£23"
+        },
+        {
+          "name": "Central Coast Chardonnay",
+          "subName": "Sandhi 2021",
+          "variety": "Chardonnay",
+          "region": "California, USA (Central Coast)",
+          "producer": "Sandhi (Rajat Parr & Sashi Moorman)",
+          "vintage": "2021",
+          "farming": "Practicing Organic",
+          "tastingNotes": "Golden apple fruits, dried flower, nutty/almond notes, touch of spice, still a lovely freshness in acidity.",
+          "about": "Collaboration focusing on Santa Barbara fruit. Wild fermentations, minimal additions, conservative new oak. Inspired by Burgundy.",
+          "price": "£20"
+        },
+        {
+          "name": "'Leirana' Albariño",
+          "subName": "Forjas del Salnés 2023",
+          "variety": "Albariño",
+          "region": "Rias Baixas, Spain (Val do Salnés)",
+          "producer": "Forjas del Salnés",
+          "vintage": "2023",
+          "farming": "Organic, practicing biodynamic",
+          "tastingNotes": "Orchard fruit, pears, mineral, saline and bright. Lightness with a youthful zest.",
+          "about": "From 90-150 year old vines. Fermented/aged mostly in steel (80%) with some neutral oak (20%) on lees.",
+          "price": "£18"
+        },
+        {
+          "name": "'Benje'",
+          "subName": "Envínate 2022",
+          "variety": "Listan Blanco (Palomino)",
+          "region": "Tenerife, Spain (Ycoden-Daute-Isora)",
+          "producer": "Envínate",
+          "vintage": "2022",
+          "farming": "organic",
+          "tastingNotes": "Citrus and a slight herbaceous note, delicately floral with a creamy profile from the flor ageing that adds complexity and a smoothness to the wine. Saline and refreshing.",
+          "about": "High altitude (1000m) vines. Fermented in concrete (25% skin contact). Aged in concrete & neutral oak foudre, 40% under flor.",
+          "price": "£19"
+        },
+        {
+          "name": "Chassagne-Montrachet 'Les Chenevottes'",
+          "subName": "Thomas Morey 2020",
+          "variety": "Chardonnay",
+          "region": "Burgundy, France (Chassagne-Montrachet)",
+          "producer": "Thomas Morey",
+          "vintage": "2020",
+          "farming": "Organic",
+          "tastingNotes": "Green apple, peaches, buttery aspect.",
+          "about": "Premier Cru vineyard near Le Montrachet. Old school winemaking, fermented and aged 12+ months in oak.",
+          "price": "£32 (125ml Coravin)"
+        }
+      ]
+    },
+    {
+      "title": "Skin-Contact",
+      "items": [
+        {
+          "name": "'Bohem' Friulano",
+          "subName": "Atelier Kramar 2019",
+          "variety": "Friulano",
+          "region": "Brda, Slovenia",
+          "producer": "Atelier Kramar",
+          "vintage": "2019",
+          "farming": "Certified Organic, Biodynamic Practices",
+          "tastingNotes": "Sweet spice and white peach aromatics with a mineral finish.",
+          "about": "3 days skin contact, 12 months aging in old oak. Unfiltered, spontaneous fermentation.",
+          "price": "£18"
+        }
+      ]
+    },
+    {
+      "title": "Rose",
+      "items": [
+        {
+          "name": "L' Écorce Buissonnière",
+          "subName": "Valérie Courrèges 2023",
+          "variety": "Grenache, Vermentino, Syrah",
+          "region": "Provence, France",
+          "producer": "Valérie Courrèges",
+          "vintage": "2023",
+          "farming": "Biodynamic",
+          "tastingNotes": "Fresh, bright, fresh rose, grapefruit and some red berries.",
+          "about": "From 40-50 year old vines on clay/limestone. Direct press, indigenous yeast ferment in concrete/amphora, aged on lees.",
+          "price": "£18"
+        },
+        {
+          "name": "Cru Classé",
+          "subName": "Chateau Galoupet 2023",
+          "variety": "Grenache, Tibouren, Syrah, Vermentino, Cinsault, Semillon",
+          "region": "Provence, France",
+          "producer": "Chateau Galoupet",
+          "vintage": "2023",
+          "farming": "Organic",
+          "tastingNotes": "Summer fruit, yellow peach and floral notes. Pomelo and pineapple, silky structure with a delicately dry finish.",
+          "about": "Cru Classé lieu-dit. Complex style, 30% vinified/aged 4-5 months in French oak demi-muids (62% new).",
+          "price": "£26"
+        }
+      ]
+    },
+    {
+      "title": "Red",
+      "items": [
+        {
+          "name": "Nomad Collab",
+          "subName": "Foradori 2022",
+          "variety": "Vernatsch (Schiava)",
+          "region": "Trentino, Italy",
+          "producer": "Foradori",
+          "vintage": "2022",
+          "farming": "Biodynamic, Demeter certified",
+          "tastingNotes": "Floral, violet, red cherry, red berries, integrated acidity with rustic qualities, moderate tannins.",
+          "about": "Destemmed, spontaneous ferment in concrete/wood/amphora (<24hr skin contact), aged 5 months. Served in can.",
+          "price": "£25 (250ml)"
+        },
+        {
+          "name": "Pinot Noir",
+          "subName": "Domaine Drouhin 2021",
+          "variety": "Pinot Noir",
+          "region": "Oregon, USA (Willamette Valley)",
+          "producer": "Domaine Drouhin",
+          "vintage": "2021",
+          "farming": "Organic, Biodynamic",
+          "tastingNotes": "Red cherry, raspberry, cranberry, earthy notes, forest floor, mushroom, silky tannins.",
+          "about": "Burgundian family estate in Oregon. Destemmed, fermented in wood/steel, aged 14 months in French oak (20% new).",
+          "price": "£20"
+        },
+        {
+          "name": "Bourgogne Rouge",
+          "subName": "Domaine de Bellene 2021",
+          "variety": "Pinot Noir",
+          "region": "Burgundy, France",
+          "producer": "Domaine de Bellene",
+          "vintage": "2021",
+          "farming": "Organic",
+          "tastingNotes": "Bright red fruit, cherry, raspberry, earthy undertones, subtle spice.",
+          "about": "From old vines (50-70 years) near Beaune. Minimal intervention, aged in used oak.",
+          "price": "£18"
+        },
+        {
+          "name": "Fleurie 'Grand Pré'",
+          "subName": "Domaine Chapel 2022",
+          "variety": "Gamay",
+          "region": "Beaujolais, France (Fleurie)",
+          "producer": "Domaine Chapel",
+          "vintage": "2022",
+          "farming": "Organic",
+          "tastingNotes": "Floral (violet, iris), red berries, cherry, light-bodied, smooth tannins.",
+          "about": "From 60-year-old vines on pink granite. Carbonic maceration, aged in concrete.",
+          "price": "£19"
+        },
+        {
+          "name": "Chianti Classico",
+          "subName": "Castell'in Villa 2019",
+          "variety": "Sangiovese",
+          "region": "Tuscany, Italy (Chianti Classico)",
+          "producer": "Castell'in Villa",
+          "vintage": "2019",
+          "farming": "Practicing Organic",
+          "tastingNotes": "Sour cherry, plum, leather, tobacco, earthy notes, firm tannins.",
+          "about": "Traditional style from Castelnuovo Berardenga. Aged 12 months in large Slavonian oak casks.",
+          "price": "£16"
+        },
+        {
+          "name": "Rioja Reserva",
+          "subName": "Viña Tondonia 2011",
+          "variety": "Tempranillo, Garnacho, Graciano, Mazuelo",
+          "region": "Rioja, Spain",
+          "producer": "R. López de Heredia",
+          "vintage": "2011",
+          "farming": "Sustainable",
+          "tastingNotes": "Dried red fruit, leather, vanilla, coconut, spice, savoury, complex.",
+          "about": "Iconic traditional Rioja. Aged 6 years in American oak barrels, racked twice yearly.",
+          "price": "£24"
+        },
+        {
+          "name": "Saint-Joseph 'Offerus'",
+          "subName": "J.L. Chave Selection 2021",
+          "variety": "Syrah",
+          "region": "Northern Rhône, France (Saint-Joseph)",
+          "producer": "J.L. Chave Selection",
+          "vintage": "2021",
+          "farming": "Sustainable",
+          "tastingNotes": "Blackberry, black olive, pepper, smoked meat, violets, firm structure.",
+          "about": "Négociant label from Jean-Louis Chave. Sourced from top sites, aged in neutral oak.",
+          "price": "£21"
+        },
+        {
+          "name": "Cabernet Sauvignon",
+          "subName": "Ridge Estate 2019",
+          "variety": "Cabernet Sauvignon, Merlot, Petit Verdot, Cabernet Franc",
+          "region": "California, USA (Santa Cruz Mountains)",
+          "producer": "Ridge Vineyards",
+          "vintage": "2019",
+          "farming": "Organic",
+          "tastingNotes": "Blackcurrant, cassis, cedar, tobacco leaf, graphite, structured tannins.",
+          "about": "Iconic California producer. Estate fruit from Monte Bello vineyard. Aged 17 months in American oak (mostly new).",
+          "price": "£28"
+        },
+        {
+          "name": "Barolo 'Castiglione'",
+          "subName": "Vietti 2019",
+          "variety": "Nebbiolo",
+          "region": "Piedmont, Italy (Barolo)",
+          "producer": "Vietti",
+          "vintage": "2019",
+          "farming": "Sustainable",
+          "tastingNotes": "Rose petals, tar, cherry, licorice, powerful tannins, long finish.",
+          "about": "Blend from several crus in Castiglione Falletto. Aged ~30 months in large Slavonian oak casks.",
+          "price": "£30"
+        }
+      ]
+    }
+  ]
+}

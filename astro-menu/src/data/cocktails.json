@@ -1,0 +1,268 @@
+{
+  "title": "COCKTAIL MENU",
+  "subtitle": "Winter Season 2024",
+  "sections": [
+    {
+      "title": "Classic Cocktails",
+      "items": [
+        {
+          "name": "Honeybush Negroni",
+          "tagline": "A Rich, Floral Negroni",
+          "description": "Tasting Notes: Honeybush, Coconut, Bitter",
+          "price": "£18"
+        },
+        {
+          "name": "Chartreuse Swizzle",
+          "tagline": "A Swizzle with Hints of Spices",
+          "description": "Tasting Notes: Spices, Pineapple, Sunflower",
+          "allergens": "Citrus, Sulphates",
+          "price": "£18"
+        },
+        {
+          "name": "Whiskey Sour",
+          "tagline": "A Fig Whiskey Sour",
+          "description": "Tasting Notes: Fig, Prune, Banana",
+          "allergens": "Lactose, Eggs, Citrus, Sulphites, Walnuts",
+          "price": "£18"
+        },
+        {
+          "name": "Cobra's Fang",
+          "tagline": "A Juicy Take on the Mai Tai",
+          "description": "Tasting Notes: Passionfruit, Juicy, Spice",
+          "allergens": "Dairy, Citrus",
+          "price": "£18"
+        },
+        {
+          "name": "American Trilogy",
+          "tagline": "Rye & Apple Brandy Old Fashioned",
+          "description": "Tasting Notes: Winter Spices, Maple, Baked Apple",
+          "price": "£18"
+        },
+        {
+          "name": "Cardinal",
+          "tagline": "Amaro & Coffee Mule",
+          "description": "Tasting Notes: Ginger, Coffee, Spices, Citrus",
+          "allergens": "Citrus, Caffeine",
+          "price": "£18"
+        },
+        {
+          "name": "Stranger Things",
+          "tagline": "A Green Apple Gimlet",
+          "description": "Tasting Notes: Caraway, Crisp Apple, Herbaceous",
+          "allergens": "Citrus (Lime), Tree Nuts (Almonds)",
+          "price": "£18"
+        },
+        {
+          "name": "Sgt Pepper",
+          "tagline": "A Spicy, Vegetal Margarita",
+          "description": "Tasting Notes: Cilantro, Melon, Jalapeno, Pineapple",
+          "allergens": "Citrus (Lime), Pineapple, Nightshade (Chilli)",
+          "price": "£18"
+        },
+        {
+          "name": "Start Me Up",
+          "tagline": "A Bourbon Penicillin",
+          "description": "Tasting Notes: Ginger, Honey, Saffron, Light Menthol",
+          "allergens": "Citrus",
+          "price": "£18"
+        },
+        {
+          "name": "Walter Gibson",
+          "tagline": "A Martini with Stone Fruit Qualities",
+          "description": "Tasting Notes: Orchard Fruits",
+          "allergens": "Sulphites (Pickles - removable), Sulphites (Wine)",
+          "price": "£18"
+        },
+        {
+          "name": "Always Betz on Black",
+          "tagline": "Banana Manhattan",
+          "description": "Tasting Notes: Raisin, Banana, Oak",
+          "price": "£18"
+        }
+      ]
+    },
+    {
+      "title": "Reserve Cocktails",
+      "items": [
+        {
+          "name": "Tuxedo #2",
+          "tagline": "A Twist on a Martini",
+          "description": "Tasting Notes: Anise, Bright Cherry, Stirred Down Boozy",
+          "allergens": "Citrus (can be removed)",
+          "price": "£22"
+        },
+        {
+          "name": "Hanky Panky",
+          "tagline": "A Famous Martini Twist (Savoy)",
+          "description": "Tasting Notes: Herbaceous, Anise, Smooth",
+          "allergens": "Citrus (can be removed)",
+          "price": "£22"
+        },
+        {
+          "name": "Paloma (Reserve)",
+          "tagline": "Tequila, Mezcal, Grapefruit Highball",
+          "description": "Tasting Notes: Fresh Citrus, Agave",
+          "allergens": "Citrus",
+          "price": "£22"
+        },
+        {
+          "name": "Jungle Bird (Reserve)",
+          "tagline": "A Bitter Rum Sour",
+          "description": "Tasting Notes: Bitter, Vanilla & Date",
+          "allergens": "Citrus, Pineapple, Animal Product (Vintage Campari)",
+          "price": "£22"
+        },
+        {
+          "name": "Sazerac",
+          "tagline": "Boozy, Up Whiskey Cocktail",
+          "description": "Tasting Notes: Floral, Fruity, Stone Fruit",
+          "price": "£22"
+        }
+      ]
+    },
+    {
+      "title": "Atrium Cocktails",
+      "items": [
+        {
+          "name": "Bee-Sou",
+          "tagline": "A Honey Forward French 75",
+          "description": "Tasting Notes: Honey, Black Pepper",
+          "allergens": "Citrus, Nightshade",
+          "price": "£19"
+        },
+        {
+          "name": "Waldorf Sour",
+          "tagline": "Waldorf Salad in Liquid Form",
+          "description": "Tasting Notes: Nutty, Grapes, Aromatic",
+          "allergens": "Sulphites, Egg, Citrus, Nuts",
+          "price": "£19"
+        },
+        {
+          "name": "Mean Mr Mustard",
+          "tagline": "Whiskey Sour with Dill Pickle & Mustard",
+          "description": "Tasting Notes: Apple, Horseradish, Mustard",
+          "allergens": "Mustard, Apple, Cucumber",
+          "price": "£19"
+        },
+        {
+          "name": "White Negroni",
+          "tagline": "Negroni with a Fresh, Botanical Twist",
+          "description": "Tasting Notes: Herbal, Floral, Slightly Bitter, Citrus",
+          "allergens": "Nightshade, Cucumber",
+          "price": "£19"
+        },
+        {
+          "name": "Szechuan Gibson",
+          "tagline": "Gibson with Szechuan Spice",
+          "description": "Tasting Notes: Alcohol Forward, Savoury Spice, Pickled",
+          "allergens": "Nightshade, Allium",
+          "price": "£19"
+        },
+        {
+          "name": "Celine Dijon",
+          "tagline": "Mushroom & Mustard Old Fashioned",
+          "description": "Tasting Notes: Savory, Umami, Pickles",
+          "allergens": "Mustard, Mushroom",
+          "price": "£19"
+        },
+        {
+          "name": "Gondolero Milk Punch",
+          "tagline": "A Classic Milk Punch",
+          "description": "Tasting Notes: Baking Spice, Ceylon, Citrus",
+          "allergens": "Dairy, Citrus",
+          "price": "£19"
+        }
+      ]
+    },
+    {
+      "title": "Side Hustle Cocktails",
+      "items": [
+        {
+          "name": "Margarita",
+          "tagline": "A Sour Made with Tequila",
+          "description": "Tasting Notes: Agave, Lime, Orange Peel",
+          "allergens": "Citrus (Lime)",
+          "price": "£17"
+        },
+        {
+          "name": "Mushroom Mole",
+          "tagline": "Chocolate, Mushroom Mole Margarita",
+          "description": "Tasting Notes: Chocolate, Mushroom, Burnt Chillies",
+          "allergens": "Mushroom, Citrus, Nightshade",
+          "price": "£17"
+        },
+        {
+          "name": "Bergamot & Chilli",
+          "tagline": "A Citrusy, Earthy, Spicy Margarita",
+          "description": "Tasting Notes: Rich, Aromatic, Spicy",
+          "allergens": "Nightshade, Citrus, Dairy",
+          "price": "£17"
+        },
+        {
+          "name": "Michelada",
+          "tagline": "A Savoury and Spicy Beer",
+          "description": "Tasting Notes: Red Pepper, Chilli, Lime",
+          "allergens": "Citrus (Lime), Gluten, Garlic, Soya, Nightshade (Chilli)",
+          "price": "£17"
+        },
+        {
+          "name": "Paloma",
+          "tagline": "A Refreshing Tequila and Grapefruit Highball",
+          "description": "Tasting Notes: Grapefruit, Agave, Smoke",
+          "allergens": "Citrus (Lime, Grapefruit), Nightshade Rim (Chilli)",
+          "price": "£17"
+        },
+        {
+          "name": "Toreador",
+          "tagline": "An Apricot Margarita",
+          "description": "Tasting Notes: Apricot, Floral & Citrus",
+          "allergens": "Citrus (GF/Lime), Stone Fruit",
+          "price": "£17"
+        },
+        {
+          "name": "Batanga",
+          "tagline": "A Tequila-Cola Highball",
+          "description": "Tasting Notes: Cola, Cherry, Baking Spices",
+          "allergens": "Citrus",
+          "price": "£17"
+        },
+        {
+          "name": "Oaxacan Old Fashioned",
+          "tagline": "A Mezcal Old Fashioned",
+          "description": "Tasting Notes: Smoke, Chocolate, Orange Peel",
+          "allergens": "Citrus (Orange)",
+          "price": "£17"
+        }
+      ]
+    },
+    {
+      "title": "Soft Cocktails",
+      "items": [
+        {
+          "name": "Strawberry & Basil Smash",
+          "description": "Tasting Notes: Strawberry, Basil, Citrus",
+          "allergens": "Citrus",
+          "price": "£12"
+        },
+        {
+          "name": "Passionfruit & Ginger Swizzle",
+          "description": "Tasting Notes: Passionfruit, Ginger, Citrus",
+          "allergens": "Citrus",
+          "price": "£12"
+        },
+        {
+          "name": "Pineapple & Sage Soda",
+          "description": "Tasting Notes: Pineapple, Sage, Citrus",
+          "allergens": "Citrus, Pineapple",
+          "price": "£12"
+        },
+        {
+          "name": "Cucumber & Elderflower Cooler",
+          "description": "Tasting Notes: Cucumber, Elderflower, Citrus",
+          "allergens": "Citrus",
+          "price": "£12"
+        }
+      ]
+    }
+  ]
+}
