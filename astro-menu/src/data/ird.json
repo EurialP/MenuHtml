@@ -1,0 +1,154 @@
+{
+  "title": "IN-ROOM DINING MENU",
+  "subtitle": "Available Daily",
+  "sections": [
+    {
+      "title": "SNACKS (Available from 11 am daily)",
+      "items": [
+        {
+          "name": "FLATBREAD",
+          "tagline": "With Delicata Squash, Mozzarella & Hot Honey",
+          "description": "Flatbread baked with crème fraiche and mozzarella served with confit delica squash and finished with whipped ricotta, picked thyme, fried pumpkin seeds and a drizzle of hot honey.\nNote: A 'plain' version is available which is Dairy Free.",
+          "allergens": "Cereals/Gluten (Cannot be removed), Milk (Cannot be removed). Other: Garlic, Nightshade, Onion.",
+          "price": "£12"
+        },
+        {
+          "name": "OYSTERS ON THE HALF SHELF",
+          "tagline": "6 pieces with Sicilian Lemon & Mignonette",
+          "description": "Carlingford oysters on a half shelf with vermouth mignonette and gremolata, finished with lemon ledges and served on crushed ice.\nDefinitions:\nMignonette: Condiment with minced shallots, cracked pepper, and vinegar.\nGremolata: Green sauce of chopped parsley, lemon zest, and garlic.",
+          "allergens": "Molluscs (Cannot be removed), Sulphites. Other: Alcohol, Citrus, Garlic, Onion.",
+          "price": "£28"
+        },
+        {
+          "name": "CRUDITÉS",
+          "tagline": "Summer Vegetables with Chive Aioli",
+          "description": "Chicory, radishes, cucumbers and carrots served with chive emulsion. A NoMad Classic from NY.\nDefinition: Crudités refers to \"raw\" vegetables, typically served as an amuse bouche or canapé.",
+          "allergens": "Eggs. Other: Onion.",
+          "price": "£14"
+        },
+        {
+          "name": "TUNA TOAST",
+          "tagline": "Toast with Lemon & Horseradish",
+          "description": "Toasted milk bread, filled with Tuna tartare & horseradish cream. Served with lemon gel, pickled shallot, frisée, radish & mustard frill.",
+          "allergens": "Cereals/Gluten (Cannot be removed), Fish (Cannot be removed), Milk (Incl Lactose - Cannot be removed), Mustard, Sulphites. Other: Citrus, Onion.",
+          "price": "£19"
+        },
+        {
+          "name": "FRIED KALETTES",
+          "tagline": "Fried with Honey Mustard & Dried Cranberries",
+          "description": "Rice flour tempura kalettes with honey mustard and dried cranberries.\nDefinition: Kalettes are a hybrid plant brand name for kale sprouts, a cross between kale and Brussels sprouts.",
+          "allergens": "Mustard, Sulphites. Other: Citrus, Nightshade.",
+          "price": "£14"
+        },
+        {
+          "name": "CHIPS",
+          "tagline": "Rosemary & Lemon",
+          "description": "Rosemary Chips, Served with Ketchup and Pommery mustard mayo.",
+          "allergens": "Eggs, Mustard, Sulphites. Other: Citrus, Nightshade. (Note: Potential Gluten CC from fryer).",
+          "price": "£9"
+        }
+      ]
+    },
+    {
+      "title": "ALL DAY (Available from 11 am daily)",
+      "items": [
+        {
+          "name": "NOMAD FRIED CHICKEN",
+          "tagline": "With Aleppo Chilli & Lime",
+          "description": "Fried chicken dusted with a spiced salt mix. Served Chipotle yogurt.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Sulphites. Other: Citrus, Garlic, Nightshade, Onion.",
+          "price": "£19"
+        },
+        {
+          "name": "GEM LETTUCE",
+          "tagline": "With Green Goddess, Radish & Dill",
+          "description": "Red gem lettuce leaves served with shaved raw radish, lemon vinaigrette & Green Goddess dressing. Finished with chopped chives & lemon zest.\nDefinition: Green Goddess Dressing takes its name from its green tint, possibly originating from The Palace Hotel, San Francisco in 1923. The NoMad version does NOT contain anchovy and is vegetarian.",
+          "allergens": "Eggs (Can be removed), Milk (Incl Lactose - Can be removed), Sulphites. Other: Citrus, Garlic, Onion. (Modification: Lemon vinaigrette or EVOO).",
+          "price": "£12"
+        },
+        {
+          "name": "NOMAD HOTDOG",
+          "tagline": "Bacon-wrapped with Black Truffle & Celery",
+          "description": "Spiel: Another signature from NoMad New York - a staple in the Elephant Bar!\nThe toasted bun is coated in truffle mayonnaise. The pork hot dog is wrapped in bacon, fried, and topped with melted Gruyere cheese, finished with celery relish and celery heart leaves.\nDefinition: Gruyere is a hard, nutty cheese from Switzerland.",
+          "allergens": "Celery, Cereals/Gluten, Eggs, Milk (Incl Lactose), Mustard, Sulphites. Other: Mushroom, Pork.",
+          "price": "£20"
+        },
+        {
+          "name": "RED SALAD",
+          "tagline": "With Beetroot, Chicories & Edmond Tew Spread",
+          "description": "Red leaf salad with beetroot, winter greens and Edmond Tew spread.\nDefinition: Edmond Tew is made in the style of Petit Langres. Natural rind has a savoury, malty flavour; firm paste is lactic and fresh tasting. Pasteurised cow's milk, animal rennet.",
+          "allergens": "Milk (Incl Lactose - Cannot be removed), Mustard.",
+          "price": "£15"
+        },
+        {
+          "name": "NOMAD CHICKEN BURGER",
+          "tagline": "Gruyere, Shallot & Black Truffle",
+          "description": "Chicken burger with gruyere cheese, pickled shallots, fried chicken skin and truffle mayonnaise.\nDefinition: Gruyere is a firm yellow Swiss cheese, known for its rich, creamy, salty, and nutty flavour.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Sulphites. Other: Citrus, Onion, Mushroom.",
+          "price": "£22"
+        },
+        {
+          "name": "DRY-AGED BEEF BURGER",
+          "tagline": "Cheddar, Red Onion & Special Sauce",
+          "description": "Spiel: Another signature from NoMad New York - a staple in the Elephant Bar!\nServed medium-rare. Covered in melted cheddar cheese, topped with pickled red onion, and served in a cheddar chive bun with the NoMad special sauce. Selection of pickled vegetables served on the side.\nDefinitions:\nSuet: Hard fat found around the kidneys.\nChuck vs. Rib-eye: Cuts close in proximity, both have intense meaty flavour.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Mustard, Sesame Seeds, Sulphites. Other: Citrus, Onion.",
+          "price": "£24"
+        },
+        {
+          "name": "LOBSTER PAPPARDELLE",
+          "tagline": "With Chives, Lemon & Black Pepper",
+          "description": "Pappardelle with a Butter Emulsion, Lobster finished Lemongrass and Black Pepper.\nDefinitions:\nPappardelle: Large, broad, flat pasta from Tuscany.\nLemongrass: Tropical herb with strong citrus flavour.",
+          "allergens": "Cereals/Gluten, Crustaceans, Eggs, Fish, Milk (Incl Lactose), Soya, Sulphites. Other: Alcohol, Citrus, Garlic, Nightshade, Onion.",
+          "price": "£38"
+        },
+        {
+          "name": "STEAK & FRITES",
+          "tagline": "With Peppercorn Sauce",
+          "description": "Bavette steak with peppercorn sauce and fries.\nDefinitions:\nBavette: From Miquel Vergara farm (Spain), family-owned, prioritizes animal welfare.\nBlack Sarawak pepper: Harvested on Borneo, hand-picked, sun-dried. Woody scents with fresh fruity notes.\nNote: Fryer has cross contamination of Gluten.",
+          "allergens": "Celery, Cereals/Gluten (CC from fryer), Milk (Incl Lactose), Mustard, Sulphites. Other: Alcohol, Citrus, Garlic, Onion.",
+          "price": "N/A"
+        }
+      ]
+    },
+    {
+      "title": "SWEETS (Available from 12 pm daily)",
+      "items": [
+        {
+          "name": "CANDY BAR",
+          "tagline": "Literally, with Dark Chocolate & Caramel",
+          "description": "(No detailed description page found in the extracted text)",
+          "allergens": "(Not available)",
+          "price": "£11"
+        },
+        {
+          "name": "ICE CREAM SANDWICH",
+          "tagline": "Salted Caramel & Sweet Corn",
+          "description": "Ice cream Sandwich made with corn ice cream, corn brittle, sable biscuit & corn salted caramel.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose).",
+          "price": "£12"
+        },
+        {
+          "name": "CHOCOLATE",
+          "tagline": "Salted Caramel with Banana Brûlée & Banana Chocolate Ice Cream",
+          "description": "A banana chocolate cake with banana Cremieux, banana caramel, banana crumble and banana tuile on top. Served with banana & Chocolate ice cream.\nDefinition: Tuile: Baked wafer, French origin, often arced, served as accompaniment.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Soya.",
+          "price": "£14"
+        },
+        {
+          "name": "RASPBERRY & PISTACHIO",
+          "tagline": "Baked Pastry with Raspberry & Pistachio Ice Cream",
+          "description": "Pistachio Mille Feuille with pistachio mousseline and raspberry pate de fruit. Served with pistachio ice cream on the side.\nDefinition: Mousseline: Light dessert cream with pastry cream and whipped cream.",
+          "allergens": "Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (Pistachio).",
+          "price": "£14"
+        },
+        {
+          "name": "CHEESE",
+          "tagline": "Brightwell Ash, Bonnington Linn, St. James, Pevensey Blue with Seasonal Accompaniments",
+          "description": "Cheeses:\nBrightwell Ash: Unpasteurised Goat's milk, Vegetarian rennet (Oxfordshire). Ash coated, fresh, tangy, crumblier texture. Aged 21+ days.\nBonnington Linn: Unpasteurised Goat's milk, Vegetarian rennet (Lanarkshire, Scotland). Matured 4+ months. Firm crumbly texture, nutty lingering notes, fresh zingy after-taste.\nSt. James: Pasteurised Sheep's Milk, Animal rennet (Cumbria). Washed rind, flavours vary from mild/lactic to funky/strong.\nPevensey Blue: Pasteurized Cows' milk, Traditional rennet (Sussex). Modelled on Gorgonzola Dolce, salty, sweet fondant texture.\nAccompaniments: Truffle honey jelly & gooseberry chutney.\nBread: Parmesan Sable Breton (contains cereals/gluten, eggs, milk), currant bread & sourdough crackers (contains sesame seeds).",
+          "allergens": "Milk (All cheeses). Accompaniments/Bread: Cereals/Gluten, Eggs, Milk, Sesame Seeds. (Depends on selection).",
+          "price": "£18"
+        }
+      ]
+    }
+  ]
+}

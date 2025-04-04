@@ -66,19 +66,20 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <script is:inline>
-        // Keep toggleDescription function globally accessible
-        function toggleDescription(menuItem) {
-            menuItem.classList.toggle('expanded');
+        // Updated toggleDescription function to target the details container
+        function toggleDescription(menuItemElement) {
+            // Find the details container within the clicked menu item
+            const detailsDiv = menuItemElement.querySelector('.menu-item-details');
+            if (detailsDiv) {
+                 // Toggle the 'expanded' class on the main menu item element
+                 // The CSS uses this class to control the visibility/max-height of detailsDiv
+                menuItemElement.classList.toggle('expanded');
+            } else {
+                console.warn('Could not find .menu-item-details within:', menuItemElement);
+            }
         }
 
-        // Basic click handling for menu items (can be refined)
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuItems = document.querySelectorAll('.menu-item[onclick]');
-            menuItems.forEach(item => {
-                // If onclick exists, ensure it works. Consider replacing with event listeners.
-                // For now, we assume the inline onclick="toggleDescription(this)" works.
-            });
-        });
+        // No need for the DOMContentLoaded listener if using inline onclick
     </script>
 </body>
 </html>
