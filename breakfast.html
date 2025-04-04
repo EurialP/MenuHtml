@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoMaD London - Breakfast Menu</title> <!-- Changed title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .heading-primary {
+            font-size: 2.25rem; /* slightly larger */
+            font-weight: 700;
+            color: #1e293b; /* Slightly darker heading color */
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.025em;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #334155; /* Slightly darker section title */
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-top: 32px; /* Add space before section title */
+        }
+        .menu-item {
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: start;
+            cursor: pointer; /* Add cursor style to indicate interactivity */
+        }
+        .menu-item-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        .menu-item-description {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.5;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            margin-top: 0;
+        }
+        .menu-item.expanded .menu-item-description {
+            max-height: 500px; /* Or adjust as needed */
+            opacity: 1;
+            margin-top: 12px;
+        }
+        .menu-item-price {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        /* Styles for allergens/dietary info (hidden by default) */
+        .allergen-info, .other-dietary-info {
+            font-size: 0.75rem;
+            display: block;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin-top: 0;
+            padding-left: 10px;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+        }
+        .allergen-info {
+            color: #dc2626; /* Red color */
+            border-left: 2px solid #fca5a5; /* Light red border */
+        }
+         .allergen-info strong {
+             font-weight: 600;
+             color: #b91c1c; /* Darker red */
+         }
+         .other-dietary-info {
+             color: #57534e; /* Stone 600 */
+             border-left: 2px solid #d6d3d1; /* Stone 300 */
+         }
+         .other-dietary-info strong {
+             font-weight: 600;
+             color: #44403c; /* Stone 700 */
+         }
+         /* Show allergens/dietary when item is expanded */
+         .menu-item.expanded .allergen-info,
+         .menu-item.expanded .other-dietary-info {
+             max-height: 200px; /* Adjust as needed */
+             opacity: 1;
+             margin-top: 8px;
+         }
+
+        /* New styles for improved layout and spacing */
+        .top-section {
+            margin-bottom: 40px;
+        }
+
+        /* Navigation styles */
+        .menu-navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        .menu-navigation a {
+            display: inline-block;
+            padding: 8px 16px;
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            margin: 0 8px;
+        }
+        .menu-navigation a:hover {
+            color: #1e293b;
+            text-decoration: underline;
+        }
+        .menu-navigation .current {
+            color: #1e293b;
+            font-weight: 700;
+            text-decoration: underline;
+            cursor: default;
+        }
+        .menu-navigation .current:hover {
+             text-decoration: underline;
+        }
+
+        /* Responsive styles for navigation */
+        @media (max-width: 640px) {
+            .menu-navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-navigation a {
+                margin: 4px 0;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container">
+        <header class="top-section">
+            <h1 class="heading-primary">BREAKFAST MENU</h1> <!-- Changed heading -->
+            <p class="text-gray-600 text-center">Served Daily</p> <!-- Placeholder subtitle -->
+            <div class="menu-navigation">
+                <a href="index.html" class="ajax-link">Food Menu</a>
+                <a href="breakfast.html" class="ajax-link current">Breakfast Menu</a>
+                <a href="ird.html" class="ajax-link">IRD Menu</a>
+                <a href="sh.html" class="ajax-link">Side Hustle Menu</a>
+                <a href="beers.html" class="ajax-link">Beer & Cider Menu</a>
+                <a href="cocktails.html" class="ajax-link">Cocktail Menu</a>
+                <a href="wines.html" class="ajax-link">Wine Menu</a>
+            </div>
+        </header>
+        <main id="menu-content">
+            <section>
+                <h2 class="section-title">Coffee</h2>
+                <div class="menu-item">
+                    <div><h3 class="menu-item-name">Espresso</h3></div>
+                    <p class="menu-item-price">£3</p>
+                </div>
+                <div class="menu-item">
+                    <div><h3 class="menu-item-name">Americano</h3></div>
+                    <p class="menu-item-price">£4</p>
+                </div>
+                <div class="menu-item">
+                    <div><h3 class="menu-item-name">Cortado / Macchiato / Flat White</h3></div>
+                    <p class="menu-item-price">£5</p>
+                </div>
+                <div class="menu-item">
+                    <div><h3 class="menu-item-name">Cappuccino / Latte</h3></div>
+                    <p class="menu-item-price">£6</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Tea by Rare Tea Company</h2>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">White</h3><p class="menu-item-description">Jasmine Silver Tip</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Green</h3><p class="menu-item-description">Sencha / Genmaicha</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Black</h3><p class="menu-item-description">English Breakfast Blend / Earl Grey</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Oolong</h3><p class="menu-item-description">Sunset Oolong</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Herbal</h3><p class="menu-item-description">Fresh Mint Blend / Lemongrass & Ginger / Chamomile</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Hot Drinks</h2>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Chai Latte</h3><p class="menu-item-description">Masala Chai, Cinnamon, Ginger & White Pepper with Milk of Choice</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Matcha Latte</h3><p class="menu-item-description">Matcha Tea, Coconut & Oat Milk</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Hot Chocolate</h3><p class="menu-item-description">Dark Chocolate, Cream & Salt</p></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Breakfast</h2>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Yoghurt & Berries</h3><p class="menu-item-description">Greek Yoghurt, Nomad Granola & Fresh Berries</p></div>
+                    <p class="menu-item-price">£14</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Porridge</h3><p class="menu-item-description">Toasted Oats, Oat Milk & Fruit Compote</p></div>
+                    <p class="menu-item-price">£12</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Lemon Poppy Pancakes</h3><p class="menu-item-description">Griddled with Blueberries & Whipped Ricotta</p></div>
+                    <p class="menu-item-price">£19</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Avocado Toast</h3><p class="menu-item-description">Maitake Mushrooms, Radishes & Parsley</p></div>
+                    <p class="menu-item-price">£18</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)"> <!-- Note: This might look odd as it expands from an empty name -->
+                    <div><h3 class="menu-item-name"></h3><p class="menu-item-description">With a Poached Egg</p></div>
+                    <p class="menu-item-price">£22</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Two Eggs</h3><p class="menu-item-description">Prepared Any Style with Choice of Toast</p></div>
+                    <p class="menu-item-price">£17</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Omelette</h3><p class="menu-item-description">Sautéed Mushrooms & Cacio e Pepe</p></div>
+                    <p class="menu-item-price">£19</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Breakfast Sandwich</h3><p class="menu-item-description">Fried Burford Brown Egg & Cheese on Homemade English Muffin, Choice of Bacon / Chicken Sausage / Greens & Rosti</p></div>
+                    <p class="menu-item-price">£18</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Pastries</h3><p class="menu-item-description">Croissant / Ham & Cheese Croissant / Pain au Chocolat</p></div>
+                    <p class="menu-item-price">£6</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Full English</h3><p class="menu-item-description">Fried Eggs, Black Pudding, Bacon, Sausage, Roast Tomato, Mushroom, Potato Rosti & Sourdough Toast. Includes coffee or tea and juice</p></div>
+                    <p class="menu-item-price">£29</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div><h3 class="menu-item-name">Full Veggie</h3><p class="menu-item-description">Fried Eggs, Avocado, Spinach, Stewed Beans, Roast Tomato, Mushroom, Potato Rosti & Sourdough Toast. Includes coffee or tea and juice</p></div>
+                    <p class="menu-item-price">£25</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Sides</h2>
+                <div class="menu-item">
+                    <div><h3 class="menu-item-name">Fresh Fruit Bowl / Avocado / Potato Rostis</h3></div>
+                    <p class="menu-item-price">£7 each</p>
+                </div>
+                <div class="menu-item">
+                    <div><h3 class="menu-item-name">Bacon / Pork Sausage / Smoked Salmon</h3></div>
+                    <p class="menu-item-price">£8 each</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function toggleDescription(menuItem) {
+            menuItem.classList.toggle('expanded');
+        }
+
+        // Basic AJAX and history handling (copied from index.html, simplified for breakfast page)
+        $(document).ready(function() {
+            function loadMenuContent(url, targetLink) {
+                // Load the whole page content for simplicity when navigating away
+                // If navigating to this page, it's already loaded
+                 window.location.href = url; // Simple page reload for external links
+            }
+
+            // Handle clicks on navigation links
+             $(document).on('click', '.ajax-link:not(.current)', function(event) { // Only handle clicks on non-current links
+                event.preventDefault(); // Prevent default link behavior
+                const url = $(this).attr('href');
+                loadMenuContent(url, this);
+            });
+
+            // Initial setup: Ensure the correct link is marked as current
+            const currentPath = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) || "breakfast.html"; // Default if path is '/'
+             $('.menu-navigation a').removeClass('current');
+             $('.menu-navigation a[href="' + currentPath + '"]').addClass('current');
+        });
+    </script>
+</body>
+</html>

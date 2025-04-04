@@ -77,17 +77,43 @@
             font-weight: 600;
             color: #1e293b;
         }
-        .allergen-info {
+        .allergen-info, .other-dietary-info { /* Combine base styles */
             font-size: 0.75rem;
-            color: #9ca3af;
-            margin-top: 0; /* Remove margin when hidden */
-            display: block; /* Keep as block for layout */
+            display: block;
             max-height: 0;
             overflow: hidden;
             opacity: 0;
+            margin-top: 0;
+            padding-left: 10px; /* Add padding for consistency */
             transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
         }
-
+        .allergen-info { /* Specific styles for allergens */
+            color: #dc2626; /* Red color */
+            border-left: 2px solid #fca5a5; /* Light red border */
+        }
+         .allergen-info strong {
+             font-weight: 600;
+             color: #b91c1c; /* Darker red */
+         }
+         .other-dietary-info { /* Specific styles for other dietaries */
+             font-size: 0.75rem; /* Keep font size */
+             color: #57534e; /* Stone 600 */
+             margin-top: 6px;
+             padding-left: 10px;
+             border-left: 2px solid #d6d3d1; /* Stone 300 */
+             display: block;
+         }
+         .other-dietary-info strong {
+             font-weight: 600;
+             color: #44403c; /* Stone 700 */
+         }
+         /* Combined expanded styles */
+         .menu-item.expanded .allergen-info,
+         .menu-item.expanded .other-dietary-info {
+             max-height: 200px; /* Adjust as needed for combined info */
+             opacity: 1;
+             margin-top: 8px;
+         }
         /* New styles for improved layout and spacing */
         .top-section {
             margin-bottom: 40px;
@@ -170,10 +196,13 @@
             <h1 class="heading-primary">FOOD MENU</h1> 
             <p class="text-gray-600 text-center">AUTUMN 2024 DINNER</p> 
             <div class="menu-navigation">
-                <a href="index.html" class="ajax-link current">Food Menu</a>
-                <a href="beers.html" class="ajax-link">Beer & Cider Menu</a>
-                <a href="cocktails.html" class="ajax-link">Cocktail Menu</a>
-                <a href="wines.html" class="ajax-link">Wine Menu</a>
+                <a href="ird.html" class="ajax-link">IRD</a>
+                <a href="sh.html" class="ajax-link">Side Hustle</a>
+                <a href="index.html" class="ajax-link current">Nomad</a>
+                <a href="breakfast.html" class="ajax-link">Breakfast</a>
+                <a href="beers.html" class="ajax-link">Beer</a>
+                <a href="cocktails.html" class="ajax-link">Cocktails</a>
+                <a href="wines.html" class="ajax-link">Wine</a>
             </div>
         </header>
         <main id="menu-content">
@@ -183,7 +212,7 @@
                     <div>
                         <h3 class="menu-item-name">CRUDITÉS</h3>
                         <p class="menu-item-description">Seasonal raw vegetables (chicory, radishes, cucumbers, carrots) served with chive emulsion. A NoMad Classic from NY.</p>
-                        <span class="allergen-info">Contains Eggs. May contain Celery, Garlic, Mushroom, Nightshade, Onion (Cannot be removed).</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Eggs.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Onion.</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -191,7 +220,7 @@
                     <div>
                         <h3 class="menu-item-name">TUNA TOAST</h3>
                         <p class="menu-item-description">Toasted milk bread filled with Tuna tartare & horseradish cream, served with lemon gel, pickled shallot, frisée, radish & mustard frill.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Fish, Milk (Incl Lactose), Mustard. May contain Celery, Crustaceans, Eggs, Lupin, Molluscs, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Nightshade, Onion (Some can be removed, others cannot).</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (Cannot be removed), Fish (Cannot be removed), Milk (Incl Lactose - Cannot be removed), Mustard, Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Onion.</span>
                     </div>
                     <p class="menu-item-price">19</p>
                 </div>
@@ -199,7 +228,7 @@
                     <div>
                         <h3 class="menu-item-name">OYSTER ON THE HALF SHELF</h3>
                         <p class="menu-item-description">6 Carlingford oysters served on crushed ice with vermouth mignonette, gremolata, and lemon wedges. Mignonette includes minced shallots, pepper, vinegar. Gremolata includes parsley, lemon zest, garlic.</p>
-                        <span class="allergen-info">Contains Molluscs, Sulphites (from vinegar/vermouth), Alcohol, Citrus, Garlic, Nightshade (chili), Onion. May contain Nuts.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Molluscs (Cannot be removed), Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol, Citrus, Garlic, Nightshade, Onion.</span>
                     </div>
                     <p class="menu-item-price">28</p>
                 </div>
@@ -207,7 +236,7 @@
                     <div>
                         <h3 class="menu-item-name">SCOTCH OLIVES</h3>
                         <p class="menu-item-description">Halbourne Blue cheese stuffed Gordal Olives wrapped in lamb sausage, breaded with panko, fried, and served with Harissa Mayo and fried mint leaves (3 per portion).</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Eggs, Milk (Incl Lactose), Mustard, Garlic, Citrus, Nightshade (harissa). May contain Celery, Crustaceans, Fish, Lupin, Molluscs, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Onion.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose), Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade.</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
@@ -215,7 +244,7 @@
                     <div>
                         <h3 class="menu-item-name">FLATBREAD</h3>
                         <p class="menu-item-description">Flatbread baked with crème fraiche and mozzarella, served with confit delica squash, whipped ricotta, picked thyme, fried pumpkin seeds, and hot honey. A 'plain' dairy-free version is available.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Milk (Incl Lactose), Garlic, Nightshade (habanero). May contain Celery, Crustaceans, Eggs, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Citrus, Onion, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (Cannot be removed), Milk (Incl Lactose - Cannot be removed).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Garlic, Nightshade, Onion. (Dairy-free 'plain' version available)</span>
                     </div>
                     <p class="menu-item-price">12</p>
                 </div>
@@ -223,7 +252,7 @@
                     <div>
                         <h3 class="menu-item-name">KALETTES</h3>
                         <p class="menu-item-description">Fried Kalettes (kale sprouts) in rice flour tempura batter with honey mustard and dried cranberries.</p>
-                        <span class="allergen-info">Contains Mustard, Citrus, Garlic, Nightshade (cayenne). Potential cross-contamination (CC) with Cereals/Gluten and Eggs. May contain Celery, Crustaceans, Fish, Lupin, Milk (Incl Lactose), Molluscs, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Onion.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (CC), Eggs (CC), Mustard, Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Nightshade.</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -235,7 +264,7 @@
                     <div>
                         <h3 class="menu-item-name">WALDORF SALAD</h3>
                         <p class="menu-item-description">Waldorf salad mix (celery, apple, walnuts, grapes, mayo-based dressing) piped into filo pastry, dipped in parsley breadcrumbs, fried, and finished with truffle paste and fresh black truffle.</p>
-                        <span class="allergen-info">Contains Celery, Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (walnuts), Sulphites, Alcohol, Citrus, Nightshade, Onion, Mushroom (truffle). May contain Crustaceans, Fish, Lupin, Molluscs, Mustard, Peanuts, Sesame Seeds, Soya, Garlic, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (Walnuts), Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Brandy), Citrus, Mushroom (Truffle), Nightshade (Cayenne), Onion.</span>
                     </div>
                     <p class="menu-item-price">15</p>
                 </div>
@@ -243,7 +272,7 @@
                     <div>
                         <h3 class="menu-item-name">GEM SALAD</h3>
                         <p class="menu-item-description">Red gem lettuce leaves with shaved raw radish, lemon vinaigrette, Green Goddess dressing (vegetarian version, no anchovy), chopped chives & lemon zest.</p>
-                        <span class="allergen-info">Contains Eggs, Milk (Incl Lactose), Sulphites (vinegar), Citrus, Garlic, Nightshade. May contain Celery, Cereals/Gluten, Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Alcohol, Onion. (Modification available with lemon vinaigrette or EVOO).</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Eggs (Can be removed), Milk (Incl Lactose - Can be removed), Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Onion. (Modification: Lemon vinaigrette or EVOO)</span>
                     </div>
                     <p class="menu-item-price">12</p>
                 </div>
@@ -251,7 +280,7 @@
                     <div>
                         <h3 class="menu-item-name">RED SALAD</h3>
                         <p class="menu-item-description">Red leaf salad (Radicchio, red endive, red frill mustard leaf, chard stem, red shiso, red/purple kale, beetroot) with Edmond Tew cheese spread (cow's milk, animal rennet).</p>
-                        <span class="allergen-info">Contains Milk (Incl Lactose), Mustard (mustard leaf), Sulphites. May contain Celery, Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Molluscs, Nuts, Peanuts, Sesame Seeds, Soya, Alcohol, Citrus, Garlic, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Milk (Incl Lactose), Mustard, Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> (None marked).</span>
                     </div>
                     <p class="menu-item-price">15</p>
                 </div>
@@ -259,7 +288,7 @@
                     <div>
                         <h3 class="menu-item-name">CHARRED HISPI CABBAGE</h3>
                         <p class="menu-item-description">Charred purple Hispi (sweetheart) cabbage dressed with pumpkin seed butter, topped with a nut & seed mix, served with delica squash puree. (Vegan).</p>
-                        <span class="allergen-info">Contains Nuts (various), Sulphites (vinegar), Garlic, Nightshade (Aleppo pepper). May contain Celery, Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Milk (Incl Lactose), Molluscs, Mustard, Peanuts, Sesame Seeds, Soya, Alcohol, Citrus, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Nuts (Hazelnut, almond, pecan, walnut, pistachio, pine nut), Sulphites (Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Garlic, Nightshade (Aleppo). (Dish is Vegan)</span>
                     </div>
                     <p class="menu-item-price">29</p>
                 </div>
@@ -267,7 +296,7 @@
                     <div>
                         <h3 class="menu-item-name">MUSHROOM RISOTTO</h3>
                         <p class="menu-item-description">Carnaroli rice risotto with UK-sourced wild mushrooms (Maitake, porcini, black trumpet - fresh and fried) and mint.</p>
-                        <span class="allergen-info">Contains Celery, Milk (Incl Lactose), Sulphites (wine), Alcohol, Citrus (lemon garnish?), Onion (shallot), Mushroom. Potential cross-contamination (CC) with Cereals/Gluten (from frier). May contain Crustaceans, Eggs, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Garlic, Nightshade, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Cereals/Gluten (CC - Fried mushrooms), Milk (Incl Lactose - Parmesan), Sulphites (Wine).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine), Citrus, Mushroom, Onion.</span>
                     </div>
                     <p class="menu-item-price">32</p>
                 </div>
@@ -279,7 +308,7 @@
                     <div>
                         <h3 class="menu-item-name">OYSTER ROCKEFELLER</h3>
                         <p class="menu-item-description">3 Grilled Carlingford oysters topped with a creamy cheese sauce (bacon, garlic, shallot, spinach, cream, basil, Pernod, parmesan) and brioche crumb, grilled on the hearth.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten (brioche), Milk (Incl Lactose), Molluscs, Sulphites, Alcohol (Pernod), Garlic, Nightshade (cayenne), Onion (shallot), Pork (bacon). May contain Celery, Crustaceans, Eggs, Fish, Lupin, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Citrus, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (Brioche), Milk (Incl Lactose - Cream, Parmesan), Molluscs, Sulphites (Pernod).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Pernod), Garlic, Nightshade (Cayenne), Onion, Pork (Lardons).</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -287,7 +316,7 @@
                     <div>
                         <h3 class="menu-item-name">SEABASS CRUDO</h3>
                         <p class="menu-item-description">Seabass crudo served on a tapioca crisp, dressed with green curry sauce, coriander oil, finger lime, and garnished with red/green shiso leaves and Thai basil.</p>
-                        <span class="allergen-info">Contains Fish (seabass, fish sauce), Sulphites, Alcohol (in stock?), Citrus, Garlic, Nightshade (chillies), Onion. Potential cross-contamination (CC) with Cereals/Gluten (from frier). May contain Celery, Crustaceans, Eggs, Lupin, Milk (Incl Lactose), Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery (Stock), Cereals/Gluten (CC - Frier), Fish, Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade, Onion.</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
@@ -295,7 +324,7 @@
                     <div>
                         <h3 class="menu-item-name">GRILLED ORKNEY SCALLOP</h3>
                         <p class="menu-item-description">Fresh Orkney Scallop grilled on the coals, served with roe oil and a smoked sabayon, finished with smoked dulce powder.</p>
-                        <span class="allergen-info">Contains Molluscs (scallop), Eggs (in sabayon), Sulphites (likely in sabayon). May contain Alcohol, Nightshade (paprika), Onion (shallots), Celery, Cereals/Gluten, Crustaceans, Fish, Lupin, Milk (Incl Lactose), Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Citrus, Garlic, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Eggs (Sabayon), Molluscs, Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine in Sabayon?), Garlic, Nightshade (Paprika), Onion.</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
@@ -303,7 +332,7 @@
                     <div>
                         <h3 class="menu-item-name">SCOTTISH MUSSELS</h3>
                         <p class="menu-item-description">Scottish mussels cooked with fresh Calabrian chilli, anchovies, shallot, fennel, celery soffrito, served with grilled sourdough, chives, and Calabrian chilli spread.</p>
-                        <span class="allergen-info">Contains Celery, Cereals/Gluten (sourdough), Fish (anchovies), Molluscs (mussels), Sulphites (wine), Alcohol, Citrus, Garlic, Nightshade (chilli), Onion (shallot). May contain Crustaceans, Eggs, Lupin, Milk (Incl Lactose), Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Cereals/Gluten (Sourdough), Fish (Anchovies), Molluscs, Sulphites (Wine).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine), Garlic, Nightshade, Onion.</span>
                     </div>
                     <p class="menu-item-price">18</p>
                 </div>
@@ -311,7 +340,7 @@
                     <div>
                         <h3 class="menu-item-name">LOBSTER PAPPARDELLE</h3>
                         <p class="menu-item-description">Pappardelle pasta with lobster in a butter emulsion, finished with lemongrass and black pepper.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Crustaceans (lobster), Eggs, Fish (in stock), Milk (Incl Lactose), Soya (in stock), Sulphites (vinegar), Alcohol, Citrus, Garlic, Nightshade (peppers, chilli), Onion (shallot). May contain Celery, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Crustaceans, Eggs, Fish (Kombu Stock), Milk (Incl Lactose - Butter), Soya (Kombu Stock), Sulphites (Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Kombu Stock), Citrus, Garlic, Nightshade, Onion.</span>
                     </div>
                     <p class="menu-item-price">38</p>
                 </div>
@@ -319,7 +348,7 @@
                     <div>
                         <h3 class="menu-item-name">SEARED ATLANTIC COD</h3>
                         <p class="menu-item-description">Seared Atlantic cod served with a celeriac chowder (fumet blanc), blanched celeriac, and finished with picked watercress, chives, celery, and parsley.</p>
-                        <span class="allergen-info">Contains Celery, Fish (cod, fish bones), Milk (Incl Lactose), Sulphites (wine, vermouth), Alcohol, Onion, Mushroom. May contain Cereals/Gluten, Crustaceans, Eggs, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Citrus, Garlic, Nightshade, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Fish, Milk (Incl Lactose - Cream, Butter), Sulphites (Wine, Vermouth).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine, Vermouth), Mushroom, Onion.</span>
                     </div>
                     <p class="menu-item-price">46</p>
                 </div>
@@ -331,7 +360,7 @@
                     <div>
                         <h3 class="menu-item-name">GRILLED QUAIL</h3>
                         <p class="menu-item-description">Grilled quail rubbed with a three-pepper spice mix, served medium with lemon puree and marigold leaf.</p>
-                        <span class="allergen-info">Contains Milk (Incl Lactose - butter), Sulphites, Citrus, Nightshade (chilli, cayenne, peppercorns). May contain Celery, Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Alcohol, Garlic, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Milk (Incl Lactose - Butter).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Nightshade (Chilli, Cayenne).</span>
                     </div>
                     <p class="menu-item-price">16</p>
                 </div>
@@ -339,7 +368,7 @@
                     <div>
                         <h3 class="menu-item-name">BEEF CARPACCIO</h3>
                         <p class="menu-item-description">Thinly sliced beef loin (seared outside) served with caper & parmesan cream, pine nut confit, pickled shallots & caper berries.</p>
-                        <span class="allergen-info">Contains Milk (Incl Lactose - parmesan, cream), Mustard, Nuts (pine nuts), Sulphites (vinegar), Citrus, Onion (shallots). May contain Celery, Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Molluscs, Peanuts, Sesame Seeds, Soya, Alcohol, Garlic, Nightshade, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Milk (Incl Lactose - Parmesan, Cream), Mustard, Nuts (Pine Nuts), Sulphites (Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Onion.</span>
                     </div>
                     <p class="menu-item-price">24</p>
                 </div>
@@ -347,7 +376,7 @@
                     <div>
                         <h3 class="menu-item-name">SQUAB</h3>
                         <p class="menu-item-description">Confit squab leg and seared breast served with braised fennel, orange puree, fennel puree, squab sauce, finished with Castelfranco & pink radicchio, orange segments, and fennel pollen.</p>
-                        <span class="allergen-info">Contains Celery, Milk (Incl Lactose - butter), Sulphites (wine, vinegar), Alcohol (Port, wine, brandy, Pernod), Citrus, Garlic, Nightshade (cayenne, peppercorns), Onion. May contain Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Milk (Incl Lactose - Butter), Sulphites (Wine, Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine, Brandy, Port, Pernod), Citrus, Garlic, Onion.</span>
                     </div>
                     <p class="menu-item-price">24</p>
                 </div>
@@ -355,7 +384,7 @@
                     <div>
                         <h3 class="menu-item-name">SHERWOOD FOREST VENISON</h3>
                         <p class="menu-item-description">Black trumpet mushroom crumbed Venison served with chestnut puree, charred pickled onion, black trumpet mushrooms, and sauce civet (game stew sauce, traditionally w/ blood). Garnished with shaved fresh chestnut.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten (breadcrumbs), Milk (Incl Lactose - butter, cream), Mustard (Dijon), Nuts (chestnut), Sulphites (wine, vinegar), Alcohol (wine, brandy, Maderia), Nightshade (peppercorns), Onion (shallots, pearl onions), Pork (blood in sauce), Mushroom (black trumpet). May contain Celery, Crustaceans, Eggs, Fish, Lupin, Molluscs, Peanuts, Sesame Seeds, Soya, Citrus, Garlic.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (Brioche), Milk (Incl Lactose - Butter, Cream), Mustard (Dijon), Nuts (Chestnut), Sulphites (Wine, Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine, Brandy, Maderia), Onion, Pork (Blood).</span>
                     </div>
                     <p class="menu-item-price">48</p>
                 </div>
@@ -363,7 +392,7 @@
                     <div>
                         <h3 class="menu-item-name">CORN FED CHICKEN</h3>
                         <p class="menu-item-description">Chicken Breast served with confit potatoes, gem lettuce dressed in buttermilk, lettuce puree, and a sherry cream sauce.</p>
-                        <span class="allergen-info">Contains Celery (in jus), Eggs (mayonnaise), Milk (Incl Lactose - buttermilk, cream, butter), Sulphites (wine, sherry), Alcohol, Citrus, Garlic, Onion (shallots), Mushroom (shiitake). May contain Cereals/Gluten, Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Nightshade, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Eggs (Mayo), Milk (Incl Lactose - Buttermilk, Cream, Butter), Sulphites (Wine, Sherry).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine, Sherry), Citrus, Garlic, Mushroom, Onion.</span>
                     </div>
                     <p class="menu-item-price">32</p>
                 </div>
@@ -371,7 +400,7 @@
                     <div>
                         <h3 class="menu-item-name">BRITISH BEEF FILET</h3>
                         <p class="menu-item-description">Dry-aged beef fillet (grilled med-rare) with turnip puree, cooked turnip, fried purple/green kale, bordelaise sauce, finished with spikey kale tops and black pepper.</p>
-                        <span class="allergen-info">Contains Celery (in stock), Milk (Incl Lactose - butter, cream), Sulphites (wine, vinegar), Alcohol, Garlic, Nightshade (peppercorns, black radish?), Onion (shallots). May contain Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Citrus, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Milk (Incl Lactose - Butter, Cream?), Sulphites (Wine, Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine, Brandy), Garlic, Onion.</span>
                     </div>
                     <p class="menu-item-price">56</p>
                 </div>
@@ -383,7 +412,7 @@
                     <div>
                         <h3 class="menu-item-name">TOMAHAWK STEAK</h3>
                         <p class="menu-item-description">45-day aged Tomahawk steak (950g avg) served with fire-roasted brown butter mash (pomme puree), Jersey Royals & Heritage tomatoes with Green Goddess Dressing, creamed chard, Bordelaise sauce, and chimichurri on the side.</p>
-                        <span class="allergen-info">Contains Celery (in Bordelaise), Cereals/Gluten (breadcrumb in chard), Eggs (Green Goddess), Milk (Incl Lactose - puree, cheese, butter), Sulphites (vinegar, wine), Alcohol, Citrus, Garlic, Nightshade (chilli, peppercorns), Onion (shallot, red onion). May contain Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Cereals/Gluten (Breadcrumb), Eggs, Milk (Incl Lactose - Cheese, Butter?), Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol, Citrus, Garlic, Nightshade, Onion.</span>
                     </div>
                     <p class="menu-item-price">150</p>
                 </div>
@@ -391,7 +420,7 @@
                     <div>
                         <h3 class="menu-item-name">WHOLE GRILLED SEA BASS</h3>
                         <p class="menu-item-description">Whole sea bass grilled on the hearth, served with agrodolce sauce, Puntarelle (chicory variant), Citrus Salsa, and Butter Glazed New Potatoes on the side.</p>
-                        <span class="allergen-info">Contains Celery, Fish (seabass, anchovy), Sulphites (wine, vinegar), Alcohol, Citrus, Garlic, Nightshade (peppers, Aleppo), Onion. May contain Milk (Incl Lactose - butter). (Components can be removed for allergies).</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Fish (Anchovy), Milk (Incl Lactose - Butter), Sulphites (Wine, Vinegar).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine), Citrus, Garlic, Nightshade (Aleppo), Onion.</span>
                     </div>
                     <p class="menu-item-price">120</p>
                 </div>
@@ -399,7 +428,7 @@
                     <div>
                         <h3 class="menu-item-name">WILD HAMPSHIRE PHEASANT (GUINEA FOWL)</h3>
                         <p class="menu-item-description">Grilled Guinea Fowl (Label Rouge quality from Loire, France) served with fire-roasted baby corn with chimichurri, spinach, sweetcorn custard (chawanmushi style) with truffle, foie gras & offal tart, and truffle & Madeira sauce.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten (tart flour), Eggs (custard, tart?), Fish (dashi), Milk (Incl Lactose - butter), Soya (white soya), Sulphites (Madeira, mirin?), Alcohol, Citrus (lemon in chimichurri), Garlic, Nightshade (chilli in chimichurri), Onion (shallot), Mushroom (truffle, shiitake in dashi?). May contain Celery, Crustaceans, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (Rye, AP Flour), Eggs (Chawanmushi), Fish (Dashi, Bonito), Milk (Incl Lactose - Butter), Soya (White Soya Sauce), Sulphites (Madeira).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Mirin, Madeira), Citrus, Garlic, Mushroom (Shiitake, Truffle), Nightshade, Onion.</span>
                     </div>
                     <p class="menu-item-price">85</p>
                 </div>
@@ -407,7 +436,7 @@
                     <div>
                         <h3 class="menu-item-name">STUFFED SQUASH</h3>
                         <p class="menu-item-description">Roasted Delica squash with a sage stuffing, served with braised collard greens, wild rice, puffed wild rice, sweet garlic puree, and a roasted vegetable sauce.</p>
-                        <span class="allergen-info">Contains Celery, Cereals/Gluten (brioche), Eggs, Milk (Incl Lactose - cream, milk, butter, whey), Sulphites (wine), Alcohol, Garlic, Nightshade (peppers, cayenne?), Onion, Mushroom (portabella). May contain Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Citrus, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Celery, Cereals/Gluten (Brioche), Eggs, Milk (Incl Lactose - Cream, Milk, Whey, Butter), Sulphites (Wine).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Wine), Garlic, Mushroom (Portabella), Nightshade (Red Peppers, Cayenne), Onion.</span>
                     </div>
                     <p class="menu-item-price">65</p>
                 </div>
@@ -419,7 +448,7 @@
                     <div>
                         <h3 class="menu-item-name">SIDE SALAD</h3>
                         <p class="menu-item-description">Red gem lettuce leaves with shaved raw radish, lemon vinaigrette, and dill.</p>
-                        <span class="allergen-info">Contains Citrus. May contain Celery, Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Milk (Incl Lactose), Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Garlic, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> (None marked).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus.</span>
                     </div>
                     <p class="menu-item-price">9</p>
                 </div>
@@ -427,7 +456,7 @@
                     <div>
                         <h3 class="menu-item-name">KALES</h3>
                         <p class="menu-item-description">Sauteed green and purple kale leaves (including Cavolo Nero) with garlic and lemon vinaigrette, mixed with fried kale leaves.</p>
-                        <span class="allergen-info">Contains Citrus, Garlic. Potential cross-contamination (CC) with Cereals/Gluten (from frier). May contain Celery, Crustaceans, Eggs, Fish, Lupin, Milk (Incl Lactose), Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (CC).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic.</span>
                     </div>
                     <p class="menu-item-price">7</p>
                 </div>
@@ -435,7 +464,7 @@
                     <div>
                         <h3 class="menu-item-name">TWICE BAKED POTATO</h3>
                         <p class="menu-item-description">Twice baked potato stuffed with truffle mash, finished with fried black truffle, cheese espuma (Raclette & Parmigiano Reggiano), garnished with black truffle and chives.</p>
-                        <span class="allergen-info">Contains Milk (Incl Lactose), Mushroom (truffle). Potential cross-contamination (CC) with Cereals/Gluten and Lupin (from frier). May contain Celery, Crustaceans, Eggs, Fish, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Citrus, Garlic, Nightshade, Onion, Pork.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (CC - Frier), Milk (Incl Lactose - Raclette, Cream, Milk).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Mushroom (Truffle).</span>
                     </div>
                     <p class="menu-item-price">19</p>
                 </div>
@@ -443,7 +472,7 @@
                     <div>
                         <h3 class="menu-item-name">BROCCOLINI</h3>
                         <p class="menu-item-description">Charred broccolini dressed in lemon vinaigrette, chilli oil & sesame crumble (Vegan).</p>
-                        <span class="allergen-info">Contains Sesame Seeds, Sulphites (likely in vinaigrette), Citrus, Nightshade (chilli), Onion (shallots). May contain Celery, Cereals/Gluten, Crustaceans, Eggs, Fish, Lupin, Milk (Incl Lactose), Molluscs, Mustard, Nuts, Peanuts, Soya, Alcohol, Garlic, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Sesame Seeds, Sulphites (Vinegar?).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Nightshade (Chilli), Onion. (Dish is Vegan)</span>
                     </div>
                     <p class="menu-item-price">10</p>
                 </div>
@@ -451,7 +480,7 @@
                     <div>
                         <h3 class="menu-item-name">CHIPS</h3>
                         <p class="menu-item-description">Chips seasoned with rosemary salt (rosemary, lemon skin, salt), served with Ketchup and Pommery mustard mayo.</p>
-                        <span class="allergen-info">Contains Eggs (mayo), Mustard (mayo), Citrus (lemon skin, ketchup?), Nightshade (potatoes, ketchup?). Potential cross-contamination (CC) with Cereals/Gluten and Milk (Incl Lactose). May contain Celery, Crustaceans, Fish, Lupin, Molluscs, Nuts, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Garlic, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (CC), Eggs (Mayo), Milk (Incl Lactose - CC), Mustard (Mayo), Sulphites.</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Nightshade (Ketchup?).</span>
                     </div>
                     <p class="menu-item-price">9</p>
                 </div>
@@ -463,7 +492,7 @@
                     <div>
                         <h3 class="menu-item-name">STRAWBERRY</h3>
                         <p class="menu-item-description">Hibiscus Sorbet, Puffed Rice & Berry Compote</p>
-                        <span class="allergen-info">(Details not fully provided in extracted text)</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> (No detailed allergen page found)</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -471,7 +500,7 @@
                     <div>
                          <h3 class="menu-item-name">APPLE</h3>
                         <p class="menu-item-description">Apple sorbet with shiso & yogurt granita, white chocolate soil, apple shiso soup, crystallized shiso leaf, and white chocolate yogurt mousse.</p>
-                        <span class="allergen-info">Contains Eggs, Milk (Incl Lactose - yogurt, white chocolate), Soya (possible in white chocolate), Citrus (yuzu). May contain Celery, Cereals/Gluten, Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Sulphites, Alcohol, Garlic, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Eggs, Milk (Incl Lactose - Yogurt, White Chocolate), Soya (White Chocolate?).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus (Yuzu).</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -479,7 +508,7 @@
                     <div>
                         <h3 class="menu-item-name">RASPBERRY & PISTACHIO</h3>
                         <p class="menu-item-description">Pistachio Mille Feuille (baked puff pastry) with pistachio mousseline (pastry cream based) and raspberry pate de fruit. Served with pistachio ice cream.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (pistachio). May contain Celery, Crustaceans, Fish, Lupin, Molluscs, Mustard, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Citrus, Garlic, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (Pistachio).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> (None marked).</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -487,7 +516,7 @@
                     <div>
                         <h3 class="menu-item-name">CHOCOLATE</h3>
                         <p class="menu-item-description">Banana chocolate cake with banana Cremieux (cream/custard), banana caramel, banana crumble, banana tuile (baked wafer), served with banana & chocolate ice cream and banana brûlée. (Vegan caramel substitution available for Cremieux).</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Eggs, Milk (Incl Lactose - butter, potentially ice cream/chocolate), Soya (likely in chocolate). May contain Celery, Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Sulphites, Alcohol, Citrus, Garlic, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose), Soya (Chocolate).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> (None marked).</span>
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
@@ -495,15 +524,15 @@
                     <div>
                         <h3 class="menu-item-name">CHERRY (PEAR CLAFOUTIS)</h3>
                         <p class="menu-item-description">Pear Clafoutis (baked fruit/batter dessert) served with poached pear, honey jelly, brick tuile (thin pastry), and a pear & ginger sorbet.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten (flour, brick pastry), Eggs, Milk (Incl Lactose - cream, crème fraîche, butter), Nuts (almonds). May contain Celery, Crustaceans, Fish, Lupin, Molluscs, Mustard, Peanuts, Sesame Seeds, Soya, Sulphites, Alcohol, Citrus, Garlic, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose), Nuts (Almond).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> (None marked).</span> <!-- Pear Clafoutis -->
                     </div>
                     <p class="menu-item-price">14</p>
                 </div>
                  <div class="menu-item" onclick="toggleDescription(this)">
                     <div>
-                        <h3 class="menu-item-name">STICKY TOFFEE PUDDING</h3>
+                        <h3 class="menu-item-name">STICKY TOFFEE PUDDING</h3> <!-- Was listed as CHERRY on menu -->
                         <p class="menu-item-description">Sticky Toffee Pudding with toffee sauce, Pedro Ximenez (PX) reduction, caramel sauce, and cinnamon ice cream.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Eggs, Milk (Incl Lactose), Sulphites (PX Sherry), Alcohol. May contain Celery, Crustaceans, Fish, Lupin, Molluscs, Mustard, Nuts, Peanuts, Sesame Seeds, Soya, Citrus, Garlic, Nightshade, Onion, Pork, Mushroom.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose), Sulphites (PX Sherry).</span><span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (PX Sherry).</span>
                     </div>
                      <!-- Price missing in source, keeping original if available or omitting -->
                      <p class="menu-item-price">14</p> <!-- Assuming price based on others -->
@@ -516,7 +545,7 @@
                     <div>
                         <h3 class="menu-item-name">SELECTION OF BRITISH CHEESES</h3>
                         <p class="menu-item-description">Selection: Brightwell Ash, Berkswell, St. James, Beauvale. Accompaniments: Truffle honey jelly & gooseberry chutney. Bread: Parmesan Sable Breton, currant bread & sourdough crackers.</p>
-                        <span class="allergen-info">Contains Cereals/Gluten, Eggs, Milk (Incl Lactose), Sesame Seeds, Mushroom (truffle). Specific allergens depend on cheese selection.</span>
+                        <span class="allergen-info"><strong>Allergens:</strong> Milk (All cheeses). Accompaniments/Bread: Cereals/Gluten, Eggs, Milk, Sesame Seeds. (Depends on selection).</span>
                     </div>
                     <p class="menu-item-price">18</p>
                 </div>
@@ -527,7 +556,7 @@
                     <div>
                         <h3 class="menu-item-name">BISCOTTI</h3>
                         <p class="menu-item-description">Served with coffee/tea. Options: Cardamom, Sour Cherry & Pistachio; OR Almond, roasted hazelnut & orange (Gluten-Free Option).</p>
-                        <span class="allergen-info">Contains Nuts (Pistachio, Almond, Hazelnut), Eggs, Milk (Incl Lactose - butter). Regular version contains Cereals/Gluten. Both contain Citrus (zest). May contain other allergens depending on specific ingredients and cross-contamination.</span>
+                        <span class="allergen-info"><strong>Allergens (Standard):</strong> Cereals/Gluten, Eggs, Milk (Butter), Nuts (Pistachio).<br><strong>Allergens (GF Option):</strong> Nuts (Almond, Hazelnut), Eggs, Milk (Butter), Citrus (Orange).</span>
                     </div>
                     <p class="menu-item-price">Included</p>
                 </div>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoMaD London - Side Hustle Menu</title> <!-- Changed title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .heading-primary {
+            font-size: 2.25rem; /* slightly larger */
+            font-weight: 700;
+            color: #1e293b; /* Slightly darker heading color */
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.025em;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #334155; /* Slightly darker section title */
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-top: 32px; /* Add space before section title */
+        }
+        .menu-item {
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: start;
+            cursor: pointer; /* Add cursor style to indicate interactivity */
+        }
+        .menu-item-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        .menu-item-description {
+            font-size: 0.875rem;
+            color: #6b7280;
+            line-height: 1.5;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0;
+            margin-top: 0;
+        }
+        .menu-item.expanded .menu-item-description {
+            max-height: 1500px; /* Increased max-height further */
+            opacity: 1;
+            margin-top: 12px;
+        }
+        .menu-item-price {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        .description-detail { /* Style for sub-descriptions */
+             font-size: 0.8rem;
+             color: #71717a;
+             margin-top: 8px;
+             padding-left: 10px;
+             border-left: 2px solid #e5e7eb;
+             display: block; /* Ensure block display */
+        }
+        .description-detail strong {
+            font-weight: 600;
+            color: #52525b;
+        }
+        .allergen-info { /* Style for allergen info */
+             font-size: 0.75rem;
+             color: #dc2626; /* Red color */
+             margin-top: 10px;
+             padding-left: 10px;
+             border-left: 2px solid #fca5a5; /* Light red border */
+             display: block;
+        }
+         .allergen-info strong {
+             font-weight: 600;
+             color: #b91c1c; /* Darker red */
+         }
+         .other-dietary-info { /* Style for other dietary info */
+             font-size: 0.75rem;
+             color: #57534e; /* Stone 600 */
+             margin-top: 6px;
+             padding-left: 10px;
+             border-left: 2px solid #d6d3d1; /* Stone 300 */
+             display: block;
+         }
+         .other-dietary-info strong {
+             font-weight: 600;
+             color: #44403c; /* Stone 700 */
+         }
+         /* Hide allergens/dietary by default */
+         .allergen-info, .other-dietary-info {
+             max-height: 0;
+             overflow: hidden;
+             opacity: 0;
+             margin-top: 0 !important; /* Use important to override potential inline styles if needed, or adjust specificity */
+             transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+         }
+         /* Show allergens/dietary when item is expanded */
+         .menu-item.expanded .allergen-info,
+         .menu-item.expanded .other-dietary-info {
+             max-height: 200px; /* Adjust as needed */
+             opacity: 1;
+             margin-top: 8px !important; /* Restore margin */
+         }
+
+
+        /* New styles for improved layout and spacing */
+        .top-section {
+            margin-bottom: 40px;
+        }
+
+        /* Navigation styles */
+        .menu-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+        .menu-navigation a {
+            display: inline-block;
+            padding: 8px 16px;
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            margin: 4px 8px;
+        }
+        .menu-navigation a:hover {
+            color: #1e293b;
+            text-decoration: underline;
+        }
+        .menu-navigation .current {
+            color: #1e293b;
+            font-weight: 700;
+            text-decoration: underline;
+            cursor: default;
+        }
+        .menu-navigation .current:hover {
+             text-decoration: underline;
+        }
+
+        /* Responsive styles for navigation */
+        @media (max-width: 768px) {
+            .menu-navigation a { padding: 6px 12px; }
+        }
+         @media (max-width: 480px) {
+             .menu-navigation { flex-direction: column; align-items: center; }
+             .menu-navigation a { margin: 4px 0; }
+         }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container">
+        <header class="top-section">
+            <h1 class="heading-primary">SIDE HUSTLE MENU</h1> <!-- Changed heading -->
+            <p class="text-gray-600 text-center">Spring 2025</p> <!-- Placeholder subtitle -->
+            <div class="menu-navigation">
+                <a href="index.html" class="ajax-link">Food Menu</a>
+                <a href="breakfast.html" class="ajax-link">Breakfast Menu</a>
+                <a href="ird.html" class="ajax-link">IRD Menu</a>
+                <a href="sh.html" class="ajax-link current">Side Hustle Menu</a> <!-- Added link, marked as current -->
+                <a href="beers.html" class="ajax-link">Beer & Cider Menu</a>
+                <a href="cocktails.html" class="ajax-link">Cocktail Menu</a>
+                <a href="wines.html" class="ajax-link">Wine Menu</a>
+            </div>
+        </header>
+        <main id="menu-content">
+            <section>
+                <h2 class="section-title">SALSAS / DIPS (Served with corn Tortilla chips)</h2>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Guacamole</h3>
+                        <p class="menu-item-description">
+                            Fresh Herbs & Ajo Perejil<br>
+                            <span class="description-detail"><strong>Description:</strong> Guacamole with herbs and ajo perejil, served with corn Tortilla chips on the side garnished with a herb salad.</span>
+                            <span class="description-detail"><strong>Definitions:</strong><br>Guacamole: Originates from Aztecs (avocados, tomatoes, chiles, salt), Spanish added onion, lime, coriander.<br>Ajo Perejil: Spanish staple marinade (garlic, parsley, olive oil, salt).</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> (None marked)</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£10</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Sikil Pak</h3>
+                        <p class="menu-item-description">
+                            Tomato, Guajillo & Hazelnut<br>
+                            <span class="description-detail"><strong>Description:</strong> Hazelnut sikil pak with guajillo powder and tortilla chips served on the side.</span>
+                            <span class="description-detail"><strong>Definitions:</strong><br>Sikil Pak: Pre-Hispanic Yucatan dip (toasted pumpkin seeds, habanero, roasted tomato).<br>Guajillo Chili: Dry form of mirasol pepper, common in Mexican cuisine.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Nuts (Hazelnut).</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade, Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£8</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Green Pipian</h3>
+                        <p class="menu-item-description">
+                            Pistachio & Jalapeño<br>
+                            <span class="description-detail"><strong>Description:</strong> Green pipian with pistachios and jalapeño, served with roasted pistachio, pumpkin seeds and corn tortillas chips on the side.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Pipián: Mexican sauce with puréed greens, thickened with ground pumpkin seeds; origins in Aztec, Purepecha & Mayan cuisines.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Nuts (Pistachio), Sulphites.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£9</p>
+                </div>
+                 <div class="menu-item"> <!-- No onclick as no description needed -->
+                    <div>
+                        <h3 class="menu-item-name">All 3 Salsas/Dips</h3>
+                    </div>
+                    <p class="menu-item-price">£25</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">BOTANAS / SNACKS</h2>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Oysters</h3>
+                        <p class="menu-item-description">
+                            Jalapeño & Pomegranate Mignonette<br>
+                            <span class="description-detail"><strong>Description:</strong> Carlingford oysters served with Pomegranate mignonette, red currant berries, shallots and jalapeno. (Carlingford Lough oysters benefit from tidal water exchange and freshwater flow, giving distinctive flavour).</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Molluscs (Cannot be removed), Sulphites.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">6 for £28</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Prawn Croquettes</h3>
+                        <p class="menu-item-description">
+                            Seaweed, Bonito & Habanero<br>
+                            <span class="description-detail"><strong>Description:</strong> Prawn croquettes, served with Kewpie mayo, habanero sweet and sour, Katsuobushi (bonito flake), Nori, and a lime wedge. (3 pieces per portion, possible to add a fourth).</span>
+                            <span class="description-detail"><strong>Definitions:</strong> Katsuobushi: Bonito flakes (simmered, smoked, fermented skipjack tuna) for umami.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Crustaceans, Eggs, Fish (Bonito), Milk (Incl Lactose), Sesame Seeds, Soya.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (White Wine, Mirin), Citrus (Lime), Garlic, Nightshade (Habanero, Morita), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£12</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Padrón Peppers</h3>
+                        <p class="menu-item-description">
+                            Citrus & Salsa Macha<br>
+                            <span class="description-detail"><strong>Description:</strong> Padrones with salsa macha, morita and lime salt.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Padrón Peppers: Small, green peppers from Galicia, Spain; usually mild, but about 1 in 10 is spicy.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Sesame Seeds, Sulphites.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£9</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Seabass Ceviche</h3>
+                        <p class="menu-item-description">
+                            Delica Pumpkin & Leche de Tigre (Note: Details mention Yuzu & Tomatillo)<br>
+                            <span class="description-detail"><strong>Description:</strong> A seabass ceviche, rice crackers, with leche de tigre, pico de gallo.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Ceviche: Raw meat or fish cured in citrus.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Eggs, Fish, Soya, Sulphites.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Mirin), Citrus, Nightshade, Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£16</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Sweet Plantain (Maduro)</h3>
+                        <p class="menu-item-description">
+                            Truffle Honey, Cheese & Togarashi<br>
+                            <span class="description-detail"><strong>Description:</strong> A Ripe Plantain, with a Queso Mix. Accompanied by Togarashi, Lemon Balm, Guacachile and a Habanero ash.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Togarashi: Japanese spice blend for a fiery umami kick.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Milk (Incl Lactose), Sesame Seeds.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus (Orange Skin), Garlic, Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£11</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Tuna Tostones (Tostada)</h3>
+                        <p class="menu-item-description">
+                            Crudo with Coriander Mayo & Ancho Chilli<br>
+                            <span class="description-detail"><strong>Description:</strong> Crispy tortilla, topped with ancho chilli spread, coriander mayo, layered slices of tuna sashimi, radish relish and coriander leaf.</span>
+                            <span class="description-detail"><strong>Definitions:</strong><br>Tostada: "Toasted" tortilla, often flat, with toppings.<br>Ancho Chilli: Mild, earthy, fruity dried poblano chilli.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Eggs, Fish, Soya, Sulphites.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus (Vinegar), Garlic, Nightshade.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£14</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">MAIZ / CORN</h2>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Shiitake Taco</h3>
+                        <p class="menu-item-description">
+                            With Tare, Shoyu & Daikon (Note: Description differs)<br>
+                            <span class="description-detail"><strong>Description:</strong> A Taco with Romesco, Shiitake Sofrito, White Onion, Coriander and a Lime wedge.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Shoyu: Soy Sauce (white version used here).</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Eggs, Soya, Sulphites.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Alcohol (Mirin, Sake, White Wine), Citrus, Garlic, Mushroom, Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£8</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Baja Fish Taco</h3>
+                        <p class="menu-item-description">
+                            With Mexican Coleslaw & Morita Chilli<br>
+                            <span class="description-detail"><strong>Description:</strong> Baja style cod taco, with Morita Mayo & cabbage coleslaw.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Eggs, Fish. (Confirm Gluten in tempura).</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade, Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£8</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Pork Carnita Taco</h3>
+                        <p class="menu-item-description">
+                            With Avocado Salsa Verde & Xnipec<br>
+                            <span class="description-detail"><strong>Description:</strong> Pork Carnitas with Avocado salsa verde & xnipek.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Tomatillo: Small, green, tangy fruit used in Mexican cuisine, key for salsas.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Sulphites (Vinegar).</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade, Onion, Pork.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£8</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Chicken Tinga Taco</h3>
+                        <p class="menu-item-description">
+                            With Charred Pineapple & Guajillo Chilli<br>
+                            <span class="description-detail"><strong>Description:</strong> Taco with Chicken tinga, Al Pastor sauce, charred pineapple, pickled red onion, and coriander.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten (standard tortilla), Sulphites (vinegar).</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade (chilli), Onion. (Note: May contain gluten - check with kitchen).</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£8</p>
+                </div>
+                 <div class="menu-item"> <!-- No onclick as no description needed -->
+                    <div>
+                        <h3 class="menu-item-name">Any 3 Tacos</h3>
+                    </div>
+                    <p class="menu-item-price">£22</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Flautas (Paneer Flauta)</h3>
+                        <p class="menu-item-description">
+                            Three, Chilli Paneer with Salsa Verde & Cheese Costra (Note: Description differs)<br>
+                            <span class="description-detail"><strong>Description:</strong> A Flauta with Paneer, Salsa Criolla, Salsa Macha and Morita Oil. (3 pieces per portion, possible to add a fourth).</span>
+                            <span class="description-detail"><strong>Definition:</strong> Paneer: Fresh, soft Indian cheese from curdled milk.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Eggs, Milk (Incl Lactose - Paneer, Mozzarella), Sesame Seeds.</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Garlic, Nightshade (chilli), Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£12</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Lamb Birria Papusa</h3>
+                        <p class="menu-item-description">
+                            Mozzarella & Caraway Slaw (Note: Details use Cumin Slaw)<br>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Celery (Stock?), Milk (Incl Lactose), Sulphites (Vinegar).</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade, Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£14</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Fried Chicken Torta</h3>
+                        <p class="menu-item-description">
+                            With Salsa Guajillo<br>
+                            <span class="description-detail"><strong>Description:</strong> Warm torta with tempura fried chicken, avocado and salsa guajillo. Finished with pickled jalapenos and salad.</span>
+                            <span class="description-detail"><strong>Definition:</strong> Torta: Hot/cold sandwich on a crusty roll.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Eggs (Mayo), Milk (Incl Lactose - Whey), Soya, Sulphites (Vinegar). (Confirm Gluten in dredge/tempura).</span>
+                            <span class="other-dietary-info"><strong>Other Dietaries:</strong> Citrus, Garlic, Nightshade, Onion.</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£19</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">POSTRE / DESSERT</h2>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Ice Cream Sandwich</h3>
+                        <p class="menu-item-description">
+                            Salted Caramel & Sweet Corn<br>
+                            <span class="description-detail"><strong>Description:</strong> Ice cream Sandwich made with corn ice cream, corn brittle, sable biscuit & corn salted caramel.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose), Soya (Chocolate).</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£12</p>
+                </div>
+                 <div class="menu-item" onclick="toggleDescription(this)">
+                    <div>
+                        <h3 class="menu-item-name">Churros</h3>
+                        <p class="menu-item-description">
+                            Chocolate & Dulce de Leche Crema<br>
+                            <span class="description-detail"><strong>Description:</strong> Cinnamon sugar churros served with two dipping sauces: Chocolate Tonka Sauce & Dulce de leche.</span>
+                            <span class="description-detail"><strong>Definitions:</strong><br>Churros: Fried dough dessert (Spanish/Portuguese cuisine). Dough contains no dairy.<br>Tonka Bean: Similar to vanilla but nuttier/spiced.</span>
+                            
+                            <span class="allergen-info"><strong>Allergens:</strong> Cereals/Gluten, Eggs, Milk (Incl Lactose - Dulce de Leche), Soya (Choc Sauce). (Note: Churros dough is dairy-free but contains egg).</span>
+                        </p>
+                    </div>
+                    <p class="menu-item-price">£12</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        function toggleDescription(menuItem) {
+            menuItem.classList.toggle('expanded');
+        }
+
+        // Basic AJAX and history handling (copied from index.html, simplified)
+        $(document).ready(function() {
+            function loadMenuContent(url, targetLink) {
+                 window.location.href = url; // Simple page reload for external links
+            }
+
+            // Handle clicks on navigation links
+             $(document).on('click', '.ajax-link:not(.current)', function(event) {
+                event.preventDefault();
+                const url = $(this).attr('href');
+                loadMenuContent(url, this);
+            });
+
+            // Initial setup: Ensure the correct link is marked as current
+            const currentPath = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) || "sh.html"; // Default if path is '/'
+             $('.menu-navigation a').removeClass('current');
+             $('.menu-navigation a[href="' + currentPath + '"]').addClass('current');
+        });
+    </script>
+</body>
+</html>
